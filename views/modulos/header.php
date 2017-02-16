@@ -61,6 +61,8 @@
 												<a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
 											</div>-->
 											<div class="col-md-12">
+												
+												<i class="fa fa-toggle-on" aria-hidden="true"></i>
 												<a href="index.php?action=salir" class="close">Salir</a>
 											</div>
 										</div>

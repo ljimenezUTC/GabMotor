@@ -11,6 +11,7 @@
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="views/css/bootstrap.min.css">
+		<link rel="stylesheet" href="views/css/font-awesome.css">
 		<link href="views/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="views/css/login.css">
 		<link rel="stylesheet" href="views/css/estilos.css">

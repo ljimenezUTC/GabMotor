@@ -13,7 +13,7 @@
 
 			if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
 
- 				header('Location:index.php?action=inicio');
+ 				header('Location:inicio');
 
  			}
 
@@ -26,7 +26,7 @@
 
 	if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
 
-		header('Location:index.php?action=inicio');
+		header('Location:inicio');
 
 	}
 

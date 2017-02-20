@@ -1,7 +1,7 @@
 <?php 
+
 	
-	class GestorClientesController
-	{
+	class GestorClientesController{
 
 		#INGRESAR CLIENTES
 		#-------------------------------------------------------------------
@@ -33,7 +33,7 @@
 
 							function(isConfirm){
 									 if (isConfirm) {	   
-									    window.location = "index.php?action=clientes";
+									    window.location = "clientes";
 									  } 
 							});
 
@@ -58,13 +58,19 @@
 
 			foreach ($respuesta as $row => $item) {
 				echo '<tr>
-						<td>' .$item["cedula_cliente"]. '</td>
-						<td>'. $item["nombre_cliente"] . $item["apellido_cliente"] . '</td>
-						<td>' . $item["direccion_cliente"] . '</td>
-						<td>'. $item["telefono_cliente"] . '</td>
-						<td><a href="index.php?action=editarCliente&idCliente=' . $item["id_cliente"] . '">Editar</a></td>
-						<td><a href="index.php?action=clientes&idBorrar='.$item["id_cliente"].'" onclick="return confirm(\'Estas seguro de qe deseas eliminar este cliente !\')" >Eliminar</a></td>
-						<td><a href="index.php?action=editarCliente&idCliente=' . $item["id_cliente"] . '"></a></td>
+						<td class="text-center">' .$item["cedula_cliente"]. '</td>
+
+						<td class="text-center">'. $item["nombre_cliente"] . " " . $item["apellido_cliente"] . '</td>
+ 
+						<td class="text-center">' . $item["direccion_cliente"] . '</td>
+
+						<td class="text-center">'. $item["telefono_cliente"] . '</td>
+
+						<td class="text-center"><a href="editarCliente&idCliente=' . $item["id_cliente"] . ' " class="btn btn-outline-info" >Editar</a></td>
+
+						<td class="text-center"><a href="clientes&idBorrar='.$item["id_cliente"].'" onclick="return confirm(\'Estas seguro de qe deseas eliminar este cliente !\')" class="btn btn-outline-danger">Eliminar</a></td>
+
+						<!--<td><a href="#">Agregar vehiculo</a></td>-->
 					</tr>
 					';
 			}
@@ -73,115 +79,134 @@
 
 		#EDITAR CLIENTES
 		#-------------------------------------------------------------------
-		public function editarClienteController(){
+		public function editarClientesController(){
 
 			$datosController = $_GET["idCliente"];
 
-			$respuesta = GestorClientesModel::editarClienteModel($datosController, "cliente");
+			$respuesta = GestorClientesModel::editarClientesModel($datosController, "cliente");
 
 			echo '
 			
 
-					<div class="form-group">
-						<label class="control-label col-lg-3">Cedula<span class="text-danger">*</span></label>
-						<div class="col-lg-9">
+				<div class="form-group">
 
-							 <input type="hidden" value="'.$respuesta["id_cliente"].'" name="idClienteEditar" >
-							 <input type="text" value="'.$respuesta["cedula_cliente"].'" name="cedulaClienteEditar" class="form-control">
+					<label class="control-label col-lg-3">Cédula<span class="text-danger">*</span></label>
+					<div class="col-lg-9">
 
-						</div>
-					</div>
-
-
-					<div class="form-group">
-						<label class="control-label col-lg-3">Nombre<span class="text-danger">*</span></label>
-						<div class="col-lg-9">
-
-
-							 <input type="text" value="'.$respuesta["nombre_cliente"].'" name="nombreClienteEditar" class="form-control">
-
-						</div>
-					</div>
-
-
-					<div class="form-group">
-
-						<label class="control-label col-lg-3">Apellido<span class="text-danger">*</span></label>
-						<div class="col-lg-9">
-
-							 <input type="text" value="'.$respuesta["apellido_cliente"].'" name="apellidoClienteEditar" class="form-control">
-
-						</div>
+						 <input type="hidden" value="'.$respuesta["id_cliente"].'" name="idClienteEditar" >
+						 <input type="text" value="'.$respuesta["cedula_cliente"].'" name="cedulaClienteEditar"  minlength="10" maxlength="10" class="form-control">
 
 					</div>
 
-					<div class="form-group">
+				</div>
 
-						<label class="control-label col-lg-3">Direccion<span class="text-danger">*</span></label>
-						<div class="col-lg-9">
 
-							 <input type="text" value="'.$respuesta["direccion_cliente"].'" name="direccionClienteEditar" class="form-control">
+				<div class="form-group">
 
-						</div>
+					<label class="control-label col-lg-3">Nombre<span class="text-danger">*</span></label>
+					<div class="col-lg-9">
 
-					</div>
-
-					</div>
-
-					<div class="form-group">
-
-						<label class="control-label col-lg-3">Telefono<span class="text-danger">*</span></label>
-						<div class="col-lg-9">
-
-							 <input type="text" value="'.$respuesta["telefono_cliente"].'" name="telefonoClienteEditar" class="form-control">
-
-						</div>
+						 <input type="text" value="'.$respuesta["nombre_cliente"].'" name="nombreClienteEditar" class="form-control">
 
 					</div>
 
-					<div class="form-group">
+				</div>
 
-						<label class="control-label col-lg-3">Password<span class="text-danger">*</span></label>
-						<div class="col-lg-9">
 
-							 <input type="text" name="passwordClienteEditar" class="form-control">
+				<div class="form-group">
 
-						</div>
+					<label class="control-label col-lg-3">Apellido<span class="text-danger">*</span></label>
+					<div class="col-lg-9">
+
+						 <input type="text" value="'.$respuesta["apellido_cliente"].'" name="apellidoClienteEditar" class="form-control">
 
 					</div>
 
-					 
-					 <div class="text-right">
-					 	<input type="submit" class="btn btn-primary" value="Actualizar">
-					</div>		
+				</div>
+
+				<div class="form-group">
+
+					<label class="control-label col-lg-3">Dirección<span class="text-danger">*</span></label>
+					<div class="col-lg-9">
+
+						 <input type="text" value="'.$respuesta["direccion_cliente"].'" name="direccionClienteEditar" class="form-control">
+
+					</div>
+
+				</div>
+
+				</div>
+
+				<div class="form-group">
+
+					<label class="control-label col-lg-3">Teléfono<span class="text-danger">*</span></label>
+					<div class="col-lg-9">
+
+						 <input type="text" value="'.$respuesta["telefono_cliente"].'" name="telefonoClienteEditar" class="form-control">
+
+					</div>
+
+				</div>
+
+				<div class="form-group">
+
+					<label class="control-label col-lg-3">Password<span class="text-danger">*</span></label>
+					<div class="col-lg-9">
+
+						 <input type="text" name="passwordClienteEditar" class="form-control">
+
+					</div>
+
+				</div>
+				 
+				 <div class="text-right">
+
+				 	<a class="btn btn-outline-secondary" href="clientes">Cancaler</a>
+				 	<button type="submit" class="btn btn-outline-success" >Actualizar</button>
+
+				</div>		
 
 			';
 			
 		}
 
 
-		public function actualizarClienteController(){
+		public function actualizarClientesController(){
 
 				if (isset($_POST["idClienteEditar"])) {
 
-					//echo "string" . $_POST["idClienteEditar"];
-
-
 					$datosController = array("id"=>$_POST["idClienteEditar"], "cedula"=>$_POST["cedulaClienteEditar"], "nombre"=>$_POST["nombreClienteEditar"], "apellido"=>$_POST["apellidoClienteEditar"], "direccion"=>$_POST["direccionClienteEditar"], "telefono"=>$_POST["telefonoClienteEditar"], "password"=>$_POST["passwordClienteEditar"]);
 
-
-					$respuesta = GestorClientesModel::actualizarClienteModel($datosController, "cliente");
-
+					$respuesta = GestorClientesModel::actualizarClientesModel($datosController, "cliente");
 
 					if($respuesta == "success"){
 
-						header("location:index.php?action=clientes");
+						echo '
+								<script>
+									
+									swal({
+										title: "OK!",
+										text: "El cliente ha sido actualizado correctamente",
+										type:"success",
+										confirmButtonText:"cerrar",
+										closeOnConfirm:false
+									},
+
+									function(isConfirm){
+										if (isConfirm) {
+											window.location = "clientes"
+										}
+									}
+
+									);
+								</script>
+						';
 
 					}
 
 					else{
 
-						echo "error";
+						echo $respuesta;
 
 					}
 
@@ -225,6 +250,31 @@
 			}
 
 		}
+
+		#VALIDAR QUE LA CEDULA QUE INGRESA DEL CLIENTE NO EXISTA EN LA BASE DE DATOS
+		#---------------------------------------------------------------------------
+		public function validarCedulaClienteController($datos){
+
+			$datosController = $datos;
+
+			$respuesta = GestorClientesModel::validarCedulaClienteModel($datosController, "cliente");
+
+			if ($respuesta == 1) {
+				
+				 echo "true";
+
+			}else{
+
+				echo "false";
+
+			}
+
+		}
+
+
+
+
 	}
- ?>
+
+
 

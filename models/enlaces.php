@@ -5,7 +5,7 @@
 
 		public function enlacesModel($enlaces){
 
-			if ($enlaces == "ingreso" || $enlaces == "inicio" || $enlaces == "clientes" || $enlaces == "vehiculos" || $enlaces == "mantenimientos" || $enlaces == "reportes" || $enlaces == "salir" || $enlaces == "ingresoCliente" || $enlaces == "editarCliente") {
+			if ($enlaces == "ingreso" || $enlaces == "inicio" || $enlaces == "clientes" || $enlaces == "vehiculos" || $enlaces == "mantenimientos" || $enlaces == "reportes" || $enlaces == "salir" || $enlaces == "ingresoCliente" || $enlaces == "editarCliente" || $enlaces == "vehiculos") {
 				
 				$modulo = "views/modulos/" . $enlaces . ".php";
 
@@ -24,4 +24,3 @@
 
 		}
 	}
- ?>

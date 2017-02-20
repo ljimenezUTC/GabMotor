@@ -4,13 +4,13 @@
 
 	if (!$_SESSION["logged_in"]) {
 
-		header("Location:index.php?action=ingreso");
+		header("Location:ingreso");
 
 		exit();
 
 	}
 
-	//include "views/modulos/header.php";
+	#include "header.php";
 
  ?>
 
@@ -36,8 +36,8 @@
 						<?php
 
 							$editarCliente = new GestorClientesController();
-							$editarCliente->editarClienteController();
-							$editarCliente->actualizarClienteController();
+							$editarCliente->editarClientesController();
+							$editarCliente->actualizarClientesController();
 
 						?>
 

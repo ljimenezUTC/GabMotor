@@ -4,12 +4,12 @@
 
 	if (!$_SESSION["logged_in"]) {
 		
-		header("location:index.php?action=ingreso");
+		header("location:ingreso");
 
 		exit();
 	}
 
-	include "views/modulos/header.php";
+	include "header.php";
 	
  ?>
 

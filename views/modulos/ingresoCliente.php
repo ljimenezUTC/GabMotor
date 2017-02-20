@@ -4,7 +4,7 @@
 
 	if (!$_SESSION["logged_in"]) {
 		
-		header("location:index.php?action=ingreso");
+		header("location:ingreso");
 
 		exit();
 	}
@@ -30,9 +30,10 @@
 				<form class="form-horizontal" method="POST">
 
 					<div class="form-group">
-						<label class="control-label col-lg-3">Cedula<span class="text-danger">*</span></label>
+						<label class="control-label col-lg-3">Cédula<span class="text-danger">*</span></label>
 						<div class="col-lg-9">
-							<input type="text" name="ingresoCedulaCliente" value="" class="form-control" required="required" placeholder="Ingresa la cedula del cliente">
+							<input type="text" name="ingresoCedulaCliente" class="form-control" minlength="10" maxlength="10" required="required" placeholder="Ingresa la cedula del cliente">
+							<span class="help-block"></span>
 						</div>
 					</div>
 
@@ -40,7 +41,7 @@
 					<div class="form-group">
 						<label class="control-label col-lg-3">Nombre<span class="text-danger">*</span></label>
 						<div class="col-lg-9">
-							<input type="text" name="ingresoNombreCliente" value="" class="form-control" required="required" placeholder="Ingresa el nombre del cliente">
+							<input type="text" name="ingresoNombreCliente" class="form-control" required="required" placeholder="Ingresa el nombre del cliente">
 						</div>
 					</div>
 
@@ -48,7 +49,7 @@
 					<div class="form-group">
 						<label class="control-label col-lg-3">Apellido<span class="text-danger">*</span></label>
 						<div class="col-lg-9">
-							<input type="text" name="ingresoApellidoCliente" value="" class="form-control" required="required" placeholder="Ingresa el apellido del cliente">
+							<input type="text" name="ingresoApellidoCliente" class="form-control" required="required" placeholder="Ingresa el apellido del cliente">
 						</div>
 					</div>
 
@@ -56,15 +57,15 @@
 					<div class="form-group">
 						<label class="control-label col-lg-3">Dirección<span class="text-danger">*</span></label>
 						<div class="col-lg-9">
-							<input type="text" name="ingresoDireccionCliente" value="" class="form-control" required="required" placeholder="Ingresa la direccion del cliente">
+							<input type="text" name="ingresoDireccionCliente" class="form-control" required="required" placeholder="Ingresa la direccion del cliente">
 						</div>
 					</div>
 
 
 					<div class="form-group">
-						<label class="control-label col-lg-3">Telefono<span class="text-danger">*</span></label>
+						<label class="control-label col-lg-3">Télefono<span class="text-danger">*</span></label>
 						<div class="col-lg-9">
-							<input type="text" name="ingresoTelefonoCliente" value="" class="form-control" required="required" placeholder="Ingresa el telefono del cliente">
+							<input type="text" name="ingresoTelefonoCliente" class="form-control" required="required" placeholder="Ingresa el telefono del cliente">
 						</div>
 					</div>
 
@@ -72,12 +73,13 @@
 					<div class="form-group">
 						<label class="control-label col-lg-3">Password<span class="text-danger">*</span></label>
 						<div class="col-lg-9">
-							<input type="text" name="ingresoPasswordCliente" value="" class="form-control" required="required" placeholder="Ingresa el password del cliente">
+							<input type="text" name="ingresoPasswordCliente" class="form-control" required="required" placeholder="Ingresa el password del cliente">
 						</div>
 					</div>
 
 					<div class="text-right">
-						<button type="submit" class="btn btn-primary">Agregar</button>
+						<a href="clientes" class="btn btn-outline-secondary">Cancaler</a>
+						<button type="submit" class="btn btn-outline-success">Agregar</button>
 					</div>
 
 				</form>
@@ -90,9 +92,9 @@
 
 </div><!-- /Page container -->
 
-	<?php 
+<?php 
 
-		$registroCliente = new GestorClientesController();
-		$registroCliente->ingresarClientesController();
+	$registroCliente = new GestorClientesController();
+	$registroCliente->ingresarClientesController();
 
-	 ?>
+ ?>

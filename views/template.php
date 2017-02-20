@@ -17,8 +17,6 @@
 		<link rel="stylesheet" href="views/css/estilos.css">
 		<link rel="stylesheet" type="text/css" href="views/css/sweetalert.css">
 
-
-
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		 <!--[if lt IE 9]>
@@ -28,8 +26,9 @@
 
 		<!-- jQuery -->
 		<script type="text/javascript" src="views/js/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="views/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="views/js/sweetalert.min.js"></script>
+		<script type="text/javascript" src="views/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="views/js/bootstrap.min.js"></script>
 
 
 	</head>
@@ -49,7 +48,8 @@
 			
 		</section>
 
-		<script src="views/js/script.js"></script>
+		
+		<script src="views/js/gestorClientes.js"></script>
 
 	</body>
 	

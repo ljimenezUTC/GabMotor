@@ -3,26 +3,26 @@
 
 	if (!$_SESSION["logged_in"]) {
 
-		header("location:index.php?action=ingreso");
+		header("location:ingreso");
 		
 		exit();
 	}
 
 	
-	include "views/modulos/header.php";
+	include "header.php";
  ?>
 
 	<!--=====================================
 			Clientes        
 	======================================-->
 
-	<div id="seccionClientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 		<!--=====================================
 			Ingreso Clientes        
 		======================================-->
 	
-			<a id="btnAgregarCliente" href="index.php?action=ingresoCliente" class="btn btn-info">Nuevo cliente</a>
+			<a id="btnAgregarCliente" href="ingresoCliente" class="btn btn-outline-info">Nuevo cliente</a>
 			
 
 		<!--====  Fin de Clientes  ====-->
@@ -37,7 +37,7 @@
 
 				<div>
 
-					<h1>Lista de clientes</h1>
+					<h4>Lista de clientes</h4>
 
 				</div>
 
@@ -55,11 +55,11 @@
 
 						<tr class="success">
 
-							<th>Cedula</th>
-							<th>Nombre completo</th>
-							<th>Direccion</th>
-							<th>Telefono</th>
-							<th colspan="2">Acciones</th>
+							<th class="text-center">Cédula</th>
+							<th class="text-center">Nombre completo</th>
+							<th class="text-center">Dirección</th>
+							<th class="text-center">Teléfono</th>
+							<th colspan="2" class="text-center">Acción</th>
 
 						</tr>
 

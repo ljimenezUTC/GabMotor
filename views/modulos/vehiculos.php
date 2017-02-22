@@ -19,6 +19,15 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 	<!--=====================================
+		Ingreso Clientes        
+	======================================-->
+	
+		<a id="" href="ingresoVehiculo" class="btn btn-outline-info">Nuevo Vehiculo</a>
+			
+
+	<!--====  Fin de Clientes  ====-->
+
+	<!--=====================================
 		Listar Clientes        
 	======================================-->
 

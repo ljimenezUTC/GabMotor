@@ -29,6 +29,7 @@
 		<script type="text/javascript" src="views/js/sweetalert.min.js"></script>
 		<script type="text/javascript" src="views/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="views/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="views/js/jquery.validate.min.js"></script>
 
 
 	</head>

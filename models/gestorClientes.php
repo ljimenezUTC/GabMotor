@@ -1,5 +1,7 @@
 <?php 
 
+	require_once "conexion.php";
+
 	class GestorClientesModel{
 
 		#REGISTRAR CLIENTES

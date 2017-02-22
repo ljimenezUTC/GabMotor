@@ -21,6 +21,7 @@
 			$respuesta = GestorClientesController::validarCedulaClienteController($datos);
 
 			echo $respuesta;
+			
 
 
 

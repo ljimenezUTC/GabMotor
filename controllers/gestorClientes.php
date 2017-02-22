@@ -261,11 +261,11 @@
 
 			if ($respuesta == 1) {
 				
-				 echo "true";
+				return "true";
 
 			}else{
 
-				echo "false";
+				return "false";
 
 			}
 

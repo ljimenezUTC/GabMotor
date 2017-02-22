@@ -11,7 +11,7 @@
 	<!--LOGO-->
 	<a class="navbar-brand" href="inicio">LOGO</a>
 
-	<?php $uri = end( explode("/",$_SERVER['REQUEST_URI'])); ?>
+	<?php $uri = $_SERVER['REQUEST_URI']; ?>
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
 		<ul class="navbar-nav mr-auto mt-2 mt-md-0">

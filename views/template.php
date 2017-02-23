@@ -8,7 +8,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-
+		<!-- Cargando fuentes -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
+		
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="views/css/bootstrap.min.css">
 		<link rel="stylesheet" href="views/css/font-awesome.css">
@@ -35,21 +37,15 @@
 	</head>
 
 	<body>
-		<section class="container">
-				<!--=====================================
-				COLUMNA CONTENIDO        
-				======================================-->
-				<?php 
-					$modulos = new EnlacesControllers();
-					$modulos->enlacesController();
-				 ?>
 
-				<!--====  Fin de COLUMNA CONTENIDO  ====-->
-			
-			
-		</section>
+	    <!--  COLUMNA CONTENIDO -->
+		<section>
+			<?php 
+				$modulos = new EnlacesControllers();
+				$modulos->enlacesController();
+			?>
+		</section><!-- Fin de COLUMNA CONTENIDO -->
 
-		
 		<script src="views/js/gestorClientes.js"></script>
 
 	</body>

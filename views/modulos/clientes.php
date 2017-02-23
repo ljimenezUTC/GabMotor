@@ -12,78 +12,68 @@
 	include "header.php";
  ?>
 
-	<!--=====================================
-			Clientes        
-	======================================-->
+<!-- Seccion Clientes -->
+<section class="container">
+	<div class="row">
+		<!--Contenido Clientes-->
+		<div id="seccionClientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	        <div class="row">
+				<div class="col-md-6 lista-cliente-detalle">
+					<span class="fa fa-th"> <a href="">Clientes</a></span>
+					<p class="text-muted small">Administra Lista de Clientes</p>
+	            </div>
 
-		<!--=====================================
-			Ingreso Clientes        
-		======================================-->
-	
-			<a id="btnAgregarCliente" href="ingresoCliente" class="btn btn-outline-info">Nuevo cliente</a>
-			
+	            <div class="col-md-6 pull-right seccion-add-clientes">
+	                <!--Ingrese Clientes-->
+	                <a id="btnAgregarCliente" href="ingresoCliente" class="btn btn-info pull-right">
+	                <span class="fa fa-plus-circle"> </span> Nuevo cliente</a>
+	            </div>
+	        </div>
 
-		<!--====  Fin de Clientes  ====-->
+	        <!-- Inicio Panel -->
+			<div class="panel panel-flat">
+				<div class="panel-heading">
+					<h5 class="panel-title">Lista de clientes</h5>
+				</div>
+				<hr>
 
-		<!--=====================================
-			Listar Clientes        
-		======================================-->
 
-		<div class="row">
-
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-				<div>
-
-					<h4>Lista de clientes</h4>
-
+				<div class="col-lg-12 seccion-buscar">
+					<form class="form-inline ">
+			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese la cedula">
+			      		<button class="btn btn-outline-success my-2 mr-sm-2" type="submit">Buscar</button>
+		    		</form>
 				</div>
 
-			</div>
+				<!-- Listar Clientes -->
+				<div class="row">
+					<div class="col-lg-12 contenido-tabla-clientes">
+						<div class="table-responsive">
+							<table class="table datatable-basic table-bordered table-striped table-hover">
+								<thead>
+									<tr class="success tabla-header">
+										<th>Cédula</th>
+										<th>Nombre completo</th>
+										<th>Dirección</th>
+										<th>Teléfono</th>
+										<th colspan="3">Acción</th>
+									</tr>
+								</thead>
 
-		</div>
+								<tbody>
+									<?php 
+										$vistaClientes = new GestorClientesController();
+										$vistaClientes->listarClientesController();
+										$vistaClientes->borrarClientesController();
+									 ?>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div><!-- Fin de Listar Clientes -->
+			</div><!-- Fin Panel -->
+		</div><!-- Fin Contenido Clientes -->
+	</div><!-- Row -->
+</section><!-- Fin Seccion Clientes -->
 
-		<div class="row">
-
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-				<table class="table table-striped">
-
-					<thead>
-
-						<tr class="success">
-
-							<th class="text-center">Cédula</th>
-							<th class="text-center">Nombre completo</th>
-							<th class="text-center">Dirección</th>
-							<th class="text-center">Teléfono</th>
-							<th colspan="2" class="text-center">Acción</th>
-
-						</tr>
-
-					</thead>
-
-					<tbody>
-						
-						<?php 
-
-							$vistaClientes = new GestorClientesController();
-							$vistaClientes->listarClientesController();
-							$vistaClientes->borrarClientesController();
-						 ?>
-
-					</tbody>
-
-				</table>
-
-			</div>
-
-		</div>
-		<!--====  Fin de Listar Clientes  ====-->
-		
-	</div>
-	<!--====  Fin de Clientes  ====-->
-	
-	

@@ -58,21 +58,27 @@
 
 			foreach ($respuesta as $row => $item) {
 				echo '<tr>
-						<td class="text-center">' .$item["cedula_cliente"]. '</td>
+						<td>' .$item["cedula_cliente"].'</td>
+						<td>' .$item["nombre_cliente"]. " " . $item["apellido_cliente"] . '</td>
+						<td>' .$item["direccion_cliente"].'</td>
+						<td>' .$item["telefono_cliente"].'</td>
 
-						<td class="text-center">'. $item["nombre_cliente"] . " " . $item["apellido_cliente"] . '</td>
- 
-						<td class="text-center">' . $item["direccion_cliente"] . '</td>
+						<td class="acciones">
+							<a href="editarCliente&idCliente='.$item["id_cliente"].'"><span class="fa fa-eye"></span></a>
+						</td>
+						
+						<td class="acciones">
+							<a href="editarCliente&idCliente='.$item["id_cliente"].'"><span class="fa fa-pencil"></span></a>
+						</td>
 
-						<td class="text-center">'. $item["telefono_cliente"] . '</td>
-
-						<td class="text-center"><a href="editarCliente&idCliente=' . $item["id_cliente"] . ' " class="btn btn-outline-info" >Editar</a></td>
-
-						<td class="text-center"><a href="clientes&idBorrar='.$item["id_cliente"].'" onclick="return confirm(\'Estas seguro de qe deseas eliminar este cliente !\')" class="btn btn-outline-danger">Eliminar</a></td>
+						<td class="text-center">
+							<a href="clientes&idBorrar='.$item["id_cliente"].'"onclick="return confirm(\'Estas seguro de qe deseas eliminar este cliente !\')" >
+							<span class="fa fa-trash-o"></span></a>
+						</td>
 
 						<!--<td><a href="#">Agregar vehiculo</a></td>-->
 					</tr>
-					';
+				';
 			}
 		}
 

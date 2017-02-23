@@ -92,7 +92,6 @@
 
 </div><!-- /Page container -->
 	
-</script>
 
 <?php 
 

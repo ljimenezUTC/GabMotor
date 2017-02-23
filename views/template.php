@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		
-		<title>P&aacute;gina de inicio de sesión</title>
+		<title>Home</title>
 
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +12,10 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="views/css/bootstrap.min.css">
 		<link rel="stylesheet" href="views/css/font-awesome.css">
-		<link href="views/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="views/css/font-awesome.min.css">
 		<link rel="stylesheet" href="views/css/login.css">
 		<link rel="stylesheet" href="views/css/estilos.css">
-		<link rel="stylesheet" type="text/css" href="views/css/sweetalert.css">
+		<link rel="stylesheet" href="views/css/sweetalert.css">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

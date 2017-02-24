@@ -93,84 +93,62 @@
 
 			echo '
 			
+				<div class="form-group row">
+				    <label for="cedulaClienteEditar" class="col-sm-2 form-control-label">Cédula <span class="text-danger">*</span> </label>
+				    <div class="col-sm-10">
+					  	<input type="hidden" value="'.$respuesta["id_cliente"].'" name="idClienteEditar" >
+						<input type="text" value="'.$respuesta["cedula_cliente"].'" name="cedulaClienteEditar" id="cedulaClienteEditar" minlength="10" maxlength="10" class="form-control">
+				    </div>
+				</div>
 
-				<div class="form-group">
 
-					<label class="control-label col-lg-3">Cédula<span class="text-danger">*</span></label>
-					<div class="col-lg-9">
 
-						 <input type="hidden" value="'.$respuesta["id_cliente"].'" name="idClienteEditar" >
-						 <input type="text" value="'.$respuesta["cedula_cliente"].'" name="cedulaClienteEditar"  minlength="10" maxlength="10" class="form-control">
+				<div class="form-group row">
+				      <label for="nombreClienteEditar" class="col-sm-2 form-control-label">Nombre <span class="text-danger">*</span></label>
+				      <div class="col-sm-10">
+				   		 <input type="text" value="'.$respuesta["nombre_cliente"].'" name="nombreClienteEditar" id="nombreClienteEditar" class="form-control">
+				      </div>
+				</div>
 
+				
+				<div class="form-group row">
+				      <label for="apellidoClienteEditar" class="col-sm-2 form-control-label">Apellido <span class="text-danger">*</span></label>
+				      <div class="col-sm-10">
+				        <input type="text" value="'.$respuesta["apellido_cliente"].'" name="apellidoClienteEditar" id="apellidoClienteEditar" class="form-control">
+				      </div>
+				</div>
+
+
+				<div class="form-group row">
+				      <label for="direccionClienteEditar" class="col-sm-2 form-control-label">Dirección <span class="text-danger">*</span></label>
+				      <div class="col-sm-10">
+				        <input type="text" value="'.$respuesta["direccion_cliente"].'" name="direccionClienteEditar" id="direccionClienteEditar" class="form-control">
+				      </div>
+				</div>
+
+
+				 <div class="form-group row">
+				      <label for="telefonoClienteEditar" class="col-sm-2 form-control-label">Teléfono <span class="text-danger">*</span></label>
+				      <div class="col-sm-10">
+				        <input type="text" value="'.$respuesta["telefono_cliente"].'" name="telefonoClienteEditar" id="telefonoClienteEditar" minlength="10" maxlength="10" class="form-control">
+				      </div>
+				 </div>
+
+
+				<div class="form-group row">
+				    <label for="passwordClienteEditar" class="col-sm-2 form-control-label">Password <span class="text-danger">*</span></label>
+				    <div class="col-sm-10">
+				    	<input type="text" name="passwordClienteEditar" id="passwordClienteEditar" class="form-control" required>
+				    </div>
+				</div>
+
+
+				<div class="text-right form-group row">
+				    <div class="col-sm-12">
+						<a href="clientes" class="btn btn-success"><span class="fa fa-undo"></span> Cancaler</a>
+						<button type="submit" class="btn btn-info">Actualizar <span class="fa fa-check-circle"></span></button>
 					</div>
-
-				</div>
-
-
-				<div class="form-group">
-
-					<label class="control-label col-lg-3">Nombre<span class="text-danger">*</span></label>
-					<div class="col-lg-9">
-
-						 <input type="text" value="'.$respuesta["nombre_cliente"].'" name="nombreClienteEditar" class="form-control">
-
-					</div>
-
-				</div>
-
-
-				<div class="form-group">
-
-					<label class="control-label col-lg-3">Apellido<span class="text-danger">*</span></label>
-					<div class="col-lg-9">
-
-						 <input type="text" value="'.$respuesta["apellido_cliente"].'" name="apellidoClienteEditar" class="form-control">
-
-					</div>
-
-				</div>
-
-				<div class="form-group">
-
-					<label class="control-label col-lg-3">Dirección<span class="text-danger">*</span></label>
-					<div class="col-lg-9">
-
-						 <input type="text" value="'.$respuesta["direccion_cliente"].'" name="direccionClienteEditar" class="form-control">
-
-					</div>
-
-				</div>
-
-				</div>
-
-				<div class="form-group">
-
-					<label class="control-label col-lg-3">Teléfono<span class="text-danger">*</span></label>
-					<div class="col-lg-9">
-
-						 <input type="text" value="'.$respuesta["telefono_cliente"].'" name="telefonoClienteEditar" class="form-control">
-
-					</div>
-
-				</div>
-
-				<div class="form-group">
-
-					<label class="control-label col-lg-3">Password<span class="text-danger">*</span></label>
-					<div class="col-lg-9">
-
-						 <input type="text" name="passwordClienteEditar" class="form-control">
-
-					</div>
-
-				</div>
-				 
-				 <div class="text-right">
-
-				 	<a class="btn btn-outline-secondary" href="clientes">Cancaler</a>
-				 	<button type="submit" class="btn btn-outline-success" >Actualizar</button>
-
-				</div>		
+				</div>	
 
 			';
 			

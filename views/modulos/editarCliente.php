@@ -10,26 +10,42 @@
 
 	}
 
-	#include "header.php";
+	include "header.php";
 
  ?>
 
-<!--=====================================
-	FORMULARIO DE EDICION DE CLIENTES        
-======================================-->
+<!-- FORMULARIO DE EDICION DE CLIENTES -->
 
-<!-- Page container -->
-<div class="page-container">
+<!-- Seccion Editar Clientes -->
+<section class="container">
 	
-	<!-- Panel -->
-	<div class="panel panel-flat">
+	<div class="row">
 		
-		<!-- Panel-body -->
-		<div class="panel-body">
+		<!--Contenido Editar Clientes-->
+		<div id="seccionClientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
-			<fieldset class="content-group">
-				
-				<legend class="text-bold">Datos del cliente</legend>
+	        <div class="row">
+				<div class="col-md-6 lista-cliente-detalle detalle-add-cliente">
+					<span class="fa fa-users"> <a href="">Clientes - Editar Cliente</a></span>
+					<p class="text-muted small">Administra los clientes!</p>
+	            </div>
+
+	            <div class="col-md-6 pull-right seccion-add-clientes">
+	                <!--Lista Clientes-->
+	                <a id="btnAgregarCliente" href="clientes" class="btn btn-success pull-right">
+	                <span class="fa fa-users"> </span> Lista de clientes</a>
+	            </div>
+	        </div>
+
+	        <!-- Inicio Panel -->
+			<div class="panel panel-flat contenido-add-cliente">
+				<div class="panel-heading">
+					<h5 class="panel-title">DATOS DEL CLIENTE</h5>
+				</div>
+				<hr>
+
+				<!-- Contenido Formulario Editar Cliente -->
+				<div class="formulario-add-cliente">
 
 					<form method="post">
 	
@@ -42,14 +58,12 @@
 						?>
 
 					</form>
+				</div><!-- Contenido Formulario Editar Cliente -->
 
-				</fieldset><hr>
+		  	</div><!-- Fin Panel -->
 
-		</div><!-- /Panel-body -->
+		</div><!-- Fin Contenido Editar Clientes -->
 
-	</div><!-- /Panel -->
+	</div><!-- Row -->
 
-</div><!-- /Page container -->
-
-
-<!--====  Fin del formulario de edicion de clientes ====-->
+</section><!-- Fin Seccion Editar Clientes -->

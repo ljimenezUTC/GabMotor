@@ -197,3 +197,35 @@ body {
   }
 
 }
+
+
+/**************************
+  * Agregar Clientes
+  **************************/
+.formulario-add-cliente .row{
+  padding: 0px 20px 10px 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 770px) {
+
+  .detalle-add-cliente{
+    font-size: 18px;
+    text-align:center;
+  }
+
+  .seccion-add-clientes .btn-success{
+    width: 100%;
+  }
+
+  .contenido-add-cliente input,label, h5{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .contenido-add-cliente .btn-success, .btn-info{
+    text-align: center;
+    font-size: 12px;
+  }
+
+}

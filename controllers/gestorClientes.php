@@ -145,7 +145,7 @@
 
 				<div class="text-right form-group row">
 				    <div class="col-sm-12">
-						<a href="clientes" class="btn btn-success"><span class="fa fa-undo"></span> Cancaler</a>
+						<a href="clientes" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>
 						<button type="submit" class="btn btn-info">Actualizar <span class="fa fa-check-circle"></span></button>
 					</div>
 				</div>	

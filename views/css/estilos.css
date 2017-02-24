@@ -126,6 +126,9 @@ body {
 .acciones {
   text-align: center; }
 
+.formulario-add-cliente input, label {
+  font-size: 14px; }
+
 @media (max-width: 770px) {
   .lista-cliente-detalle {
     padding-bottom: 0px; }

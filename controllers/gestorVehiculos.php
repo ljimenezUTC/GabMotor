@@ -32,9 +32,9 @@
 
 						<td class="text-center">' . $item["kilometraje_vehiculo"] . '</td>
 
-						<td class="text-center"><a href="#" class="btn btn-outline-info">Editar</a></td>
+						<td class="acciones"><a href="#"><span class="fa fa-pencil"></span></a></td>
 
-						<td class="text-center"><a href="#" class="btn btn-outline-danger">Eliminar</a></td>
+						<td class="acciones"><a href="#"><span class="fa fa-trash-o"></span></a></td>
 
 						<!--<td class="text-center"><a href="#" class="btn btn-outline-success">Mantnimiento</a></td>-->
 

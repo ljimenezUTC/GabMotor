@@ -84,6 +84,25 @@
 
 		#BORRAR VEHICULOS
 		#----------------------------------------------------------------
+		public function borrarVehiculosModel($datosModel, $tablaVehiculo){
+
+			$stmt = Conexion::conectar()->prepare("DELETE FROM $tablaVehiculo WHERE id_vehiculo = :idVehiculo");
+
+			$stmt->bindParam(":idVehiculo", $datosModel, PDO::PARAM_INT);
+
+			if ($stmt->execute()) {
+				
+				return 'success';
+
+			}else{
+
+				return 'error';
+
+			}
+
+			$stmt->close();
+
+		}
 
 
 	}

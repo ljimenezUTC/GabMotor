@@ -70,6 +70,7 @@
 									<?php 
 										$vistaVehiculos = new GestorVehiculosController();
 										$vistaVehiculos->listarVehiculosController();
+										$vistaVehiculos->borrarVehiculosController();
 									 ?>
 									
 								</tbody>

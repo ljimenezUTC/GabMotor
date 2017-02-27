@@ -131,7 +131,7 @@
 
 						<td class="acciones"><a href="#"><span class="fa fa-pencil"></span></a></td>
 
-						<td class="acciones"><a href="#"><span class="fa fa-trash-o"></span></a></td>
+						<td class="acciones"><a href="vehiculos&idVehiculo=' . $item["id_vehiculo"] . '"><span class="fa fa-trash-o"></span></a></td>
 
 						<!--<td class="text-center"><a href="#" class="btn btn-outline-success">Mantnimiento</a></td>-->
 
@@ -160,5 +160,42 @@
 
 		#BORRAR VEHICULOS
 		#----------------------------------------------------------------
+		public function borrarVehiculosController(){
+
+			if (isset($_GET["idVehiculo"])) {
+
+				$datosController = $_GET["idVehiculo"];
+
+				$respuesta = GestorVehiculosModel::borrarVehiculosModel($datosController, "vehiculo");
+
+				if ($respuesta == 'success') {
+
+					echo'<script>
+
+							swal({
+								  title: "¡OK!",
+								  text: "¡El vehiculo ha sido eliminado correctamente!",
+								  type: "success",
+								  confirmButtonText: "Cerrar",
+								  closeOnConfirm: false
+							},
+
+							function(isConfirm){
+									 if (isConfirm) {	   
+									    window.location = "vehiculos";
+									  } 
+							});
+
+
+						</script>';
+					
+				}else{
+
+					echo $respuesta;
+				}
+
+			}
+
+		}
 
 	}

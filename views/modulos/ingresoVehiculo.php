@@ -53,22 +53,22 @@
 					<div class="col-md-3">
 				  		<label class="control-label">Cédula del cliente</label>
 						<input type="hidden" class="form-control" name="idClienteIngresoVehiculo" id="idClienteIngresoVehiculo" >
-						<input type="text" class="form-control" id="cedulaClienteIngresoVehiculo" >
+						<input type="text" class="form-control" id="cedulaClienteIngresoVehiculo" readonly="readonly">
 					 </div>
 
 					 <div class="col-md-3">
 						<label  class="control-label">Nombre</label>
-						<input type="text" class="form-control" id="nombreClienteIngresoVehiculo" >
+						<input type="text" class="form-control" id="nombreClienteIngresoVehiculo" readonly="readonly">
 					</div>
 				
 					<div class="col-md-3">
 						<label class="control-label">Dirección</label>
-						<input type="text" class="form-control" id="direccionClienteIngresoVehiculo">
+						<input type="text" class="form-control" id="direccionClienteIngresoVehiculo" readonly="readonly">
 					</div>
 				
 					<div class="col-md-3">
 						<label class="control-label">Teléfono</label>
-						<input type="text" class="form-control" id="telefonoClienteIngresoVehiculo">
+						<input type="text" class="form-control" id="telefonoClienteIngresoVehiculo" readonly="readonly">
 					</div>
 
 				</div><br>

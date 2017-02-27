@@ -44,6 +44,13 @@ function agregar (id, cedula, nombre, apellido, direccion, telefono)
 			$("#direccionClienteIngresoVehiculo").val(direccion);
 			$("#telefonoClienteIngresoVehiculo").val(telefono);
 
+			$("#idClienteEditarVehiculo").val(id);
+			$("#cedulaClienteEditarVehiculo").attr('value', cedula);
+			$("#nombreClienteEditarVehiculo").val(nombre + " " + apellido);
+			$("#direccionClienteEditarVehiculo").val(direccion);
+			$("#telefonoClienteEditarVehiculo").val(telefono);
+
+
 		}
 
 

@@ -27,6 +27,12 @@
 		 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		 <![endif]-->
 
+		<script type="text/javascript" src="views/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="views/js/sweetalert.min.js"></script>
+		<script type="text/javascript" src="views/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="views/js/wow.min.js"></script>
+		<script type="text/javascript" src="views/js/main.js"></script>
+
 	</head>
 
 	<body>
@@ -40,19 +46,9 @@
 		</section><!-- Fin de COLUMNA CONTENIDO -->
 		
 
-
 		<!-- jQuery -->
-		<script type="text/javascript" src="views/js/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="views/js/sweetalert.min.js"></script>
-		<script type="text/javascript" src="views/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="views/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="views/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="views/js/wow.min.js"></script>
-		<script type="text/javascript" src="views/js/main.js"></script>
-
 		<script type="text/javascript" src="views/js/gestorClientes.js"></script>
 		<script type="text/javascript" src="views/js/gestorVehiculos.js"></script>
-
 
 	</body>
 	

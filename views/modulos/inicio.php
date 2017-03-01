@@ -13,18 +13,8 @@
 	
  ?>
 
-	<!--=====================================
-		INICIO       
-	======================================-->
-
-		<div>
-
-			<h1>Bienvenidos</h1>
-			
-			<p>BIenvenidos al panel de control</p>
-
-		</div>
-		
-
-
-	<!--====  Fin de INICIO  ====-->
+<!-- Inicio -->
+<section class="container">
+	<h1>Bienvenidos</h1>
+	<p>BIenvenidos al panel de control</p>
+</section><!-- Fin de Inicio-->

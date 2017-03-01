@@ -22,28 +22,27 @@
 		<div id="seccionClientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
 			<div class="row">
-				<div class="col-md-6 lista-cliente-detalle">
+				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
 					<span class="fa fa-th"> <a href="">Vehículos</a></span>
 					<p class="text-muted small">Administra Lista de Vehículos</p>
 	            </div>
 
-	            <div class="col-md-6 pull-right seccion-add-clientes">
+	            <div class="col-md-6 pull-right seccion-add-clientes wow bounceInDown">
 	                <!--Ingrese Vehiculos-->
 	                <a id="" href="ingresoVehiculo" class="btn btn-info pull-right">
 	                <span class="fa fa-plus-circle"> </span> Nuevo Vehiculo</a>
 	            </div>
 	        </div>
-			
 
 			<!-- Inicio Panel -->
 			<div class="panel panel-flat">
-				<div class="panel-heading">
+				<div class="panel-heading wow zoomIn">
 					<h5 class="panel-title">Lista de vehículos</h5>
 				</div>
 				<hr>
 
 				<div class="col-lg-12 seccion-buscar">
-					<form class="form-inline ">
+					<form class="form-inline">
 			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese ">
 			      		<button class="btn btn-outline-success my-2 mr-sm-2" type="submit">Buscar</button>
 		    		</form>
@@ -62,7 +61,7 @@
 										<th>Modelo</th>
 										<th>Año</th>
 										<th>Kilometraje</th>
-										<th colspan="2">Acción</th>
+										<th colspan="3">Acción</th>
 									</tr>
 								</thead>
 

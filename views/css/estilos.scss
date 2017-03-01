@@ -1,36 +1,161 @@
 //-----------------------
 // PATRON DE COLORES
 //-----------------------
-$color-principal:#12AFAF;
-$color-menu-texto:#FFF;
-$color-body:#FFF;
+$color-principal: #12AFAF;
+$color-texto: #FFF;
+$color-texto-negro: #333333;
+$color-logo: #FFEB3B;
 
 body {
   font-family: 'Open Sans', sans-serif;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 /**************************
+  * Login
+  ************************/
+.menu-login{
+  background: $color-principal;
+  ul li a, .logo{
+    color:$color-texto;
+  }
+  .fa{
+    font-size: 24px;
+    padding-left:15px;
+  }
+
+  ul li a:hover{
+    color: $color-texto-negro;
+    transition: all 1200ms ease;
+  }
+}
+
+.login-form{
+  background: $color-texto;
+  font-size:12px;
+  border-radius: 6px;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0 0 3px #252932;
+}
+
+.detalle-login{
+  text-align:center;
+  //text-shadow: 0px 1px 1px $color-texto-negro;
+  p{font-size: 14px;}
+}
+
+.formulario-header{ 
+  text-align:center;
+  padding: 40px 0px 20px 0px;
+
+  //Rotar Elemento
+  .img-responsive{
+    transition: all 1s ease;
+  }
+  .img-responsive:hover{
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }//
+}
+
+.contenido-form-login{
+  padding: 5px 30px 5px 30px;
+  input{
+    text-align: left;
+    font-size: 14px;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+}
+
+.footer-form{
+  padding: 5px 30px 40px 30px;
+  font-size: 14px;
+}
+
+.reguistrar a{
+  float: right;
+}
+
+.input-group-addon{
+  background: $color-texto;
+  font-size: 20px;
+  width: 40px;
+}
+
+@media (max-width: 990px) {
+  .menu-login .nav{
+    .fa{
+      font-size: 24px;
+    }
+  }
+
+  .demo-redes{
+    margin-top: -10px;
+  }
+
+  .menu-login{
+    ul li a:hover{
+      border-bottom: 0.1px solid;
+    }
+  }
+
+  .contenido-form-login{
+    input, button{
+      font-size:12px;
+    }
+  }
+  
+  .bt-login{
+    font-size: 14px;
+  }
+
+  .rec-password{
+    a{
+      font-size: 12px;
+      float:left;
+    }
+  }
+
+  .reguistrar{
+    a{
+      font-size: 12px;
+      float:left;
+    }
+  }
+}
+
+
+/**************************
   * Menu
-  **************************/
+  ************************/
 .menu{
   background: $color-principal;
+  ul li a{
+    color: $color-texto;
+    font-size: 14px;
+  }
+  ul li a:hover {
+    color:$color-texto-negro;
+    border-bottom: 0.1px solid;
+    transition: all 1200ms ease;
+  }
+  .logo{
+    color: $color-logo;
+  }
+  .logo:hover{
+    color: $color-texto;
+  }
 }
 
 .icono-menu{
   padding: 0px 8px 0px 0px;
 }
 
-.menu ul li a{
-  color: $color-menu-texto;
-  font-size: 14px;
-}
-
-.menu ul li a:hover {
-  color: #FAFAFA;
-  border-bottom: 1px solid
-}
-
-.opciones-menu,.logo{
+.opciones-menu, .logo{
   margin-left: 30px !important;
 }
 
@@ -40,7 +165,7 @@ body {
 
 .fa-bars{
   font-size: 24px;
-  color: $color-menu-texto;
+  color: $color-texto;
 }
 
 .fa-user{
@@ -49,62 +174,61 @@ body {
   width: auto;
 }
 
-//Detalle perfil
+/********************
+  * Detalle perfil
+  *******************/
 .dropdown-menu{
   margin-left:-135px;
+  padding: 0px;
+  overflow: hidden;
 }
 
 .navbar-content{
   text-align:center;
   width:300px;
   padding: 15px 0px 15px 0px;
+  .user-img{
+    font-size: 90px;
+    color: #12AFAF;
+  }
+  .col-md-7{
+    a{
+      border-bottom: 0px solid;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+    a:hover{
+      border-bottom: 0px solid;
+    }
+  }
 }
 
-.navbar-content .user-img{
- font-size: 90px;
- color: #12AFAF;
-}
-
-.navbar-content .col-md-7 a{
-  border-bottom: 0px solid;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.navbar-content .col-md-7 a:hover{
-  border-bottom: 0px solid;
-}
-
-.navbar-footer {
+.navbar-footer{
   background-color: #5BC0DE;
   text-align: center;
 }
 
-.navbar-footer-content .col-md-12 a{
-  font-size: 16px;
-  text-decoration: none;
+.navbar-footer-content{ 
+  padding:15px 15px 15px 15px;
+  .col-md-12{
+    a{
+      font-size: 16px;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: none;
+      color: #f44336;
+      border-bottom: 0px solid;
+    }
+  }
 }
 
-.navbar-footer-content .col-md-12 a:hover{
-  text-decoration: none;
-  color: #f44336;
-  border-bottom: 0px solid;
-}
-
-.navbar-footer-content { padding:15px 15px 15px 15px;}
-.dropdown-menu {
-  padding: 0px;
-  overflow: hidden;
-}
-
-
-@media (max-width: 991px) {
+@media (max-width: 990px) {
   .navbar-content{
     width: 100%;
-  }
-
-  .navbar-content span{
-    font-size: 14px;
+    span{
+      font-size: 14px;
+    }
   }
   .dropdown-menu {
     margin-left: 0px;
@@ -113,11 +237,11 @@ body {
 
 /**************************
   * Clientes
-  **************************/
+  ************************/
 .panel{
   border: 1px #F5F5F5;
   border-radius: 4px;
-  background: $color-menu-texto;
+  background: $color-texto;
 }
 
 .panel-heading{
@@ -132,23 +256,19 @@ body {
 .lista-cliente-detalle{
   font-size: 25px;
   padding: 20px;
-}
-
-.lista-cliente-detalle a{
-  font-family: 'Open Sans', sans-serif;
-}
-
-.lista-cliente-detalle p{
-  font-size: 13px;
+  a{font-family: 'Open Sans', sans-serif;}
+  p{font-size: 14px;}
 }
 
 .seccion-add-clientes{
-  padding: 20px;
-}
-
-.seccion-add-clientes span{
-  padding-right: 5px;
-  background: rgba(91,192,222,0.5);
+  padding:20px;
+  a{
+    font-size: 14px;
+  }
+  span{
+    padding-right: 5px;
+    background: rgba(91,192,222,0.5);
+  }
 }
 
 .contenido-tabla-clientes{
@@ -156,18 +276,22 @@ body {
   font-size: 14px;
 }
 
-.tabla-header th{
-  background: #4CAF50;
-  text-align: center;
-  color: $color-menu-texto;
+.tabla-header{
+  th{
+    background: #4CAF50;
+    text-align: center;
+    color: $color-texto;
+  }
 }
 
 .acciones{
   text-align: center;
 }
 
-.formulario-add-cliente input,label{
+.formulario-add-cliente{
+  input,label{
     font-size: 14px;
+  }
 }
 
 @media (max-width: 770px) {
@@ -183,53 +307,70 @@ body {
   .seccion-buscar .form-inline .mr-sm-2{
     width: 100%;
     text-align: center;
+    font-size:12px;
   }
 
-  .seccion-buscar .form-inline button{
-    width: 100%;
+  .seccion-buscar .form-inline{
+    button{
+      width: 100%;
+    }
   }
 
   .seccion-add-clientes{
     padding-top: 0px;
-  }
-  .seccion-add-clientes .btn-info{
-    width: 100%;
-  }
-
-  .contenido-tabla-clientes table{
-    font-size: 12px;
+    .btn-info{
+      width: 100%;
+    }
   }
 
+  .contenido-tabla-clientes{
+    table{
+      font-size: 12px;
+    }
+  } 
 }
 
 
 /**************************
   * Agregar Clientes
-  **************************/
-.formulario-add-cliente .row{
-  padding: 0px 20px 10px 20px;
-  font-family: 'Open Sans', sans-serif;
+  ************************/
+.formulario-add-cliente{
+  .row{
+    padding: 0px 20px 10px 20px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  button, a{
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 770px) {
-
   .detalle-add-cliente{
     font-size: 18px;
     text-align:center;
   }
 
-  .seccion-add-clientes .btn-success{
-    width: 100%;
+  .seccion-add-clientes{
+    a{
+      font-size:14px;
+    }
+    .btn-success{
+      width: 100%;
+      font-size:12px;
+    }
   }
 
-  .contenido-add-cliente input,label, h5{
-    font-size: 12px;
-    text-align: center;
+  .contenido-add-cliente{
+    input,label, h5{
+      font-size: 12px;
+      text-align: center;
+    }
+    .btn-success, .btn-info{
+      text-align: center;
+      font-size: 11px;
+    }
   }
-
-  .contenido-add-cliente .btn-success, .btn-info{
-    text-align: center;
-    font-size: 12px;
-  }
-
 }
+
+//Continua

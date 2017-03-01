@@ -1,7 +1,7 @@
 <!-- HEADER -->
 
 <!-- Menu -->
-<nav class="navbar navbar-toggleable-md bg-faded menu">
+<nav class="navbar navbar-toggleable-md bg-faded fixed-top menu">
 
 	<!-- Boton del menú para dispositivos móviles -->
 	<button class="navbar-toggler navbar-toggler-right" 
@@ -11,14 +11,14 @@
 	</button>
 
 	<!-- Logo Menu-->
-	<a class="navbar-brand logo" href="index.php?action=inicio">GAB MOTORS</a>
+	<a class="navbar-brand logo" href="inicio">GAB MOTORS</a>
 
 	<?php $uri = $_SERVER['REQUEST_URI']; ?>
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
 		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 opciones-menu">
 
-			<li class="nav-item active" 
+			<li class="nav-item" 
 				<?php if($uri == 'inicio') echo "class='active'"; ?>>
 				<a class="nav-link" href="inicio"><span class="fa fa-desktop icono-menu"></span>PANEL DE INICIO</a>
 			</li>
@@ -30,18 +30,18 @@
 
 			<li class="nav-item" 
 				<?php if($uri == 'vehiculos') echo "class='active'"; ?>>
-				<a class="nav-link" href="vehiculos"><span class="fa fa-cab icono-menu"></span>VEHICULOS</a>
+				<a class="nav-link" href="vehiculos"><span class="fa fa-cab icono-menu"></span>VEHÍCULOS</a>
 			</li>
 
 		</ul>
 
 		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 opciones-menu navbar-right">
-			<li class="nav-item">
-				<a class="nav-link">Bienvenido: <?php if($_SESSION['logged_in']) { ?>
-				<?php echo $_SESSION['emailIngreso']; ?>
+			<!-- <li class="nav-item">
+				<a class="nav-link">Bienvenido: <?php #if($_SESSION['logged_in']) { ?>
+				<?php #echo $_SESSION['emailIngreso']; ?>
 				</a>
-				<?php } ?>
-			</li>
+				<?php #} ?>
+			</li> -->
 				
 			<li class="dropdown">
 

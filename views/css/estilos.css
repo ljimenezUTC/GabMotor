@@ -1,22 +1,106 @@
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 60px;
+  padding-bottom: 20px; }
 
 /**************************
+  * Login
+  ************************/
+.menu-login {
+  background: #12AFAF; }
+  .menu-login ul li a, .menu-login .logo {
+    color: #FFF; }
+  .menu-login .fa {
+    font-size: 24px;
+    padding-left: 15px; }
+  .menu-login ul li a:hover {
+    color: #333333;
+    transition: all 1200ms ease; }
+
+.login-form {
+  background: #FFF;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0 0 3px #252932; }
+
+.detalle-login {
+  text-align: center; }
+  .detalle-login p {
+    font-size: 14px; }
+
+.formulario-header {
+  text-align: center;
+  padding: 40px 0px 20px 0px; }
+  .formulario-header .img-responsive {
+    transition: all 1s ease; }
+  .formulario-header .img-responsive:hover {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    cursor: pointer; }
+
+.contenido-form-login {
+  padding: 5px 30px 5px 30px; }
+  .contenido-form-login input {
+    text-align: left;
+    font-size: 14px; }
+  .contenido-form-login button:hover {
+    cursor: pointer; }
+
+.footer-form {
+  padding: 5px 30px 40px 30px;
+  font-size: 14px; }
+
+.reguistrar a {
+  float: right; }
+
+.input-group-addon {
+  background: #FFF;
+  font-size: 20px;
+  width: 40px; }
+
+@media (max-width: 990px) {
+  .menu-login .nav .fa {
+    font-size: 24px; }
+
+  .demo-redes {
+    margin-top: -10px; }
+
+  .menu-login ul li a:hover {
+    border-bottom: 0.1px solid; }
+
+  .contenido-form-login input, .contenido-form-login button {
+    font-size: 12px; }
+
+  .bt-login {
+    font-size: 14px; }
+
+  .rec-password a {
+    font-size: 12px;
+    float: left; }
+
+  .reguistrar a {
+    font-size: 12px;
+    float: left; } }
+/**************************
   * Menu
-  **************************/
+  ************************/
 .menu {
   background: #12AFAF; }
+  .menu ul li a {
+    color: #FFF;
+    font-size: 14px; }
+  .menu ul li a:hover {
+    color: #333333;
+    border-bottom: 0.1px solid;
+    transition: all 1200ms ease; }
+  .menu .logo {
+    color: #FFEB3B; }
+  .menu .logo:hover {
+    color: #FFF; }
 
 .icono-menu {
   padding: 0px 8px 0px 0px; }
-
-.menu ul li a {
-  color: #FFF;
-  font-size: 14px; }
-
-.menu ul li a:hover {
-  color: #FAFAFA;
-  border-bottom: 1px solid; }
 
 .opciones-menu, .logo {
   margin-left: 30px !important; }
@@ -33,58 +117,53 @@ body {
   text-align: center;
   width: auto; }
 
+/********************
+  * Detalle perfil
+  *******************/
 .dropdown-menu {
-  margin-left: -135px; }
+  margin-left: -135px;
+  padding: 0px;
+  overflow: hidden; }
 
 .navbar-content {
   text-align: center;
   width: 300px;
   padding: 15px 0px 15px 0px; }
-
-.navbar-content .user-img {
-  font-size: 90px;
-  color: #12AFAF; }
-
-.navbar-content .col-md-7 a {
-  border-bottom: 0px solid;
-  padding-top: 6px;
-  padding-bottom: 6px; }
-
-.navbar-content .col-md-7 a:hover {
-  border-bottom: 0px solid; }
+  .navbar-content .user-img {
+    font-size: 90px;
+    color: #12AFAF; }
+  .navbar-content .col-md-7 a {
+    border-bottom: 0px solid;
+    padding-top: 6px;
+    padding-bottom: 6px; }
+  .navbar-content .col-md-7 a:hover {
+    border-bottom: 0px solid; }
 
 .navbar-footer {
   background-color: #5BC0DE;
   text-align: center; }
 
-.navbar-footer-content .col-md-12 a {
-  font-size: 16px;
-  text-decoration: none; }
-
-.navbar-footer-content .col-md-12 a:hover {
-  text-decoration: none;
-  color: #f44336;
-  border-bottom: 0px solid; }
-
 .navbar-footer-content {
   padding: 15px 15px 15px 15px; }
+  .navbar-footer-content .col-md-12 a {
+    font-size: 16px;
+    text-decoration: none; }
+  .navbar-footer-content .col-md-12 a:hover {
+    text-decoration: none;
+    color: #f44336;
+    border-bottom: 0px solid; }
 
-.dropdown-menu {
-  padding: 0px;
-  overflow: hidden; }
-
-@media (max-width: 991px) {
+@media (max-width: 990px) {
   .navbar-content {
     width: 100%; }
-
-  .navbar-content span {
-    font-size: 14px; }
+    .navbar-content span {
+      font-size: 14px; }
 
   .dropdown-menu {
     margin-left: 0px; } }
 /**************************
   * Clientes
-  **************************/
+  ************************/
 .panel {
   border: 1px #F5F5F5;
   border-radius: 4px;
@@ -100,19 +179,18 @@ body {
 .lista-cliente-detalle {
   font-size: 25px;
   padding: 20px; }
-
-.lista-cliente-detalle a {
-  font-family: 'Open Sans', sans-serif; }
-
-.lista-cliente-detalle p {
-  font-size: 13px; }
+  .lista-cliente-detalle a {
+    font-family: 'Open Sans', sans-serif; }
+  .lista-cliente-detalle p {
+    font-size: 14px; }
 
 .seccion-add-clientes {
   padding: 20px; }
-
-.seccion-add-clientes span {
-  padding-right: 5px;
-  background: rgba(91, 192, 222, 0.5); }
+  .seccion-add-clientes a {
+    font-size: 14px; }
+  .seccion-add-clientes span {
+    padding-right: 5px;
+    background: rgba(91, 192, 222, 0.5); }
 
 .contenido-tabla-clientes {
   text-align: left;
@@ -126,7 +204,7 @@ body {
 .acciones {
   text-align: center; }
 
-.formulario-add-cliente input, label {
+.formulario-add-cliente input, .formulario-add-cliente label {
   font-size: 14px; }
 
 @media (max-width: 770px) {
@@ -139,40 +217,44 @@ body {
 
   .seccion-buscar .form-inline .mr-sm-2 {
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    font-size: 12px; }
 
   .seccion-buscar .form-inline button {
     width: 100%; }
 
   .seccion-add-clientes {
     padding-top: 0px; }
-
-  .seccion-add-clientes .btn-info {
-    width: 100%; }
+    .seccion-add-clientes .btn-info {
+      width: 100%; }
 
   .contenido-tabla-clientes table {
     font-size: 12px; } }
 /**************************
   * Agregar Clientes
-  **************************/
+  ************************/
 .formulario-add-cliente .row {
   padding: 0px 20px 10px 20px;
   font-family: 'Open Sans', sans-serif; }
+.formulario-add-cliente button, .formulario-add-cliente a {
+  font-size: 14px; }
 
 @media (max-width: 770px) {
   .detalle-add-cliente {
     font-size: 18px;
     text-align: center; }
 
+  .seccion-add-clientes a {
+    font-size: 14px; }
   .seccion-add-clientes .btn-success {
-    width: 100%; }
+    width: 100%;
+    font-size: 12px; }
 
-  .contenido-add-cliente input, label, h5 {
+  .contenido-add-cliente input, .contenido-add-cliente label, .contenido-add-cliente h5 {
     font-size: 12px;
     text-align: center; }
-
-  .contenido-add-cliente .btn-success, .btn-info {
+  .contenido-add-cliente .btn-success, .contenido-add-cliente .btn-info {
     text-align: center;
-    font-size: 12px; } }
+    font-size: 11px; } }
 
 /*# sourceMappingURL=estilos.css.map */

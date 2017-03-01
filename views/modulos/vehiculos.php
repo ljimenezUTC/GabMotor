@@ -72,7 +72,6 @@
 										$vistaVehiculos->listarVehiculosController();
 										$vistaVehiculos->borrarVehiculosController();
 									 ?>
-									
 								</tbody>
 							</table>
 						</div>

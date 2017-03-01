@@ -27,6 +27,8 @@
 				
 			}
 
+			$stmt->close();
+
 		}
 
 		#LISTAR CLIENTES

@@ -72,7 +72,7 @@
 						</td>
 
 						<td class="text-center">
-							<a href="clientes&idBorrar='.$item["id_cliente"].'"onclick="return confirm(\'Estas seguro de qe deseas eliminar este cliente !\')" >
+							<a href="clientes&idBorrar='.$item["id_cliente"].'"onclick="return confirm(\'Estas seguro de que deseas eliminar este cliente !\')" >
 							<span class="fa fa-trash-o"></span></a>
 						</td>
 

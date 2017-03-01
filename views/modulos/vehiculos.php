@@ -42,8 +42,9 @@
 				<hr>
 
 				<div class="col-lg-12 seccion-buscar">
-					<form class="form-inline">
-			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese ">
+
+					<form class="form-inline ">
+			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese las placas">
 			      		<button class="btn btn-outline-success my-2 mr-sm-2" type="submit">Buscar</button>
 		    		</form>
 				</div>
@@ -69,6 +70,7 @@
 									<?php 
 										$vistaVehiculos = new GestorVehiculosController();
 										$vistaVehiculos->listarVehiculosController();
+										$vistaVehiculos->borrarVehiculosController();
 									 ?>
 									
 								</tbody>

@@ -33,11 +33,6 @@
 				<a class="nav-link" href="vehiculos"><span class="fa fa-cab icono-menu"></span>VEHÍCULOS</a>
 			</li>
 
-			<li class="nav-item" 
-				<?php if($uri == 'mantenimientos') echo "class='active'"; ?>>
-				<a class="nav-link" href="mantenimientos"><span class="fa fa-wrench icono-menu"></span>MANTENIMIENTOS</a>
-			</li>
-
 		</ul>
 
 		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 opciones-menu navbar-right">

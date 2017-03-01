@@ -26,7 +26,6 @@
 		<div id="seccionClientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 			
 			<div class="row">
-
 				<div class="col-md-6 lista-cliente-detalle detalle-add-cliente wow bounceInDown">
 					<span class="fa fa-car"><a href="vehiculos"> Vehículos - Añadir Vehículo</a></span>
 					<p class="text-muted">Administración de vehiculos</p>	
@@ -36,7 +35,6 @@
 					<a href="vehiculos" class="btn btn-success pull-right">
 					<span class="fa fa-car"></span> Lista de vehiculos</a>
 				</div>
-				
 			</div>
 
 			<!-- Inicio Panel -->
@@ -127,10 +125,11 @@
 							</div>
 						</div>
 					</form>
-				</div><!-- Contenido Formulario Add Vehiculos -->
+				</div><!-- Contenido Formulario Add Vehiculo -->
 		  	</div><!-- Fin Panel -->
-		</div><!-- Fin Contenido Ingreso Vehiculos -->
-
+		</div><!-- Fin Contenido Ingreso Vehiculo -->
+	</div><!-- Row -->
+</section><!-- Fin Seccion Ingresar Vehiculo -->
 
 
 		<!-- MODAL CARGA DEL CLIENTES -->
@@ -175,7 +174,6 @@
 		 	</div>
 
 		 </div>
-				
 
 
 

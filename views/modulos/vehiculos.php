@@ -76,9 +76,9 @@
 							</table>
 						</div>
 					</div>
-				</div><!-- Fin de Listar Clientes -->
+				</div><!-- Fin de Listar Vehiculos -->
 			</div><!-- Fin Panel -->
-		</div><!-- Fin Contenido Vehiculos -->
+		</div><!-- Fin Contenido Vehiculo -->
 	</div><!-- Row -->
 </section><!-- Fin Seccion Vehiculos -->
 

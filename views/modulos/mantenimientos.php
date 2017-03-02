@@ -13,46 +13,47 @@
 	
  ?>
 
+
 <!-- Vehiculos -->
 
-<!-- Seccion Vehiculos -->
+<!-- Seccion Mantenimientos -->
 <section class="container">
 	<div class="row">
 
-		<!--Contenido Vehiculos-->
-		<div id="seccionClientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+		<!--Contenido Mantenimientos-->
+		<div id="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
 			<div class="row">
-				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
-					<span class="fa fa-th"> <a href="">Vehículos</a></span>
-					<p class="text-muted small">Administra Lista de Vehículos</p>
+				<div class="col-md-6  wow bounceInDown">
+					<span class="fa fa-th"> <a href="">Mantenimientos</a></span>
+					<p class="text-muted small">Administra Lista de Mantenimientos</p>
 	            </div>
 
-	            <div class="col-md-6 pull-right seccion-add-clientes wow bounceInDown">
-	                <!--Ingrese Vehiculos-->
-	                <a id="" href="ingresoVehiculo" class="btn btn-info pull-right">
-	                <span class="fa fa-plus-circle"> </span> Nuevo Vehiculo</a>
+	            <div class="col-md-6 pull-right  wow bounceInDown">
+	                <!--Ingrese Mantenimientos-->
+	                <a id="" href="ingresoMantenimiento" class="btn btn-info pull-right">
+	                <span class="fa fa-plus-circle"> </span> Nuevo Mantenimiento</a>
 	            </div>
 	        </div>
 
 			<!-- Inicio Panel -->
 			<div class="panel panel-flat">
 				<div class="panel-heading wow zoomIn">
-					<h5 class="panel-title">Lista de vehículos</h5>
+					<h5 class="panel-title">Lista de Mantenimientos</h5>
 				</div>
 				<hr>
 
 				<div class="col-lg-12 seccion-buscar">
 
 					<form class="form-inline ">
-			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese las placas">
+			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese">
 			      		<button class="btn btn-outline-success my-2 mr-sm-2" type="submit">Buscar</button>
 		    		</form>
 				</div>
 
-				<!-- Listar Vehiculos -->
+				<!-- Listar Mantenimientos -->
 				<div class="row">
-					<div class="col-lg-12 contenido-tabla-clientes">
+					<div class="col-lg-12 ">
 						<div class="table-responsive">
 							<table class="table datatable-basic table-bordered table-striped table-hover">
 								<thead>

@@ -1,5 +1,5 @@
 <?php 
-
+	
 	session_start();
 
 	if (!$_SESSION["logged_in"]) {
@@ -7,14 +7,11 @@
 		header("location:ingreso");
 
 		exit();
-
 	}
 
 	include "header.php";
-
+	
  ?>
-
-
 <!-- FORMULARIO DE INGRESO DE VEHICULOS -->
 
 <!-- Seccion Ingresar vehiculos -->
@@ -132,48 +129,48 @@
 </section><!-- Fin Seccion Ingresar Vehiculo -->
 
 
-		<!-- MODAL CARGA DEL CLIENTES -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		 	<div class="modal-dialog modal-lg" role="document">
-		 		<div class="modal-content">
+<!-- MODAL CARGA DEL CLIENTES -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ 	<div class="modal-dialog modal-lg" role="document">
+ 		<div class="modal-content">
 
-					<div class="modal-header">
-				        <h5 class="modal-title" id="myModalLabel">Buscar Clientes</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				     </div>
+			<div class="modal-header">
+		        <h5 class="modal-title" id="myModalLabel">Buscar Clientes</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		     </div>
 
-					<div class="modal-body">
+			<div class="modal-body">
 
-						<form class="form-horizontal">
+				<form class="form-horizontal">
 
-						  <div class="form-group">
+				  <div class="form-group">
 
-							<div class="col-sm-5">
-							  <input type="text" class="form-control" id="" placeholder="Buscar Clientes" onkeyup="load(1)">
-							</div>
+					<div class="col-sm-5">
+					  <input type="text" class="form-control" id="" placeholder="Buscar Clientes" onkeyup="load(1)">
+					</div>
 
-							<button type="button" class="btn btn-default" onclick="load(1)">Buscar</button>
-						  </div>
-
-						</form>
-
-					<div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div><!-- Carga gif animado -->
-
-					
-					<div class="outer_div table-responsive" ></div><!-- Datos ajax Final -->
-								
-
+					<button type="button" class="btn btn-default" onclick="load(1)">Buscar</button>
 				  </div>
 
-					<div class="modal-footer">
-							<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>	
-					</div>
-		 		</div>
-		 	</div>
+				</form>
 
-		 </div>
+			<!--<div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div> Carga gif animado -->
+
+			
+			<div class="outer_div table-responsive" ></div><!-- Datos ajax Final -->
+						
+
+		  </div>
+
+			<div class="modal-footer">
+					<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>	
+			</div>
+ 		</div>
+ 	</div>
+
+ </div>
 
 
 

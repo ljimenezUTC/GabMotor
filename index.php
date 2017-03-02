@@ -3,6 +3,7 @@
 	require_once "models/ingreso.php";
 	require_once "models/gestorClientes.php";
 	require_once "models/gestorVehiculos.php";
+	require_once "models/gestorMantenimientos.php";
 
 	require_once "controllers/template.php";
 	require_once "controllers/enlaces.php";
@@ -10,6 +11,7 @@
 	require_once "controllers/salir.php";
 	require_once "controllers/gestorClientes.php";
 	require_once "controllers/gestorVehiculos.php";
+	require_once "controllers/gestorMantenimientos.php";
 
 	require_once 'views/mensajes.php';
 	

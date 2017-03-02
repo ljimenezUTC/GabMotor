@@ -1,19 +1,17 @@
 <?php 
-
+	
 	session_start();
 
 	if (!$_SESSION["logged_in"]) {
-
-		header("Location:ingreso");
+		
+		header("location:ingreso");
 
 		exit();
 	}
 
-	include "header.php"
-
+	include "header.php";
+	
  ?>
-
-
  <!-- FORMULARIO DE EDICION DE VEHICULOS -->
 
 <section class="container">

@@ -1,12 +1,11 @@
 
-
 $(document).ready(function() {
 	
-	load();
+	listarClientesAgregar();
 
 });
 
-function load(){
+function listarClientesAgregar(){
 
 	var parametros = {"action":"ajax"};
 	$("#loader").fadeIn('slow');
@@ -17,13 +16,16 @@ function load(){
 
 		beforeSend: function () {
 
-		}, success: function (datos) {
+		},
+
+		success: function (datos) {
 				
-				console.log(datos);
+				//console.log(datos);
 				$(".outer_div").html(datos);
 
 
 		}, 
+		
 		error: function(error){
 			
 			console.log("error" + error);

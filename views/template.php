@@ -33,7 +33,6 @@
 		<script type="text/javascript" src="views/js/sweetalert.min.js"></script>
 		<script type="text/javascript" src="views/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="views/js/wow.min.js"></script>
-		<script type="text/javascript" src="views/js/main.js"></script>
 
 
 	</head>
@@ -50,7 +49,6 @@
 
 
 
-		<script type="text/javascript" src="views/js/wow.min.js"></script>
 		<script type="text/javascript" src="views/js/main.js"></script>
 		<script type="text/javascript" src="views/js/gestorClientes.js"></script>
 		<script type="text/javascript" src="views/js/gestorVehiculos.js"></script>

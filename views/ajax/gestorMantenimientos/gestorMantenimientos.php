@@ -1,11 +1,11 @@
 <?php 
 
-	require_once "../../models/gestorMantenimientos.php";
-	require_once "../../controllers/gestorMantenimientos.php";
+	require_once "../../../models/gestorMantenimientos.php";
+	require_once "../../../controllers/gestorMantenimientos.php";
 
 	# CLASE Y METODOS
 	# -----------------------------------------------------------------------
-	class Ajax
+	class ajax
 	{
 		
 

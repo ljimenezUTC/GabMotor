@@ -3,6 +3,7 @@ $(document).ready(function() {
 	listarVehiculosAgregar();
 	listarCategoriasMantenimientos();
 	listarCategoriasMantenimientosSubItems();
+	agregarMantenimiento();
 
 });
 
@@ -12,7 +13,7 @@ function listarVehiculosAgregar(){
 	$("#loader").fadeIn('slow');
 
 	$.ajax({
-		url: 'views/ajax/gestorMantenimientos.php',
+		url: 'views/ajax/gestorMantenimientos/gestorMantenimientos.php',
 		data: parametros,
 
 		beforeSend: function(){
@@ -50,7 +51,7 @@ function listarCategoriasMantenimientos(){
 	var parametros = {"action":"ajaxCategoria"};
 
 	$.ajax({
-		url: 'views/ajax/cargarCategorias.php',
+		url: 'views/ajax/gestorMantenimientos/cargarCategorias.php',
 		data: parametros
 	})
 	.done(function(datos){
@@ -75,7 +76,7 @@ function listarCategoriasMantenimientosSubItems(){
 
 		$.ajax({
 			type: 'POST',
-			url: 'views/ajax/cargarMantenimientos.php',
+			url: 'views/ajax/gestorMantenimientos/cargarMantenimientos.php',
 			data: {"idCategoria":idCategoria, "action":"ajaxMantenimiento"}
 		})
 		.done(function(datos){
@@ -92,4 +93,31 @@ function listarCategoriasMantenimientosSubItems(){
 		});
 	});
 
+}
+
+function agregarMantenimiento(){
+
+	$("#agregarIdMantenimiento").on('click', function(){
+
+		var idMantenimiento = $("#ingresoTipoMantenimiento").val();
+
+		$.ajax({
+			type: 'POST',
+			url: 'views/ajax/gestorMantenimientos/agregarMantenimientos.php',
+			data: {"idMantenimiento":idMantenimiento}
+		})
+		.done(function(datos){
+
+			alert(datos);
+			console.log(datos);
+			//$("#ingresoTipoMantenimiento").html(datos);
+
+		})
+		.fail(function(){
+
+		})
+		.always(function() {
+			console.log("complete");
+		});
+	});
 }

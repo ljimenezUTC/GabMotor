@@ -103,7 +103,7 @@
 					    <div class="text-right form-group row">
 					    	<div class="col-sm-12">
 								<!--<a href="mantenimientos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>-->
-								<button type="submit" class="btn btn-info"> Agregar <span class="fa fa-check-circle"></span></button>
+								<button type="button" class="btn btn-info" id="agregarIdMantenimiento"> Agregar mantenimiento</button>
 							</div>
 						</div>
 

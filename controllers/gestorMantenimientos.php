@@ -52,7 +52,7 @@
 			$respuesta = GestorMantenimientosModel::listarCategoriasMantenimientosModel("categoria");
 
 			echo '
-					<option value="0"> -- Seleccione una categoria -- </option>
+					<option value="0"> Seleccione una categoria </option>
 				';
 
 			foreach ($respuesta as $row => $item) {
@@ -74,7 +74,7 @@
 			$respuesta = GestorMantenimientosModel::listarCategoriasMantenimientosSubItemsModel("categoria", "mantenimiento", $datosController);
 
 			echo '
-					<option value="0"> -- Seleccione un Item -- </option>
+					<option value="0"> Seleccione una opcion </option>
 				';
 
 			foreach ($respuesta as $row => $item) {

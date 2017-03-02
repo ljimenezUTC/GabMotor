@@ -85,7 +85,47 @@
 
 		}
 
-		
+		#AGREGAR LOS MANTENIMIENTOS EN LA TABLA TEMPORAL Y SU PRESENTACION EN LA VISTA AGREGAR MANTENIMIENTOS
+		#---------------------------------------------------------------------------------------------------
+		public function agregarMantenimientosController($idMantenimiento){
+
+			$datosController = $idMantenimiento;
+
+			$respuesta = GestorMantenimientosModel::agregarMantenimientosModel($datosController," 	temporal_mantenimientos", "mantenimiento");
+
+			echo '
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th class="text-center">Categoria</th>
+							<th class="text-center">Mantenimiento</th>
+							<th class="text-center">Accion</th>
+						</tr>
+					</thead>
+					<tbody>
+			';
+
+			foreach ($respuesta as $row => $item) {
+				
+				echo '
+					<tr>
+						<td class="text-center"></td>
+						<td class="text-center">' . $item["descripcion_mantenimiento"] . '</td>
+						<td class="text-center"></td>
+					</tr>
+
+					';
+
+			}
+
+			echo '
+				
+					</tbody>
+				</table>
+
+			';
+
+		}
+
 	}
 
-?>

@@ -100,24 +100,42 @@ function agregarMantenimiento(){
 	$("#agregarIdMantenimiento").on('click', function(){
 
 		var idMantenimiento = $("#ingresoTipoMantenimiento").val();
+		var idCategoria = $("#ingresoCategoriaMantenimiento").val();
 
-		$.ajax({
-			type: 'POST',
-			url: 'views/ajax/gestorMantenimientos/agregarMantenimientos.php',
-			data: {"idMantenimiento":idMantenimiento}
-		})
-		.done(function(datos){
+		if (idCategoria == "0" ) {
 
-			alert(datos);
-			console.log(datos);
-			//$("#ingresoTipoMantenimiento").html(datos);
+			$("#resultados").html("Seleccione una categoria");
 
-		})
-		.fail(function(){
+		}else{
 
-		})
-		.always(function() {
-			console.log("complete");
-		});
+			if (idMantenimiento == "0") {
+
+				$("#resultados").html("Seleccione un mantenimiento");
+
+			}else{
+
+				$.ajax({
+					type: 'POST',
+					url: 'views/ajax/gestorMantenimientos/agregarMantenimientos.php',
+					data: {"idMantenimiento":idMantenimiento}
+				})
+				.done(function(datos){
+
+					//alert(datos);
+					console.log(datos);
+					$("#resultados").html(datos);
+
+				})
+				.fail(function(){
+
+				})
+				.always(function() {
+					console.log("complete");
+				});
+
+			}
+
+		}
+
 	});
 }

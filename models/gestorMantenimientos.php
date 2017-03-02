@@ -49,5 +49,38 @@
 
 		}
 
+		#AGREGAR LOS MANTENIMIENTOS EN LA TABLA TEMPORAL Y SU PRESENTACION EN LA VISTA AGREGAR MANTENIMIENTOS
+		#---------------------------------------------------------------------------------------------------
+		public function agregarMantenimientosModel($datosModel,$tablaTemporalMantenimientos, $tablaMantenimiento){
+
+			session_start();
+
+			$sessionId = session_id();
+
+			$stmtTmpInsertar = Conexion::conectar()->prepare("INSERT INTO $tablaTemporalMantenimientos (id_mantenimiento, session_id) VALUES(:idMantenimiento, :sessionId)");
+
+			$stmtTmpInsertar->bindParam(":idMantenimiento",$datosModel, PDO::PARAM_INT);
+			$stmtTmpInsertar->bindParam(":sessionId",$sessionId, PDO::PARAM_STR);
+
+			if($stmtTmpInsertar->execute()){
+
+				$stmt = Conexion::conectar()->prepare("SELECT $tablaTemporalMantenimientos.id_mantenimiento, $tablaMantenimiento.descripcion_mantenimiento FROM $tablaTemporalMantenimientos INNER JOIN $tablaMantenimiento ON $tablaTemporalMantenimientos.id_mantenimiento = $tablaMantenimiento.id_mantenimiento ORDER BY $tablaMantenimiento.id_mantenimiento ASC ");
+
+				$stmt->execute();
+
+				return $stmt->fetchAll();
+
+				$stmt->close();
+
+			}else{
+
+				return 'error';
+
+			}
+
+			$stmtTmpInsertar->close();
+
+		}
+
 	}
  ?>

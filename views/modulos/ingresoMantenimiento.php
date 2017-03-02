@@ -107,6 +107,8 @@
 							</div>
 						</div>
 
+						<div id="resultados" class='col-md-12'></div><!-- Carga los datos ajax -->
+
 					</form>
 				</div><!-- Contenido Formulario Add mantenimientos -->
 		  	</div><!-- Fin Panel -->

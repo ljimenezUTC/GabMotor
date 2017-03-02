@@ -1,4 +1,7 @@
 <?php 
+	
+	require_once "../../../models/gestorMantenimientos.php";
+	require_once "../../../controllers/gestorMantenimientos.php";
 
 	#CLASE Y METODOS
 	#------------------------------------------------------------------------
@@ -10,7 +13,9 @@
 
 			$datos = $this->idMantenimiento;
 
-			echo $datos;
+			$respuesta = GestorMantenimientosController::agregarMantenimientosController($datos);
+
+			echo $respuesta;
 			
 		}
 	}

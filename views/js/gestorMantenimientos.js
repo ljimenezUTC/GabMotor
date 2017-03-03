@@ -139,3 +139,32 @@ function agregarMantenimiento(){
 
 	});
 }
+
+
+function eliminarMantenimiento(idTemporalMantenimiento) {
+
+
+	$.ajax({
+		url: 'views/ajax/gestorMantenimientos/agregarMantenimientos.php',
+		type: 'GET',
+		data: {'idTemporalMantenimiento': idTemporalMantenimiento},
+	})
+	.done(function(datos) {
+
+		//alert(datos);
+		//console.log(datos);
+		$("#resultados").html(datos);
+
+	})
+	.fail(function() {
+
+		console.log("error");
+
+	})
+	.always(function() {
+
+		console.log("complete");
+
+	});
+	
+}

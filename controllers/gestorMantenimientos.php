@@ -91,7 +91,7 @@
 
 			$datosController = $idMantenimiento;
 
-			$respuesta = GestorMantenimientosModel::agregarMantenimientosModel($datosController," 	temporal_mantenimientos", "mantenimiento");
+			$respuesta = GestorMantenimientosModel::agregarMantenimientosModel($datosController," 	temporal_mantenimientos", "mantenimiento", "categoria");
 
 			echo '
 				<table class="table table-striped">
@@ -109,9 +109,51 @@
 				
 				echo '
 					<tr>
-						<td class="text-center"></td>
+						<td class="text-center">' . $item["nombre_categoria"] . '</td>
 						<td class="text-center">' . $item["descripcion_mantenimiento"] . '</td>
-						<td class="text-center"></td>
+						<td class="text-center"><button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><i class="fa fa-trash"></i></button></td>
+					</tr>
+
+					';
+
+			}
+
+			echo '
+				
+					</tbody>
+				</table>
+
+			';
+
+		}
+
+		#
+		#------------------------------------------------------------------------------------------------
+		public function eliminarMantenimientosTemporalController($datos){
+
+			$datosController = $datos;
+
+			$respuesta = GestorMantenimientosModel::eliminarMantenimientosTemporalModel($datosController, "temporal_mantenimientos", "mantenimiento", "categoria");
+
+			echo '
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th class="text-center">Categoria</th>
+							<th class="text-center">Mantenimiento</th>
+							<th class="text-center">Accion</th>
+						</tr>
+					</thead>
+					<tbody>
+			';
+
+			foreach ($respuesta as $row => $item) {
+				
+				echo '
+					<tr>
+						<td class="text-center">' . $item["nombre_categoria"] . '</td>
+						<td class="text-center">' . $item["descripcion_mantenimiento"] . '</td>
+						<td class="text-center"><button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><i class="fa fa-trash"></i></button></td>
 					</tr>
 
 					';
@@ -128,4 +170,4 @@
 		}
 
 	}
-
+?>

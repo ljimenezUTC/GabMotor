@@ -102,12 +102,18 @@
 
 					    <div class="text-right form-group row">
 					    	<div class="col-sm-12">
-								<!--<a href="mantenimientos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>-->
 								<button type="button" class="btn btn-info" id="agregarIdMantenimiento"> Agregar mantenimiento</button>
 							</div>
 						</div>
 
 						<div id="resultados" class='col-md-12'></div><!-- Carga los datos ajax -->
+
+						<div class="text-right form-group row">
+					    	<div class="col-sm-12">
+								<!--<a href="mantenimientos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>-->
+								<button type="submit" class="btn btn-info" > Guardar</button>
+							</div>
+						</div>
 
 					</form>
 				</div><!-- Contenido Formulario Add mantenimientos -->

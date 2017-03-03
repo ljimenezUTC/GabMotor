@@ -51,7 +51,7 @@
 
 		#AGREGAR LOS MANTENIMIENTOS EN LA TABLA TEMPORAL Y SU PRESENTACION EN LA VISTA AGREGAR MANTENIMIENTOS
 		#---------------------------------------------------------------------------------------------------
-		public function agregarMantenimientosModel($datosModel,$tablaTemporalMantenimientos, $tablaMantenimiento){
+		public function agregarMantenimientosModel($datosModel,$tablaTemporalMantenimientos, $tablaMantenimiento, $tablaCategoria){
 
 			session_start();
 
@@ -64,7 +64,7 @@
 
 			if($stmtTmpInsertar->execute()){
 
-				$stmt = Conexion::conectar()->prepare("SELECT $tablaTemporalMantenimientos.id_mantenimiento, $tablaMantenimiento.descripcion_mantenimiento FROM $tablaTemporalMantenimientos INNER JOIN $tablaMantenimiento ON $tablaTemporalMantenimientos.id_mantenimiento = $tablaMantenimiento.id_mantenimiento ORDER BY $tablaMantenimiento.id_mantenimiento ASC ");
+				$stmt = Conexion::conectar()->prepare("SELECT $tablaTemporalMantenimientos.id_mantenimiento, $tablaTemporalMantenimientos.id_temporal, $tablaMantenimiento.descripcion_mantenimiento, $tablaCategoria.nombre_categoria FROM $tablaTemporalMantenimientos INNER JOIN $tablaMantenimiento ON $tablaTemporalMantenimientos.id_mantenimiento = $tablaMantenimiento.id_mantenimiento INNER JOIN categoria ON $tablaMantenimiento.id_categoria = $tablaCategoria.id_categoria ORDER BY $tablaCategoria.id_categoria ASC");
 
 				$stmt->execute();
 
@@ -79,6 +79,34 @@
 			}
 
 			$stmtTmpInsertar->close();
+
+		}
+
+		#
+		#---------------------------------------------------------------------------------------------------
+		public function eliminarMantenimientosTemporalModel($datosModel, $tablaTemporalMantenimientos, $tablaMantenimiento, $tablaCategoria){
+
+			$stmtEliminar = Conexion::conectar()->prepare("DELETE FROM $tablaTemporalMantenimientos WHERE id_temporal = :idTemporal");
+
+			$stmtEliminar->bindParam(":idTemporal", $datosModel, PDO::PARAM_INT);
+
+			if ($stmtEliminar->execute()) {
+				
+				$stmt = Conexion::conectar()->prepare("SELECT $tablaTemporalMantenimientos.id_mantenimiento, $tablaTemporalMantenimientos.id_temporal, $tablaMantenimiento.descripcion_mantenimiento, $tablaCategoria.nombre_categoria FROM $tablaTemporalMantenimientos INNER JOIN $tablaMantenimiento ON $tablaTemporalMantenimientos.id_mantenimiento = $tablaMantenimiento.id_mantenimiento INNER JOIN categoria ON $tablaMantenimiento.id_categoria = $tablaCategoria.id_categoria ORDER BY $tablaCategoria.id_categoria ASC");
+
+				$stmt->execute();
+
+				return $stmt->fetchAll();
+
+				$stmt->close();
+
+			}else{
+
+				return 'error';
+
+			}
+
+			$stmtEliminar->close();
 
 		}
 

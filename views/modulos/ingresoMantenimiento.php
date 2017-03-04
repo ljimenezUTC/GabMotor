@@ -31,8 +31,7 @@
 				</div>
 
 				<div class="col-md-6 pull-right ">
-					<a href="mantenimientos" class="btn btn-success pull-right">
-					<span class="fa fa-wrench"></span> Lista de Mantenimientos</a>
+					
 				</div>
 			</div>
 
@@ -169,4 +168,11 @@
 </div>
 
 <!-- FIN  MODAL CARGA DEL CLIENTES -->
+
+<?php 
+
+	$registrarMantenimientos = new GestorMantenimientosController();
+	$registrarMantenimientos->registrarMantenimientosController();
+
+ ?>
 

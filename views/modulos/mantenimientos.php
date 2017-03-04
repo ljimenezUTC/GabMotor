@@ -39,7 +39,7 @@
 			<!-- Inicio Panel -->
 			<div class="panel panel-flat">
 				<div class="panel-heading wow zoomIn">
-					<h5 class="panel-title">Lista de Mantenimientos</h5>
+					<h5 class="panel-title">Reporte de Mantenimientos</h5>
 				</div>
 				<hr>
 
@@ -58,21 +58,21 @@
 							<table class="table datatable-basic table-bordered table-striped table-hover">
 								<thead>
 									<tr class="success tabla-header">
-										<th>Cliente</th>
-										<th>Placas</th>
-										<th>Marca</th>
-										<th>Modelo</th>
-										<th>Año</th>
+										<th>Cédula cliente</th>
+										<th>Nombre</th>
+										<th>Placas del vehículo</th>
+										<th>Marca/Modelo</th>
 										<th>Kilometraje</th>
-										<th colspan="3">Acción</th>
+										<th>Categoria mantenimiento</th>
+										<th>Mantenimiento</th>
+										<th>Fecha de realizacion</th>
 									</tr>
 								</thead>
 
 								<tbody>
 									<?php 
-										$vistaVehiculos = new GestorVehiculosController();
-										$vistaVehiculos->listarVehiculosController();
-										$vistaVehiculos->borrarVehiculosController();
+										$vistaReporteFinalMantenimientos = new GestorMantenimientosController();
+										$vistaReporteFinalMantenimientos->reporteFinalMantenimientosController();
 									 ?>
 								</tbody>
 							</table>

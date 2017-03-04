@@ -127,7 +127,7 @@
 
 		}
 
-		#
+		#ELIMINAR MANTENIMIENTOS DE LA TABLA TEMPORAL Y PRESENTACION EN LA VISTA DE AGREGAR MANTENIMIENTOS
 		#------------------------------------------------------------------------------------------------
 		public function eliminarMantenimientosTemporalController($datos){
 
@@ -153,7 +153,7 @@
 					<tr>
 						<td class="text-center">' . $item["nombre_categoria"] . '</td>
 						<td class="text-center">' . $item["descripcion_mantenimiento"] . '</td>
-						<td class="text-center"><button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><i class="fa fa-trash"></i></button></td>
+						<td class="text-center"><button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><span class="fa fa-trash"></span></button></td>
 					</tr>
 
 					';
@@ -169,5 +169,68 @@
 
 		}
 
+		#GUARDAR LOS MANTENIMIENTOS REALIZADOS EN LA TABLA DE DETALLE Y ELIMINARLOS EN LA TABLA TEMPORAL
+		#------------------------------------------------------------------------------------------------
+		public function registrarMantenimientosController(){
+
+			if (isset($_POST["idVehiculoIngresoMantenimiento"])) {
+
+				$datosController = $_POST["idVehiculoIngresoMantenimiento"];
+
+				$respuesta = GestorMantenimientosModel::registrarMantenimientosModel($datosController);
+
+				if ($respuesta == 'success') {
+					
+					echo'<script>
+
+							swal({
+								  title: "¡OK!",
+								  text: "¡Los mantenimientos han sido insertados correctamente!",
+								  type: "success",
+								  confirmButtonText: "Cerrar",
+								  closeOnConfirm: false
+							},
+
+							function(isConfirm){
+									 if (isConfirm) {	   
+									    window.location = "mantenimientos";
+									  } 
+							});
+
+
+						</script>';
+
+				}else{
+
+					echo $respuesta;
+				}
+
+			}
+		}
+		#REPORTE FINAL DE LOS MANTENIMIENTOS INGRESADOS REFERENTES A CADA VEHICULO CON SUS RESPECTIVO CLIENTE
+		#----------------------------------------------------------------------------------------------------
+		public function reporteFinalMantenimientosController(){
+
+			$respuesta = GestorMantenimientosModel::reporteFinalMantenimientosModel();
+
+			foreach ($respuesta as $row => $item) {
+				
+				echo '
+					<tr>
+						<td>' . $item["cedula_cliente"] . '</td>
+						<td>' . $item["nombre_cliente"] . " " .  $item["apellido_cliente"] . '</td>
+						<td>' . $item["placas_vehiculo"] . '</td>
+						<td>' . $item["marca_vehiculo"] . ' '. $item["modelo_vehiculo"] . '</td>
+						<td>' . $item["kilometraje_vehiculo"] . '</td>
+						<td>' . $item["nombre_categoria"] . '</td>
+						<td>' . $item["descripcion_mantenimiento"] . '</td>
+						<td>' . $item["fecha_ingreso"] . '</td>
+					</tr>
+				';
+			}
+
+		}
+
 	}
 ?>
+

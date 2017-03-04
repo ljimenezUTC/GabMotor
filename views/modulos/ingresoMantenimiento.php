@@ -46,6 +46,15 @@
 				<!-- Contenido Formulario Add mantenimientos -->
 				<div class="">
 					<form method="POST">
+
+						<div class="row">
+							<div class="col-md-3">
+								<label  class="control-label">Cliente</label>
+								<input type="text" class="form-control" id="nombresClienteIngresoMantenimiento" readonly="readonly"><hr>
+							</div>
+							
+						</div>
+						
 						<div class="row">
 							<div class="col-md-3">
 						  		<label class="control-label">Placas del vehículo</label>

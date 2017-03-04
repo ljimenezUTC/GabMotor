@@ -35,13 +35,16 @@ function listarVehiculosAgregar(){
 	});
 }
 
-function agregarVehiculo(id, placas, marca, modelo, kilometraje){
+function agregarVehiculo( id, placas, marca, modelo, kilometraje, nombreCliente, apellidoCliente){
 
 	$("#idVehiculoIngresoMantenimiento").attr('value', id);
 	$("#placasVehiculoIngresoMantenimiento").attr('value', placas);
 	$("#marcaVehiculoIngresoMantenimiento").attr('value', marca);
 	$("#modeloVehiculoIngresoMantenimiento").attr('value', modelo);
 	$("#kilometrajeVehiculoIngresoMantenimiento").attr('value', kilometraje);
+
+	$("#nombresClienteIngresoMantenimiento").attr('value', nombreCliente + ' ' + apellidoCliente);
+	
 
 	
 }

@@ -36,7 +36,7 @@
 			 			<td class="text-center">'.$item["modelo_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["anio_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["kilometraje_vehiculo"].'</td>
-			 			<td class="text-center"><a href="#" onclick="agregarVehiculo(\''.$item["id_vehiculo"].'\', \''.$item["placas_vehiculo"].'\', \''.$item["marca_vehiculo"].'\', \''.$item["modelo_vehiculo"].'\', \''.$item["kilometraje_vehiculo"].'\')" class="btn btn-outline-success"> Agregar </a></td>
+			 			<td class="text-center"><a href="#" onclick="agregarVehiculo(\''.$item["id_vehiculo"].'\', \''.$item["placas_vehiculo"].'\', \''.$item["marca_vehiculo"].'\', \''.$item["modelo_vehiculo"].'\', \''.$item["kilometraje_vehiculo"].'\', \''.$item["nombre_cliente"].'\', \''.$item["apellido_cliente"].'\')" class="btn btn-outline-success"> Agregar </a></td>
 			 		</tr>
 		 		';
 			}

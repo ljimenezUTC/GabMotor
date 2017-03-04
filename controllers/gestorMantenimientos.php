@@ -8,12 +8,13 @@
 		#----------------------------------------------------------
 		public function listarVehiculosMantenimientosController(){
 
-			$respuesta = GestorMantenimientosModel::listarVehiculosMantenimientosModel("vehiculo");
+			$respuesta = GestorMantenimientosModel::listarVehiculosMantenimientosModel("vehiculo", "cliente");
 
 			echo '
 				<table class="table table-striped">
 				 	<thead>
 				 		<tr>
+				 			<th class="text-center">Cliente</th>
 				 			<th class="text-center">Placas</th>
 				 			<th class="text-center">Marca</th>
 				 			<th class="text-center">Modelo</th>
@@ -29,6 +30,7 @@
 
 				echo '
 					<tr>
+						<td class="text-center">'.$item["nombre_cliente"]. ' '.$item["apellido_cliente"].'</td>
 			 			<td class="text-center">'.$item["placas_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["marca_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["modelo_vehiculo"].'</td>

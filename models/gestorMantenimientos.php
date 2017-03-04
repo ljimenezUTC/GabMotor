@@ -7,9 +7,9 @@
 		
 		# LISTAR VEHICULOS PARA EL INGRESO DE MANTENIMIENTOS
 		#----------------------------------------------------------
-		public function listarVehiculosMantenimientosModel($tablaVehiculo){
+		public function listarVehiculosMantenimientosModel($tablaVehiculo, $tablaCliente){
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tablaVehiculo ");
+			$stmt = Conexion::conectar()->prepare("SELECT $tablaCliente.nombre_cliente, $tablaCliente.apellido_cliente, $tablaVehiculo.* FROM $tablaVehiculo INNER JOIN cliente ON $tablaVehiculo.id_cliente = $tablaCliente.id_cliente ORDER BY $tablaCliente.id_cliente ASC");
 
 			$stmt->execute();
 

@@ -1,42 +1,49 @@
 //-----------------------
 // PATRON DE COLORES
 //-----------------------
-$color-principal: #12AFAF;
-$color-texto: #FFF;
-$color-texto-negro: #333333;
-$color-logo: #FFEB3B;
+$dark-primary-color: #0288D1; 
+$default-primary-color: #03A9F4;
+$light-primary-color: #B3E5FC;
+$text-primary-color: #FFFFFF;
+$accent-color: #00BCD4;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #BDBDBD;
 
 body {
   font-family: 'Open Sans', sans-serif;
   padding-top: 60px;
   padding-bottom: 20px;
+  background: $text-primary-color!important;
 }
 
 /**************************
   * Login
   ************************/
 .menu-login{
-  background: $color-principal;
+  background: $dark-primary-color;
+  padding-bottom:1px;
+  padding-top:1px;
+  
   ul li a, .logo{
-    color:$color-texto;
-  }
-  .fa{
-    font-size: 24px;
-    padding-left:15px;
+    color:$text-primary-color;
   }
 
-  ul li a:hover{
-    color: $color-texto-negro;
-    transition: all 1200ms ease;
+  .fa{
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .fa:hover{
+    color: $light-primary-color;
   }
 }
 
 .login-form{
-  background: $color-texto;
+  background: $text-primary-color;
   font-size:12px;
-  border-radius: 6px;
-  border: 1px solid #EEEEEE;
-  box-shadow: 0 0 3px #252932;
+  border-radius: 4px;
+  box-shadow: 0 0 4px $divider-color;
 }
 
 .detalle-login{
@@ -81,7 +88,7 @@ body {
 }
 
 .input-group-addon{
-  background: $color-texto;
+  background: $text-primary-color;
   font-size: 20px;
   width: 40px;
 }
@@ -95,12 +102,6 @@ body {
 
   .demo-redes{
     margin-top: -10px;
-  }
-
-  .menu-login{
-    ul li a:hover{
-      border-bottom: 0.1px solid;
-    }
   }
 
   .contenido-form-login{
@@ -128,44 +129,38 @@ body {
   }
 }
 
-
 /**************************
   * Menu
   ************************/
 .menu{
-  background: $color-principal;
+  background:$dark-primary-color;
+  padding-bottom:6px;
+  padding-top:6px;
+
   ul li a{
-    color: $color-texto;
+    color:$text-primary-color;
     font-size: 14px;
   }
+
   ul li a:hover {
-    color:$color-texto-negro;
-    border-bottom: 0.1px solid;
-    transition: all 1200ms ease;
+    color: $light-primary-color;
   }
   .logo{
-    color: $color-logo;
+     color:$text-primary-color;
   }
-  .logo:hover{
-    color: $color-texto;
-  }
+}
+
+.navbar-toggler-icon{
+  font-size: 24px;
+  color: $text-primary-color;
 }
 
 .icono-menu{
   padding: 0px 8px 0px 0px;
 }
 
-.opciones-menu, .logo{
-  margin-left: 30px !important;
-}
-
-.navbar-nav.navbar-right{
-  margin-right: 30px !important;
-}
-
-.fa-bars{
-  font-size: 24px;
-  color: $color-texto;
+.menu-right{
+  margin-right: 0px !important;
 }
 
 .fa-user{
@@ -178,9 +173,10 @@ body {
   * Detalle perfil
   *******************/
 .dropdown-menu{
-  margin-left:-135px;
+  margin-left:-175px;
   padding: 0px;
   overflow: hidden;
+  border-radius:2px;
 }
 
 .navbar-content{
@@ -189,7 +185,7 @@ body {
   padding: 15px 0px 15px 0px;
   .user-img{
     font-size: 90px;
-    color: #12AFAF;
+    color: $dark-primary-color;
   }
   .col-md-7{
     a{
@@ -204,7 +200,7 @@ body {
 }
 
 .navbar-footer{
-  background-color: #5BC0DE;
+  background-color: $divider-color;
   text-align: center;
 }
 
@@ -217,7 +213,7 @@ body {
     }
     a:hover{
       text-decoration: none;
-      color: #f44336;
+      color: $dark-primary-color;
       border-bottom: 0px solid;
     }
   }
@@ -235,39 +231,124 @@ body {
   } 
 }
 
+/****************************
+* Seccion Inicio
+****************************/
+.alert {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.11);
+  display: table;
+  width: 100%;
+}
+
+.alert-white {
+  background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+  padding-left: 70px;
+  position: relative;
+}
+
+.alert-white.rounded {
+  border-radius: 3px;
+}
+
+.alert-white.rounded .icon {
+  border-radius: 3px 0 0 3px;
+}
+
+.alert-white .icon {
+  text-align: center;
+  width: 45px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #bdbdbd;
+  padding-top: 15px;
+}
+
+.alert-white .icon:after {
+  transform: rotate(45deg);
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 1px solid #bdbdbd;
+  position: absolute;
+  border-left: 0;
+  border-bottom: 0;
+  top: 50%;
+  right: -6px;
+  margin-top: -3px;
+  background: #fff;
+}
+
+.alert-white .icon i {
+  font-size: 20px;
+  color: #fff;
+  left: 12px;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+}
+
+/*Color alertas de inicio*/
+.alert-success {
+  color: $secondary-text-color;
+  background-color: $default-primary-color;
+  border-color: $default-primary-color;
+}
+
+.alert-white.alert-success .icon, 
+.alert-white.alert-success .icon:after {
+  border-color: $default-primary-color;
+  background: $default-primary-color;
+}
+
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #98cce6;
+  color: #3a87ad;
+}
+
+.alert-white.alert-info .icon, 
+.alert-white.alert-info .icon:after {
+  border-color: #3a8ace;
+  background: #4d90fd;
+}
+
+
 /**************************
   * Clientes
   ************************/
 .panel{
-  border: 1px #F5F5F5;
-  border-radius: 4px;
-  background: $color-texto;
-}
-
-.panel-heading{
-  padding-top: 16px;
-  padding-left: 16px;
+  border: 1px $text-primary-color;
+  background: $text-primary-color;
 }
 
 .seccion-buscar{
-  padding:0px 0px 15px 16px;
+  padding:0px 0px 15px 0px;
+  input, button{font-size:14px;}
+  .buscar{width: 395px}
+  .btn-buscar{
+    margin-left: 8px;
+  }
 }
 
 .lista-cliente-detalle{
-  font-size: 25px;
-  padding: 20px;
+  font-size: 24px;
+  padding: 18px;
   a{font-family: 'Open Sans', sans-serif;}
   p{font-size: 14px;}
 }
 
 .seccion-add-clientes{
-  padding:20px;
+  padding:18px;
   a{
     font-size: 14px;
   }
   span{
     padding-right: 5px;
-    background: rgba(91,192,222,0.5);
   }
 }
 
@@ -277,10 +358,10 @@ body {
 }
 
 .tabla-header{
-  th{
-    background: #4CAF50;
+  th{font-family: 'Open Sans', sans-serif;
+    background: $default-primary-color;
     text-align: center;
-    color: $color-texto;
+    color: $text-primary-color;
   }
 }
 
@@ -300,11 +381,15 @@ body {
   }
 
   .seccion-buscar{
-    padding:0px 10px 2px 10px;
+    padding:0px;
     text-align: center;
+    .btn-buscar{
+      margin-left: 0px;
+    }
   }
 
-  .seccion-buscar .form-inline .mr-sm-2{
+
+  .seccion-buscar .form-inline .mr-sm-0{
     width: 100%;
     text-align: center;
     font-size:12px;
@@ -373,4 +458,12 @@ body {
   }
 }
 
-//Continua
+/**************************
+  * Seccion mantenimentos
+  ************************/
+.contenedor-mantenimientos{
+  font-size:14px;
+  button, input, select{font-size:14px;}
+  
+}
+

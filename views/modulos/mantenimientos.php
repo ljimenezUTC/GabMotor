@@ -14,8 +14,6 @@
  ?>
 
 
-<!-- Vehiculos -->
-
 <!-- Seccion Mantenimientos -->
 <section class="container">
 	<div class="row">
@@ -24,12 +22,12 @@
 		<div id="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
 			<div class="row">
-				<div class="col-md-6  wow bounceInDown">
+				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
 					<span class="fa fa-th"> <a href="">Mantenimientos</a></span>
 					<p class="text-muted small">Administra Lista de Mantenimientos</p>
 	            </div>
 
-	            <div class="col-md-6 pull-right  wow bounceInDown">
+	            <div class="col-md-6 pull-right seccion-add-clientes wow bounceInDown">
 	                <!--Ingrese Mantenimientos-->
 	                <a id="" href="ingresoMantenimiento" class="btn btn-info pull-right">
 	                <span class="fa fa-plus-circle"> </span> Nuevo Mantenimiento</a>
@@ -46,14 +44,14 @@
 				<div class="col-lg-12 seccion-buscar">
 
 					<form class="form-inline ">
-			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese">
-			      		<button class="btn btn-outline-success my-2 mr-sm-2" type="submit">Buscar</button>
+			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese la ceula del cliente">
+			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit">Buscar</button>
 		    		</form>
 				</div>
 
 				<!-- Listar Mantenimientos -->
 				<div class="row">
-					<div class="col-lg-12 ">
+					<div class="col-lg-12 contenido-tabla-clientes">
 						<div class="table-responsive">
 							<table class="table datatable-basic table-bordered table-striped table-hover">
 								<thead>

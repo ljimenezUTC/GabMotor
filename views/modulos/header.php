@@ -2,7 +2,6 @@
 
 <!-- Menu -->
 <nav class="navbar navbar-toggleable-md bg-faded fixed-top menu">
-
 	<!-- Boton del menú para dispositivos móviles -->
 	<button class="navbar-toggler navbar-toggler-right" 
 	  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" 
@@ -11,46 +10,39 @@
 	</button>
 
 	<!-- Logo Menu-->
-	<a class="navbar-brand logo" href="inicio">GAB MOTORS</a>
+	<a class="navbar-brand logo" href="inicio">
+	<!--<img src="\GabMotor\views\images\logo.png" width="35px" alt="Su Imágen" class="img-responsive text-left">-->GAB MOTORS</a>
 
 	<?php $uri = $_SERVER['REQUEST_URI']; ?>
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 opciones-menu">
+		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0">
 
 			<li class="nav-item" 
 				<?php if($uri == 'inicio') echo "class='active'"; ?>>
-				<a class="nav-link" href="inicio"><span class="fa fa-desktop icono-menu"></span>PANEL DE INICIO</a>
+				<a class="nav-link" href="inicio"><span class="fa fa-desktop icono-menu"></span>Panel de inicio</a>
 			</li>
 
 			<li class="nav-item"
 				<?php if($uri == 'clientes') echo "class='active'"; ?>>
-				<a class="nav-link" href="clientes"><span class="fa fa-group icono-menu"></span>CLIENTES</a>
+				<a class="nav-link" href="clientes"><span class="fa fa-group icono-menu"></span>Clientes</a>
 			</li>
 
 			<li class="nav-item" 
 				<?php if($uri == 'vehiculos') echo "class='active'"; ?>>
-				<a class="nav-link" href="vehiculos"><span class="fa fa-cab icono-menu"></span>VEHÍCULOS</a>
+				<a class="nav-link" href="vehiculos"><span class="fa fa-car icono-menu"></span>Vehículos</a>
 			</li>
 
 			<li class="nav-item" 
 				<?php if($uri == 'mantenimientos') echo "class='active'"; ?>>
-				<a class="nav-link" href="mantenimientos"><span class="fa fa-wrench icono-menu"></span>MANTENIMIENTOS</a>
+				<a class="nav-link" href="mantenimientos"><span class="fa fa-wrench icono-menu"></span>Mantenimientos</a>
 			</li>
 
 		</ul>
 
-		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 opciones-menu navbar-right">
-			<!-- <li class="nav-item">
-				<a class="nav-link">Bienvenido: <?php #if($_SESSION['logged_in']) { ?>
-				<?php #echo $_SESSION['emailIngreso']; ?>
-				</a>
-				<?php #} ?>
-			</li> -->
-				
+		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 menu-right">
 			<li class="dropdown">
-
-				<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><span class="fa fa-user icono-menu"></span>SU CUENTA
+				<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><span class="fa fa-user icono-menu"></span>Su cuenta
 				</a>
                 <ul class="dropdown-menu">
                 	<li>
@@ -63,8 +55,7 @@
                                 <div class="col-md-7">
                                     <span>Email</span>
                                     <p class="text-muted small"><?php echo $_SESSION['emailIngreso']; ?></p> 
-                                    <a href="#" class="btn btn-info btn-sm">Ver Perfil</a> 
-                                    <br>
+                                    <a href="#" class="btn btn-info btn-sm">Ver Perfil</a>
                                 </div>
                             </div>
                         </div>

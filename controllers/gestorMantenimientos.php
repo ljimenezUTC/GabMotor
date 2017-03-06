@@ -13,7 +13,7 @@
 			echo '
 				<table class="table table-striped">
 				 	<thead>
-				 		<tr>
+				 		<tr class="success tabla-header">
 				 			<th class="text-center">Cliente</th>
 				 			<th class="text-center">Placas</th>
 				 			<th class="text-center">Marca</th>
@@ -36,7 +36,7 @@
 			 			<td class="text-center">'.$item["modelo_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["anio_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["kilometraje_vehiculo"].'</td>
-			 			<td class="text-center"><a href="#" onclick="agregarVehiculo(\''.$item["id_vehiculo"].'\', \''.$item["placas_vehiculo"].'\', \''.$item["marca_vehiculo"].'\', \''.$item["modelo_vehiculo"].'\', \''.$item["kilometraje_vehiculo"].'\', \''.$item["nombre_cliente"].'\', \''.$item["apellido_cliente"].'\')" class="btn btn-outline-success"> Agregar </a></td>
+			 			<td class="class="acciones""><a href="#" onclick="agregarVehiculo(\''.$item["id_vehiculo"].'\', \''.$item["placas_vehiculo"].'\', \''.$item["marca_vehiculo"].'\', \''.$item["modelo_vehiculo"].'\', \''.$item["kilometraje_vehiculo"].'\', \''.$item["nombre_cliente"].'\', \''.$item["apellido_cliente"].'\')" class="btn btn-outline-success"> Agregar </a></td>
 			 		</tr>
 		 		';
 			}
@@ -54,7 +54,7 @@
 			$respuesta = GestorMantenimientosModel::listarCategoriasMantenimientosModel("categoria");
 
 			echo '
-					<option value="0"> Seleccione una categoria </option>
+					<option value="0"> Seleccione una categoria</option>
 				';
 
 			foreach ($respuesta as $row => $item) {
@@ -97,7 +97,7 @@
 
 			echo '
 				<table class="table table-striped">
-					<thead>
+					<thead class="success tabla-header">
 						<tr>
 							<th class="text-center">Categoria</th>
 							<th class="text-center">Mantenimiento</th>
@@ -113,7 +113,8 @@
 					<tr>
 						<td class="text-center">' . $item["nombre_categoria"] . '</td>
 						<td class="text-center">' . $item["descripcion_mantenimiento"] . '</td>
-						<td class="text-center"><button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><i class="fa fa-trash"></i></button></td>
+						<td class="text-center">
+						<button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><span class="fa fa-trash-o"></span></button></td>
 					</tr>
 
 					';
@@ -138,7 +139,7 @@
 			$respuesta = GestorMantenimientosModel::eliminarMantenimientosTemporalModel($datosController, "temporal_mantenimientos", "mantenimiento", "categoria");
 
 			echo '
-				<table class="table table-striped">
+				<table class="table datatable-basic table-bordered table-striped table-hover">
 					<thead>
 						<tr>
 							<th class="text-center">Categoria</th>

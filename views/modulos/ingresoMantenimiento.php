@@ -13,49 +13,50 @@
 	
  ?>
 
-<!-- FORMULARIO DE INGRESO DE MANTENIMIENTOS -->
 
 <!-- Seccion Ingresar mantenimientos -->
-
 <section class="container">
-	
+
 	<div class="row">
-		
 		<!--Contenido Ingreso mantenimientos-->
 		<div id="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 			
 			<div class="row">
-				<div class="col-md-6  wow bounceInDown">
-					<span class="fa fa-wrench"><a href="mantenimientos"> Mantenimientos - Añadir Mantenimiento</a></span>
-					<p class="text-muted">Administración de Mantenimientos</p>	
-				</div>
-
-				<div class="col-md-6 pull-right ">
-					
+				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
+					<span class="fa fa-wrench"><a href="mantenimientos"> Añadir Mantenimiento</a></span>
 				</div>
 			</div>
 
 			<!-- Inicio Panel -->
 			<div class="panel panel-flat ">
-				<div class="panel-heading">
-					<h5 class="panel-title">DATOS DEL MANTENIMIENTO</h5>
+				<div class="panel-heading wow zoomIn">
+					<h6 class="panel-title">DATOS PARA AGREGAR EL MANTENIMIENTO</h6>
 				</div>
 				
 				<hr>
 
 				<!-- Contenido Formulario Add mantenimientos -->
-				<div class="">
+				<div class="contenedor-mantenimientos">
 					<form method="POST">
 
 						<div class="row">
-							<div class="col-md-3">
+							<div class="col-md-6">
 								<label  class="control-label">Cliente</label>
-								<input type="text" class="form-control" id="nombresClienteIngresoMantenimiento" readonly="readonly"><hr>
+								<input type="text" class="form-control" id="nombresClienteIngresoMantenimiento" readonly="readonly">
 							</div>
-							
+
+							<div class="col-md-6">
+								<p class="text-right font-italic text-success">Seleccione el vehiculo para agregar el mantenimiento 1)</p>
+								<div class="pull-right">
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span>Agregar Vehiculo</button>
+								</div>	
+							</div>
+					
 						</div>
 						
+						<br>
 						<div class="row">
+
 							<div class="col-md-3">
 						  		<label class="control-label">Placas del vehículo</label>
 								<input type="hidden" class="form-control" name="idVehiculoIngresoMantenimiento" id="idVehiculoIngresoMantenimiento" >
@@ -77,49 +78,50 @@
 								<input type="text" class="form-control" id="kilometrajeVehiculoIngresoMantenimiento" readonly="readonly">
 							</div>
 
-						</div><br>
-						
+						</div><br> <hr>
+
+
 						<div class="row">
-
-							<div class="col-lg-12 col-md-12 ">
-								<div class="pull-right">
-								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car"></span> Agregar Vehiculo</button>
-								</div>	
-							</div>
 							
-						</div><br>
+							<div class="col-lg-6">
+								<div class="form-group row">
+									<label for="ingresoCategoriaMantenimiento" class="col-md-3 form-control-label">Categoria<span class="text-danger">*</span> </label>
+									<div class="col-md-9">
+										<select name="ingresoCategoriaMantenimiento" id="ingresoCategoriaMantenimiento" class="form-control" required="required">
+										</select>
+									</div>
+								</div>
 
-						<div class="form-group row">
-					      	<label for="ingresoCategoriaMantenimiento" class="col-sm-2 form-control-label">Categoria<span class="text-danger">*</span> </label>
-					      	<div class="col-sm-10">
-					        	<select name="ingresoCategoriaMantenimiento" id="ingresoCategoriaMantenimiento" class="form-control" required="required">
-					        		
-					        	</select>
-					      	</div>
-					    </div>
-
-					    <div class="form-group row">
-					      	<label for="ingresoTipoMantenimiento" class="col-sm-2 form-control-label">Mantenimiento<span class="text-danger">*</span> </label>
-					      	<div class="col-sm-10">
-					        	<select name="ingresoTipoMantenimiento" id="ingresoTipoMantenimiento" class="form-control" required="required">
-					        	</select>
-					      </div>
-					    </div>
-
-				      
-
-					    <div class="text-right form-group row">
-					    	<div class="col-sm-12">
-								<button type="button" class="btn btn-info" id="agregarIdMantenimiento"> Agregar mantenimiento</button>
+								<div class="form-group row">
+									<label for="ingresoTipoMantenimiento" class="col-md-3 form-control-label">Mantenimiento<span class="text-danger">*</span> </label>
+									<div class="col-md-9">
+										<select name="ingresoTipoMantenimiento" id="ingresoTipoMantenimiento" class="form-control" required="required">
+										</select>
+									</div>
+								</div>
 							</div>
+
+							<div class="col-lg-6">
+								<div class="text-right form-group row">
+									<div class="col-sm-12">
+										<p class="text-right font-italic text-success">Seleccione la categoria y mantenimiento realizado 2)</p>
+										<button type="button" class="btn btn-info" id="agregarIdMantenimiento"><span class="fa fa-wrench icono-menu"></span>Agregar mantenimiento</button>
+									</div>
+								</div>					
+							</div>	
+						</div><hr>
+
+
+						<div class="row">
+							<div id="resultados" class='col-md-12 table-responsive'></div><!-- Carga los datos ajax -->
 						</div>
-
-						<div id="resultados" class='col-md-12'></div><!-- Carga los datos ajax -->
-
+						
+						<hr>
 						<div class="text-right form-group row">
 					    	<div class="col-sm-12">
 								<!--<a href="mantenimientos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>-->
-								<button type="submit" class="btn btn-info" > Guardar</button>
+								<p class="text-right font-italic text-success">Guarde los mantenimientos realizados 3)</p>
+								<button type="submit" class="btn btn-info"><span class="fa fa-save icono-menu"></span>Guardar Mantenimiento</button>
 							</div>
 						</div>
 

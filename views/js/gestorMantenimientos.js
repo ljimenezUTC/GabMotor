@@ -107,13 +107,13 @@ function agregarMantenimiento(){
 
 		if (idCategoria == "0" ) {
 
-			$("#resultados").html("Seleccione una categoria");
+			$("#resultados").html("<div class='alert alert-danger alert-dismissible fade show' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Clos'><span aria-hidden='true'>&times;</span></button>Debe seleccionar una categoría.</div>");
 
 		}else{
 
 			if (idMantenimiento == "0") {
 
-				$("#resultados").html("Seleccione un mantenimiento");
+				$("#resultados").html("<div class='alert alert-danger alert-dismissible fade show' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Clos'><span aria-hidden='true'>&times;</span></button>Debe seleccionar un mantenimiento.</div>");
 
 			}else{
 

@@ -52,8 +52,8 @@
 
 		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0"></ul>
 
-		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 navbar-right">
-			<li class="nav-item pull-right">
+		<ul class="nav navbar-nav mr-auto mt-2 mt-md-0 menu-right">
+			<li class="nav-item">
 				<a href="#" class="nav-link"><span class="fa fa-facebook icono-redes-sociales"></span></a>
             </li>
 

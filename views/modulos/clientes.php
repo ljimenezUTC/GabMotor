@@ -42,8 +42,8 @@
 
 				<div class="col-lg-12 seccion-buscar">
 					<form class="form-inline">
-			      		<input class="form-control mr-sm-2" type="text" placeholder="Ingrese la cedula">
-			      		<button class="btn btn-outline-success my-2 mr-sm-2" type="submit">Buscar</button>
+			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese la cedula">
+			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit">Buscar</button>
 		    		</form>
 				</div>
 

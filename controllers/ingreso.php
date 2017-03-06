@@ -20,13 +20,12 @@
 
 					$respuesta = IngresoModels::ingresoModel($datosController, "usuario");
 
-					if ($respuesta == 1) {
+					if ($datos["emailIngreso"] == $respuesta["email_usuario"] && $datos["passwordIngreso"] == $respuesta["password_usuario"]) {
 
-						$_SESSION = $datos;
+						$_SESSION = $respuesta;
 
 						$_SESSION['logged_in'] = true;
 
-						return true;
 
 					}else{
 

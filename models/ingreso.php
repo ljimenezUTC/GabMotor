@@ -14,9 +14,9 @@
 
 			$stmt->execute();
 
-			$stmt->fetch();
+			return $stmt->fetch();
 
-			return $stmt->rowCount();
+			 //$stmt->rowCount();
 
 			$stmt->close();
 

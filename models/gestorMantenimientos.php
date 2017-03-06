@@ -114,8 +114,12 @@
 		#-----------------------------------------------------------------------------------------------
 		public function registrarMantenimientosModel($datosModel){
 
+			session_start();
 
-			$stmt = Conexion::conectar()->prepare("INSERT INTO orden_pago (id_vehiculo, id_usuario, fecha_ingreso) VALUES(:idVehiculo, '21', NOW())");
+			$usuario = $_SESSION["id_usuario"];
+
+
+			$stmt = Conexion::conectar()->prepare("INSERT INTO orden_pago (id_vehiculo, id_usuario, fecha_ingreso) VALUES(:idVehiculo, $usuario, NOW())");
 
 			$stmt->bindParam(":idVehiculo",$datosModel,PDO::PARAM_INT);
 
@@ -188,4 +192,3 @@
 		}
 
 	}
- ?>

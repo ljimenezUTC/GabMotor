@@ -62,8 +62,8 @@
                                 </div>
                                 <div class="col-md-7">
                                     <span>Email</span>
-                                    <p class="text-muted small"><?php echo $_SESSION['emailIngreso']; ?></p> 
-                                    <a href="#" class="btn btn-info btn-sm">Ver Perfil</a> 
+                                    <p class="text-muted small"><?php echo $_SESSION["nombre_usuario"]; ?></p> 
+                                    <a href="perfilUsuario" class="btn btn-info btn-sm">Ver Perfil</a> 
                                     <br>
                                 </div>
                             </div>

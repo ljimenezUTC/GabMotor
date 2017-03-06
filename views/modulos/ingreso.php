@@ -113,8 +113,8 @@
 				</form>
 
 				<div class="row footer-form">
-					<div class="col-lg-6 col-xs-7 col-sm-7 col-md-7 rec-password">
-						<a href="forget_password.php">¿Olvidó su contraseña? <span class="fa fa-lock"></span></a>
+					<div class="col-lg-5 col-xs-7 col-sm-7 col-md-7 rec-password">
+						<!--<a href="forget_password.php">¿Olvidó su contraseña? <span class="fa fa-lock"></span></a>-->
 					</div>
 						
 					<div class="col-lg-6 col-xs-5 col-sm-5 col-md-5 reguistrar">

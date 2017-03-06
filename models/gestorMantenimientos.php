@@ -1,5 +1,7 @@
 <?php 
 	
+	session_start();
+
 	require_once "conexion.php";
 	
 	class GestorMantenimientosModel
@@ -52,8 +54,6 @@
 		#AGREGAR LOS MANTENIMIENTOS EN LA TABLA TEMPORAL Y SU PRESENTACION EN LA VISTA AGREGAR MANTENIMIENTOS
 		#---------------------------------------------------------------------------------------------------
 		public function agregarMantenimientosModel($datosModel,$tablaTemporalMantenimientos, $tablaMantenimiento, $tablaCategoria){
-
-			session_start();
 
 			$sessionId = session_id();
 
@@ -114,10 +114,7 @@
 		#-----------------------------------------------------------------------------------------------
 		public function registrarMantenimientosModel($datosModel){
 
-			session_start();
-
 			$usuario = $_SESSION["id_usuario"];
-
 
 			$stmt = Conexion::conectar()->prepare("INSERT INTO orden_pago (id_vehiculo, id_usuario, fecha_ingreso) VALUES(:idVehiculo, $usuario, NOW())");
 

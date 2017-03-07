@@ -31,7 +31,7 @@
 
 	            <div class="col-md-6 pull-right seccion-add-clientes">
 	                <!--Lista Clientes-->
-	                <a id="btnAgregarCliente" href="clientes" class="btn btn-success pull-right">
+	                <a id="btnAgregarCliente" href="clientes" class="btn btn-info pull-right">
 	                <span class="fa fa-users"> </span> Lista de clientes</a>
 	            </div>
 	        </div>

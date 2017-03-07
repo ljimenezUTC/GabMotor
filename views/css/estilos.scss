@@ -234,7 +234,13 @@ body {
 /****************************
 * Seccion Inicio
 ****************************/
+.inicio{ 
+  padding: 6px 0px 6px 0px;
+  color: $secondary-text-color;
+}
+
 .alert {
+  font-size:13px;
   border-radius: 0;
   -webkit-border-radius: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.11);
@@ -243,7 +249,7 @@ body {
 }
 
 .alert-white {
-  background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+  background-image: linear-gradient(to bottom, $text-primary-color, $text-primary-color);
   padding-left: 70px;
   position: relative;
 }
@@ -263,7 +269,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border: 1px solid #bdbdbd;
   padding-top: 15px;
 }
 
@@ -273,19 +278,17 @@ body {
   content: '';
   width: 10px;
   height: 10px;
-  border: 1px solid #bdbdbd;
   position: absolute;
   border-left: 0;
   border-bottom: 0;
   top: 50%;
   right: -6px;
   margin-top: -3px;
-  background: #fff;
 }
 
 .alert-white .icon i {
   font-size: 20px;
-  color: #fff;
+  color: $text-primary-color;
   left: 12px;
   margin-top: -10px;
   position: absolute;
@@ -464,6 +467,26 @@ body {
 .contenedor-mantenimientos{
   font-size:14px;
   button, input, select{font-size:14px;}
-  
 }
 
+/**************************
+  * Modales
+  ************************/
+.modal-header{
+  background: $dark-primary-color;
+  color: $text-primary-color;
+  span{
+    color: $text-primary-color;
+  }
+}
+.modal-footer{
+  button{font-size: 12px;}
+}
+
+.tabla-modal{
+  a{font-size: 12px;}
+}
+
+.buscar-modal{
+  padding: 0px 0px 10px 16px;
+}

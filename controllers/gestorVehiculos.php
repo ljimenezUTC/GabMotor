@@ -12,10 +12,10 @@
 			$respuesta = GestorVehiculosModel::listarClientesVehiculosModel("cliente");
 
 			echo ' 
-					<table class=" table table-striped">
+					<table class="table datatable-basic table-bordered table-striped table-hover">
 	
 							<thead>
-								<tr>
+								<tr class="success tabla-header">
 									<th>Cedula</th>
 									<th>Nombre</th>
 									<th>Direccion</th>
@@ -33,13 +33,13 @@
 
 				
 				echo '
-								<tr>
-									<td>' . $item["cedula_cliente"] . '</td>
-									<td>'. $item["nombre_cliente"] .' '. $item["apellido_cliente"] .'</td>
-									<td>'. $item["direccion_cliente"] .'</td>
-									<td>'. $item["telefono_cliente"] .'</td>
-									<td><a href="#" onclick="agregar( \'' . $item["id_cliente"] . '\' , \'' . $item["cedula_cliente"] . '\' , \'' . $item["nombre_cliente"] . '\' , \'' . $item["apellido_cliente"] . '\' , \'' . $item["direccion_cliente"] . '\' , \'' . $item["telefono_cliente"] . '\')" class="btn btn-outline-success">Agregar</a></td>
-								</tr>
+						<tr>
+							<td class="acciones">' . $item["cedula_cliente"] . '</td>
+							<td class="acciones">'. $item["nombre_cliente"] .' '. $item["apellido_cliente"] .'</td>
+							<td class="acciones">'. $item["direccion_cliente"] .'</td>
+							<td class="acciones">'. $item["telefono_cliente"] .'</td>
+							<td class="acciones"><a href="#" onclick="agregar( \'' . $item["id_cliente"] . '\' , \'' . $item["cedula_cliente"] . '\' , \'' . $item["nombre_cliente"] . '\' , \'' . $item["apellido_cliente"] . '\' , \'' . $item["direccion_cliente"] . '\' , \'' . $item["telefono_cliente"] . '\')" class="btn btn-info"><span class="fa fa-user"></span> Agregar</a></td>
+						</tr>
 							
 				';
 				
@@ -178,7 +178,7 @@
 
 					<div class="col-lg-12 col-md-12 ">
 						<div class="pull-right">
-						<button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap">Cambiar Cliente</button>
+						<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap">Cambiar Cliente</button>
 						</div>	
 					</div>
 					

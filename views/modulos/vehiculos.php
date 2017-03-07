@@ -43,7 +43,6 @@
 				<hr>
 
 				<div class="col-lg-12 seccion-buscar">
-
 					<form class="form-inline ">
 			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese las placas">
 			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit">Buscar</button>

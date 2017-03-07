@@ -29,8 +29,8 @@
 				</div>
 
 				<div class="col-md-6 pull-right seccion-add-clientes">
-					<a href="vehiculos" class="btn btn-success pull-right">
-					<span class="fa fa-car"></span> Lista de vehiculos</a>
+					<!--<a href="vehiculos" class="btn btn-info pull-right">
+					<span class="fa fa-car"></span> Lista de vehiculos</a>-->
 				</div>
 			</div>
 
@@ -71,7 +71,7 @@
 						
 						<div class="row">
 
-							<div class="col-lg-12 col-md-12 ">
+							<div class="col-lg-12 col-md-12 col-sm-12">
 								<div class="pull-right">
 								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-user"></span> Agregar Cliente</button>
 								</div>	
@@ -135,7 +135,7 @@
  		<div class="modal-content">
 
 			<div class="modal-header">
-		        <h5 class="modal-title" id="myModalLabel">Buscar Clientes</h5>
+		        <h5 class="modal-title" id="myModalLabel">Clientes Existentes</h5>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
@@ -143,29 +143,23 @@
 
 			<div class="modal-body">
 
-				<form class="form-horizontal">
+				<div class="col-lg-12 seccion-buscar buscar-modal">
+					<form class="form-inline ">
+			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese la cedula" onkeyup="load(1)">
+			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit" onclick="load(1)">Buscar</button>
+		    		</form>
+				</div>
 
-				  <div class="form-group">
-
-					<div class="col-sm-5">
-					  <input type="text" class="form-control" id="" placeholder="Buscar Clientes" onkeyup="load(1)">
-					</div>
-
-					<button type="button" class="btn btn-default" onclick="load(1)">Buscar</button>
-				  </div>
-
-				</form>
 
 			<!--<div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div> Carga gif animado -->
 
-			
-			<div class="outer_div table-responsive" ></div><!-- Datos ajax Final -->
-						
-
-		  </div>
+				<div class="col-lg-12 contenido-tabla-clientes tabla-modal">
+					<div class="outer_div table-responsive" ></div><!-- Datos ajax Final -->
+				</div>		
+		  	</div>
 
 			<div class="modal-footer">
-					<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>	
+				<!--<button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>-->
 			</div>
  		</div>
  	</div>

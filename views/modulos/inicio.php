@@ -16,7 +16,7 @@
 <!-- Inicio -->
 <section class="container">
 
-	<strong><h4>Bienvenidos al panel de control</h4></strong>
+	<h4  class="inicio">Bienvenidos al panel de control</h4>
 
 	<div class="bootstrap snippet">
         <div class="alert alert-success alert-white rounded">
@@ -24,7 +24,7 @@
             <div class="icon">
                 <i class="fa fa-group"></i>
             </div>
-            <strong><h4 class="text-danger">Clientes</h4></strong>
+            <h4 class="text-danger">Clientes</h4>
             <p class="">Administrador de clientes</p>
             <p class=""><span class="fa fa-plus-circle"></span> Agregar</p>
             <p class=""><span class="fa fa-pencil"></span> Actualizar</p>

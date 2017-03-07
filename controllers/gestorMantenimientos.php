@@ -11,16 +11,16 @@
 			$respuesta = GestorMantenimientosModel::listarVehiculosMantenimientosModel("vehiculo", "cliente");
 
 			echo '
-				<table class="table table-striped">
+				<table class="table datatable-basic table-bordered table-striped table-hover">
 				 	<thead>
 				 		<tr class="success tabla-header">
-				 			<th class="text-center">Cliente</th>
-				 			<th class="text-center">Placas</th>
-				 			<th class="text-center">Marca</th>
-				 			<th class="text-center">Modelo</th>
-				 			<th class="text-center">Año</th>
-				 			<th class="text-center">Kilometraje</th>
-				 			<th class="text-center">Acción</th>
+				 			<th>Cliente</th>
+				 			<th>Placas</th>
+				 			<th>Marca</th>
+				 			<th>Modelo</th>
+				 			<th>Año</th>
+				 			<th>Kilometraje</th>
+				 			<th>Acción</th>
 				 		</tr>
 				 	</thead>
 				 	<tbody>
@@ -36,7 +36,7 @@
 			 			<td class="text-center">'.$item["modelo_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["anio_vehiculo"].'</td>
 			 			<td class="text-center">'.$item["kilometraje_vehiculo"].'</td>
-			 			<td class="class="acciones""><a href="#" onclick="agregarVehiculo(\''.$item["id_vehiculo"].'\', \''.$item["placas_vehiculo"].'\', \''.$item["marca_vehiculo"].'\', \''.$item["modelo_vehiculo"].'\', \''.$item["kilometraje_vehiculo"].'\', \''.$item["nombre_cliente"].'\', \''.$item["apellido_cliente"].'\')" class="btn btn-outline-success"> Agregar </a></td>
+			 			<td class="text-center class="acciones""><a href="#" onclick="agregarVehiculo(\''.$item["id_vehiculo"].'\', \''.$item["placas_vehiculo"].'\', \''.$item["marca_vehiculo"].'\', \''.$item["modelo_vehiculo"].'\', \''.$item["kilometraje_vehiculo"].'\', \''.$item["nombre_cliente"].'\', \''.$item["apellido_cliente"].'\')" class="btn btn-info"><span class="fa fa-car"></span> Agregar </a></td>
 			 		</tr>
 		 		';
 			}
@@ -96,7 +96,7 @@
 			$respuesta = GestorMantenimientosModel::agregarMantenimientosModel($datosController," 	temporal_mantenimientos", "mantenimiento", "categoria");
 
 			echo '
-				<table class="table table-striped">
+				<table class="table datatable-basic table-bordered table-striped table-hover">
 					<thead class="success tabla-header">
 						<tr>
 							<th class="text-center">Categoria</th>

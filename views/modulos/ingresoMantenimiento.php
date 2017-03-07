@@ -46,7 +46,7 @@
 							</div>
 
 							<div class="col-md-6">
-								<p class="text-right font-italic text-success">Seleccione el vehiculo para agregar el mantenimiento 1)</p>
+								<p class="text-right text-info">Seleccione el vehiculo para agregar el mantenimiento 1)</p>
 								<div class="pull-right">
 								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span>Agregar Vehiculo</button>
 								</div>	
@@ -104,7 +104,7 @@
 							<div class="col-lg-6">
 								<div class="text-right form-group row">
 									<div class="col-sm-12">
-										<p class="text-right font-italic text-success">Seleccione la categoria y mantenimiento realizado 2)</p>
+										<p class="text-right text-info">Seleccione la categoria y mantenimiento realizado 2)</p>
 										<button type="button" class="btn btn-info" id="agregarIdMantenimiento"><span class="fa fa-wrench icono-menu"></span>Agregar mantenimiento</button>
 									</div>
 								</div>					
@@ -120,7 +120,7 @@
 						<div class="text-right form-group row">
 					    	<div class="col-sm-12">
 								<!--<a href="mantenimientos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>-->
-								<p class="text-right font-italic text-success">Guarde los mantenimientos realizados 3)</p>
+								<p class="text-right text-info">Guarde los mantenimientos realizados 3)</p>
 								<button type="submit" class="btn btn-info"><span class="fa fa-save icono-menu"></span>Guardar Mantenimiento</button>
 							</div>
 						</div>
@@ -141,37 +141,28 @@
  		<div class="modal-content">
 
 			<div class="modal-header">
-		        <h5 class="modal-title" id="myModalLabel">Buscar vehiculos</h5>
+		        <h5 class="modal-title" id="myModalLabel">Vehículos Existentes</h5>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		     </div>
 
 			<div class="modal-body">
-
-				<form class="form-horizontal">
-
-				  <div class="form-group">
-
-					<div class="col-sm-5">
-					  <input type="text" class="form-control" id="" placeholder="Buscar Vehiculo" onkeyup="load(1)">
-					</div>
-
-					<button type="button" class="btn btn-default" onclick="load(1)">Buscar</button>
-				  </div>
-
-				</form>
+				<div class="col-lg-12 seccion-buscar buscar-modal">
+					<form class="form-inline ">
+			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese las placas" onkeyup="load(1)">
+			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit" onclick="load(1)">Buscar</button>
+		    		</form>
+				</div>
 
 			<!--<div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div> Carga gif animado -->
-
-			
-			<div class="listaVehiculosModal table-responsive" ></div><!-- Datos ajax Final -->
-						
-
-		  </div>
+				<div class="col-lg-12 contenido-tabla-clientes tabla-modal">
+					<div class="listaVehiculosModal table-responsive" ></div><!-- Datos ajax Final -->
+				</div>		
+		  	</div>
 
 			<div class="modal-footer">
-					<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>	
+				<!--<button type="button" class="btn btn-outline-info" data-dismiss="modal">Cerrar</button>-->
 			</div>
  		</div>
  	</div>

@@ -26,73 +26,63 @@
  ?>
 
 
-
- <!--=====================================
-PERFIL       
-======================================-->
-<br><br>
+ <!-- PERFIL -->
 <section class="container">
 
-	<div class="row">
+	<div class="jumbotron perfil wow bounceInDown">
+		<h4>Perfil</h4>
+		<br>
+		<form method="POST" >
 
-		<div class="col-lg-12 col-md-4 col-sm-6 col-xs-12">
-			<?php require_once 'views/mensaje.php';?>
-			<h2 class="text-lg-left">Perfil</h2><br>
-
-			<form method="POST" >
-
-				<div class="form-group row">
-			      	<label for="" class="col-sm-2 form-control-label">Nombre: </label>
-			      	<div class="col-sm-10">
-			        	<p> <?php echo $_SESSION["nombre_usuario"] ?> </p>
-			     	 </div>
-			    </div>
-
-
-				<div class="form-group row">
-					<label for="" class="col-sm-2 form-control-label">Email: </label>
-			      	<div class="col-sm-10">
-						<p> <?php echo $_SESSION["email_usuario"] ?> </p>
-					</div>
+		  	<div class="form-group row cont-perfil">
+				<label for="" class="col-sm-3 col-xs-12 form-control-label"><span class="fa fa-user"></span> Nombre</label>
+				<div class="col-sm-9 col-xs-12">
+					<laabel> <?php echo $_SESSION["nombre_usuario"] ?> </label>
 				</div>
-
-				<div class="form-group row">
-					<label class="col-sm-2 form-control-label">Contraseña actual: </label>
-					<div class="col-sm-3">
-						<input type="text" name="passwordActual" id="" class="form-control">
-						<span class="help-block"></span>
-					</div>
-				</div>
-
-				<div class="form-group row">
-					<span for="" class="col-sm-2 form-control-label"> Nueva Contraseña: </span>
-					<div class="col-sm-3">
-						<input type="text" name="passwordNuevo" id="" class="form-control">
-						<span class="help-block"></span>
-					</div>
-				</div>
-				<div class=" form-group row">
-					<span for="" class="col-sm-2 form-control-label"> Confirmar Contraseña: </span>
-					<div class="col-sm-3">
-						<input type="text" name="confirmarPassword" id="" class="form-control">
-						<span class="help-block"></span>
-					</div>
-				</div>
-				<input type="hidden" id="" name="idUsuarioPerfil" value="<?php echo $_SESSION["id_usuario"]; ?>"><br>
-
-				<div class="text-center form-group row">
-			    	<div class="col-sm-12">
-						<button type="submit" class="btn btn-outline-info" id="boton_enviar">Cambiar contraseña </button>
-					</div>
-				</div>
-				
-			</form>
+			</div>
 			
-		</div>
-		
+			<div class="form-group perfil row cont-perfil">
+				<label for="" class="col-sm-3 col-xs-12 form-control-label"><span class="fa fa-envelope"></span> Email</label>
+				<div class="col-sm-9 col-xs-12">
+					<label> <?php echo $_SESSION["email_usuario"] ?> </label>
+				</div>
+			</div>
+
+			<hr class="my-2">
+
+
+		  	<h4>Cambiar Contraseña</h4>
+			<?php require_once 'views/mensaje.php';?>
+			<br>
+		  	<div class="form-group row">
+				<label class="col-sm-3 form-control-label">Contraseña actual</label>
+				<div class="col-sm-9">
+					<input type="text" name="passwordActual" id="" class="form-control">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="" class="col-sm-3 form-control-label"> Nueva Contraseña</label>
+				<div class="col-sm-9">
+					<input type="text" name="passwordNuevo" id="" class="form-control">
+				</div>
+			</div>
+					
+			<div class=" form-group row">
+				<label for="" class="col-sm-3 form-control-label"> Confirmar Contraseña</label>
+				<div class="col-sm-9">
+					<input type="text" name="confirmarPassword" id="" class="form-control">
+				</div>
+			</div>
+			
+			<input type="hidden" id="" name="idUsuarioPerfil" value="<?php echo $_SESSION["id_usuario"]; ?>"><br>
+
+			<div class="text-right form-group row">
+				<div class="col-sm-12">
+					<button type="submit" class="btn btn-info" id="boton_enviar">Cambiar contraseña <span class="fa fa-check"></span></button>
+				</div>
+			</div>
+		</form>		
 	</div>
-	
-</section>
-
-
-<!--====  Fin de PERFIL  ====-->
+				
+</section> <!-- Fin de PERFIL -->

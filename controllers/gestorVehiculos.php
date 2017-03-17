@@ -11,48 +11,44 @@
 
 			$respuesta = GestorVehiculosModel::listarClientesVehiculosModel("cliente");
 
-			echo ' 
-					<table class="table datatable-basic table-bordered table-striped table-hover">
-	
-							<thead>
-								<tr class="success tabla-header">
-									<th>Cedula</th>
-									<th>Nombre</th>
-									<th>Direccion</th>
-									<th>Telefono</th>
-									<th>Accion</th>
-								</tr>
-							</thead>
-
-							<tbody>
-
-			';
-
 			foreach ($respuesta as $row => $item) {
-
-
-				
 				echo '
 						<tr>
 							<td class="acciones">' . $item["cedula_cliente"] . '</td>
 							<td class="acciones">'. $item["nombre_cliente"] .' '. $item["apellido_cliente"] .'</td>
 							<td class="acciones">'. $item["direccion_cliente"] .'</td>
 							<td class="acciones">'. $item["telefono_cliente"] .'</td>
-							<td class="acciones"><a href="#" onclick="agregar( \'' . $item["id_cliente"] . '\' , \'' . $item["cedula_cliente"] . '\' , \'' . $item["nombre_cliente"] . '\' , \'' . $item["apellido_cliente"] . '\' , \'' . $item["direccion_cliente"] . '\' , \'' . $item["telefono_cliente"] . '\')" class="btn btn-info"><span class="fa fa-user"></span> Agregar</a></td>
-						</tr>
-							
+							<td class="acciones"><a href="#" onclick="agregar( \'' . $item["id_cliente"] . '\' , \'' . $item["cedula_cliente"] . '\' , \'' . $item["nombre_cliente"] . '\' , \'' . $item["apellido_cliente"] . '\' , \'' . $item["direccion_cliente"] . '\' , \'' . $item["telefono_cliente"] . '\')" class="btn btn-info btn-sm btn-modal">Agregar cliente <span class="fa fa-plus-circle"></span></a></td>
+						</tr>		
 				';
-				
+			}
+		}
+
+
+		#
+		#--------------------------------------------------------------------------------------
+		public function validarPlacasVehiculoController($placasVehiculo){
+
+			$datosController = $placasVehiculo;
+
+			$respuesta = GestorVehiculosModel::validarPlacasVehiculoModel($datosController, 'vehiculo');
+
+			if($respuesta == 1){
+
+				return "true";
+
+			}else{
+
+				return "false";
+
 			}
 
-			echo '
-					
-					</tbody>
-							
-				</table>
-			
-			';
 		}
+
+
+
+
+
 
 		#REGISTRAR VEHICULOS
 		#----------------------------------------------------------------
@@ -123,12 +119,9 @@
 						<td>' . $item["modelo_vehiculo"] . '</td>
 						<td>' . $item["anio_vehiculo"] . '</td>
 						<td>' . $item["kilometraje_vehiculo"] . '</td>
-
 						<td class="acciones"><a href="editarVehiculo&idVehiculo=' . $item["id_vehiculo"] . '"><span class="fa fa-pencil"></span></a></td>
 
 						<td class="acciones"><a href="vehiculos&idVehiculo=' . $item["id_vehiculo"] . '" onclick="return confirm(\'Estas seguro de que deseas eliminar este vehiculo !\')"><span class="fa fa-trash-o"></span></a></td>
-
-						<!--<td class="text-center"><a href="#" class="btn btn-outline-success">Mantnimiento</a></td>-->
 					</tr>
 				';
 			}
@@ -318,6 +311,24 @@
 						</script>';
 					
 				}else{
+					echo'<script>
+
+							swal({
+								  title: "¡IMPOSIBLE!",
+								  text: "¡El vehiculo no se puede eliminar!",
+								  type: "error",
+								  confirmButtonText: "Cerrar",
+								  closeOnConfirm: false
+							},
+
+							function(isConfirm){
+									 if (isConfirm) {	   
+									    window.location = "vehiculos";
+									  } 
+							});
+
+
+						</script>';
 
 					echo $respuesta;
 				}

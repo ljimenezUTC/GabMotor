@@ -25,7 +25,7 @@
 
 			<li class="nav-item"
 				<?php if($uri == 'clientes') echo "class='active'"; ?>>
-				<a class="nav-link" href="clientes"><span class="fa fa-group icono-menu"></span>Clientes</a>
+				<a class="nav-link" href="clientes"><span class="fa fa-th icono-menu"></span>Clientes</a>
 			</li>
 
 			<li class="nav-item" 
@@ -50,7 +50,7 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <!-- <img src="http://placehold.it/120x120" alt="Su Imágen" class="img-responsive"> -->
-                                    <span class="fa fa-smile-o user-img" aria-hidden="true"></span>
+                                    <span class="fa fa-user user-img" aria-hidden="true"></span>
                                 </div>
                                 <div class="col-md-7">
                                     <span>Email</span>

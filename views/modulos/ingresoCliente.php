@@ -26,14 +26,8 @@
 
 	        <div class="row">
 				<div class="col-md-6 lista-cliente-detalle detalle-add-cliente">
-					<span class="fa fa-users"> <a href="">Clientes - Añadir Cliente</a></span>
+					<span class="fa fa-th"> <a href="">Clientes - Añadir Cliente</a></span>
 					<p class="text-muted small">Administra los clientes!</p>
-	            </div>
-
-	            <div class="col-md-6 pull-right seccion-add-clientes">
-	                <!--Ingrese Clientes-->
-	                <!--<a id="btnAgregarCliente" href="clientes" class="btn btn-info pull-right">
-	                <span class="fa fa-users"></span> Lista de clientes</a>-->
 	            </div>
 	        </div>
 
@@ -49,9 +43,14 @@
 				 <form method="POST">
 				  
 				    <div class="form-group row">
+
 				      <label for="ingresoCedulaCliente" class="col-sm-2 form-control-label">Cédula <span class="text-danger">*</span> </label>
 				      <div class="col-sm-10">
 				        <input type="text" name="ingresoCedulaCliente" id="ingresoCedulaCliente" class="form-control" minlength="10" maxlength="10" required="required" placeholder="Ingresa la cedula del cliente">
+
+				        <div id="mensajeValidarCedula" class="has-error">
+				        	
+				        </div>
 				      </div>
 				    </div>
 

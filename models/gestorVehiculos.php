@@ -17,7 +17,30 @@
 
 			$stmt->close();
 
+
 		}
+
+
+		#
+		#-------------------------------------------------------------------------------------------------------------
+		 public function validarPlacasVehiculoModel($datosModel, $tablaVehiculo){
+
+			 $stmt = Conexion::conectar()->prepare("SELECT * FROM $tablaVehiculo WHERE placas_vehiculo = :placasVehiculo");
+
+			 $stmt->bindParam(":placasVehiculo", $datosModel, PDO::PARAM_STR);
+
+			 $stmt->execute();
+
+			 $stmt->fetch();
+
+			 return $stmt->rowCount();
+
+			 $stmt->close();
+
+		 }
+
+
+
 
 		#REGISTRAR VEHICULOS
 		#----------------------------------------------------------------

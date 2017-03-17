@@ -17,14 +17,15 @@
 		.done(function(response) {
 
 			if (response == "true") {
+				console.log(response);
 
-				$(".help-block").html('<span class=" has-error alert-dismissable">El usuario con esta cedula ya existe</span>').fadeIn();
+				$("#mensajeValidarCedula").html('<span class=" has-error alert-dismissable">El usuario con esta cedula ya existe</span>').fadeIn('slow');
 
 				$("#boton_enviar").attr("disabled", true);
 
 			
 			}else{
-				$(".help-block").remove();
+				$("#mensajeValidarCedula").fadeOut('slow');
 
 				$("#boton_enviar").attr("disabled", false);
 				

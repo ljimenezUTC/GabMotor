@@ -159,8 +159,15 @@ body {
 * Seccion Inicio
 ****************************/
 .inicio {
-  padding: 6px 0px 6px 0px;
-  color: #757575; }
+  padding: 10px 0px 6px 0px;
+  color: #0288D1;
+  font-size: 16px; }
+
+.snippet p {
+  color: #212121; }
+.snippet h6 {
+  color: #f44336;
+  font-size: 14px; }
 
 .alert {
   font-size: 13px;
@@ -206,47 +213,39 @@ body {
 .alert-white .icon i {
   font-size: 20px;
   color: #FFFFFF;
-  left: 12px;
+  left: 15px;
   margin-top: -10px;
   position: absolute;
   top: 50%; }
 
-/*Color alertas de inicio*/
-.alert-success {
-  color: #757575;
-  background-color: #03A9F4;
-  border-color: #03A9F4; }
-
-.alert-white.alert-success .icon,
-.alert-white.alert-success .icon:after {
-  border-color: #03A9F4;
-  background: #03A9F4; }
-
-.alert-info {
-  background-color: #d9edf7;
-  border-color: #98cce6;
-  color: #3a87ad; }
-
 .alert-white.alert-info .icon,
 .alert-white.alert-info .icon:after {
-  border-color: #3a8ace;
-  background: #4d90fd; }
+  border-color: #00BCD4;
+  background: #00BCD4; }
 
+.alert-detalle {
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF);
+  padding-left: 30px;
+  position: relative; }
+
+.alert-detalle.rounded {
+  border-radius: 3px; }
+
+.alert-detalle p {
+  padding-left: 24px; }
+
+@media (max-width: 390px) {
+  .inicio {
+    font-size: 12px; }
+
+  p {
+    font-size: 11px; } }
 /**************************
   * Clientes
   ************************/
 .panel {
   border: 1px #FFFFFF;
   background: #FFFFFF; }
-
-.seccion-buscar {
-  padding: 0px 0px 15px 0px; }
-  .seccion-buscar input, .seccion-buscar button {
-    font-size: 14px; }
-  .seccion-buscar .buscar {
-    width: 395px; }
-  .seccion-buscar .btn-buscar {
-    margin-left: 8px; }
 
 .lista-cliente-detalle {
   font-size: 24px;
@@ -265,7 +264,7 @@ body {
 
 .contenido-tabla-clientes {
   text-align: left;
-  font-size: 14px; }
+  font-size: 13px; }
 
 .tabla-header th {
   font-family: 'Open Sans', sans-serif;
@@ -282,20 +281,6 @@ body {
 @media (max-width: 770px) {
   .lista-cliente-detalle {
     padding-bottom: 0px; }
-
-  .seccion-buscar {
-    padding: 0px;
-    text-align: center; }
-    .seccion-buscar .btn-buscar {
-      margin-left: 0px; }
-
-  .seccion-buscar .form-inline .mr-sm-0 {
-    width: 100%;
-    text-align: center;
-    font-size: 12px; }
-
-  .seccion-buscar .form-inline button {
-    width: 100%; }
 
   .seccion-add-clientes {
     padding-top: 0px; }
@@ -353,7 +338,62 @@ body {
 .tabla-modal a {
   font-size: 12px; }
 
-.buscar-modal {
-  padding: 0px 0px 10px 16px; }
+/***********************************
+  * Tabla Paginacion & buscar & items
+  *********************************/
+.input-buscar {
+  padding: 5px;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 0 1px #BDBDBD;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 100%;
+  width: 280px;
+  height: 37px; }
+
+@media (max-width: 770px) {
+  .input-buscar {
+    width: 100%;
+    height: 30px;
+    font-size: 12px; }
+
+  .custom-select {
+    width: 100%;
+    height: 30px;
+    font-size: 12px; } }
+.texto-n {
+  font-size: 14px;
+  text-aling: center; }
+
+.tabla-header:hover {
+  cursor: pointer; }
+  .tabla-header:hover th {
+    background: #0288D1; }
+
+/****************
+ * Modales
+ ***************/
+.btn-modal {
+  font-size: 12px; }
+
+/****************
+ * Perfil
+ ***************/
+.perfil {
+  font-size: 14px; }
+  .perfil input, .perfil button {
+    font-size: 14px; }
+  .perfil h4 {
+    padding: 0px 0px 8px 0px;
+    color: #0288D1; }
+  .perfil hr {
+    padding: 10px; }
+
+@media (max-width: 770px) {
+  .perfil input, .perfil button {
+    font-size: 12px; } }
+@media (max-width: 575px) {
+  .cont-perfil, h4 {
+    text-align: center; } }
 
 /*# sourceMappingURL=estilos.css.map */

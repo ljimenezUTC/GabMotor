@@ -1,41 +1,55 @@
+/*==================================================
+	Validar placas del vehiculo en la BD
+=============================================*/
 
-$(document).ready(function() {
-	
-	listarClientesAgregar();
+	$("#ingresoPlacasVehiculo").on('change',function() {
 
-});
+		var placasVehiculo = $("#ingresoPlacasVehiculo").val();
 
-function listarClientesAgregar(){
+		$.ajax({
 
-	var parametros = {"action":"ajax"};
-	$("#loader").fadeIn('slow');
+			url: 'views/ajax/gestorVehiculos.php',
+			type: 'POST',
+			data: {"placasVehiculo": placasVehiculo}
 
-	$.ajax({
-		url: 'views/ajax/gestorVehiculos.php',
-		data: parametros,
-
-		beforeSend: function () {
-
-		},
-
-		success: function (datos) {
-				
-				//console.log(datos);
-				$(".outer_div").html(datos);
+		})
+		.done(function(response) {
 
 
-		}, 
-		
-		error: function(error){
-			
-			console.log("error" + error);
-		
-		}
+			if (response == "true") {
+
+				$("#mensajeValidarPlacas").html('<span class=" has-error alert-dismissable">El usuario con esta cedula ya existe</span>').fadeIn('slow');
+
+				$("#btnGuardarVehiculo").attr("disabled", true);
+
+
+			}else{
+
+				$("#mensajeValidarPlacas").fadeOut('slow');
+
+				$("#btnGuardarVehiculo").attr("disabled", false);
+
+			}
+
+		})
+		.fail(function() {
+
+			console.log("error");
+
+		})
+		.always(function() {
+
+			console.log("complete");
+
+		});
+
 	});
 
-	
 
-}
+
+/*===============================================================================
+	Agregar cliente seleccionado a las cajas de texto en el ingreso de vehiculos
+=================================================================================*/
 
 function agregar (id, cedula, nombre, apellido, direccion, telefono)
 		{
@@ -52,7 +66,11 @@ function agregar (id, cedula, nombre, apellido, direccion, telefono)
 			$("#direccionClienteEditarVehiculo").val(direccion);
 			$("#telefonoClienteEditarVehiculo").val(telefono);
 
+			$("#myModal").modal('hide');
+
 
 		}
+
+
 
 

@@ -18,118 +18,141 @@
 <section class="container">
 
 	<div class="row">
+
 		<!--Contenido Ingreso mantenimientos-->
 		<div id="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 			
 			<div class="row">
+
 				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
+
 					<span class="fa fa-wrench"><a href="mantenimientos"> Añadir Mantenimiento</a></span>
+
 				</div>
+
 			</div>
+
 
 			<!-- Inicio Panel -->
 			<div class="panel panel-flat ">
+
 				<div class="panel-heading wow zoomIn">
+
 					<h6 class="panel-title">DATOS PARA AGREGAR EL MANTENIMIENTO</h6>
-				</div>
-				
-				<hr>
+
+				</div><hr>
 
 				<!-- Contenido Formulario Add mantenimientos -->
 				<div class="contenedor-mantenimientos">
+
 					<form method="POST">
 
 						<div class="row">
-							<div class="col-md-6">
+
+							<div class="col-md-3">
+
 								<label  class="control-label">Cliente</label>
 								<input type="text" class="form-control" id="nombresClienteIngresoMantenimiento" readonly="readonly">
+
 							</div>
 
+							<div class="col-md-3"></div>
+
 							<div class="col-md-6">
+
 								<p class="text-right text-info">Seleccione el vehiculo para agregar el mantenimiento 1)</p>
+
 								<div class="pull-right">
-								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span>Agregar Vehiculo</button>
-								</div>	
+
+									<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span>Agregar Vehiculo</button>
+
+								</div>
+
 							</div>
 					
-						</div>
-						
-						<br>
+						</div><br>
+
 						<div class="row">
 
 							<div class="col-md-3">
+
 						  		<label class="control-label">Placas del vehículo</label>
 								<input type="hidden" class="form-control" name="idVehiculoIngresoMantenimiento" id="idVehiculoIngresoMantenimiento" >
 								<input type="text" class="form-control" id="placasVehiculoIngresoMantenimiento" readonly="readonly">
+
 							 </div>
 
-							 <div class="col-md-3">
+							<div class="col-md-3">
+
 								<label  class="control-label">Marca</label>
 								<input type="text" class="form-control" id="marcaVehiculoIngresoMantenimiento" readonly="readonly">
+
 							</div>
 						
 							<div class="col-md-3">
+
 								<label class="control-label">Modelo</label>
 								<input type="text" class="form-control" id="modeloVehiculoIngresoMantenimiento" readonly="readonly">
+
 							</div>
 						
 							<div class="col-md-3">
+
 								<label class="control-label">Kilomátraje</label>
 								<input type="text" class="form-control" id="kilometrajeVehiculoIngresoMantenimiento" readonly="readonly">
+
 							</div>
 
 						</div><br> <hr>
 
-
+						<!--CARGA DE CATEGORIAS Y SUS MANTENIMIENTOS-->
 						<div class="row">
-							
-							<div class="col-lg-6">
-								<div class="form-group row">
-									<label for="ingresoCategoriaMantenimiento" class="col-md-3 form-control-label">Categoria<span class="text-danger">*</span> </label>
-									<div class="col-md-9">
-										<select name="ingresoCategoriaMantenimiento" id="ingresoCategoriaMantenimiento" class="form-control" required="required">
-										</select>
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label for="ingresoTipoMantenimiento" class="col-md-3 form-control-label">Mantenimiento<span class="text-danger">*</span> </label>
-									<div class="col-md-9">
-										<select name="ingresoTipoMantenimiento" id="ingresoTipoMantenimiento" class="form-control" required="required">
-										</select>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6">
-								<div class="text-right form-group row">
-									<div class="col-sm-12">
-										<p class="text-right text-info">Seleccione la categoria y mantenimiento realizado 2)</p>
-										<button type="button" class="btn btn-info" id="agregarIdMantenimiento"><span class="fa fa-wrench icono-menu"></span>Agregar mantenimiento</button>
-									</div>
-								</div>					
-							</div>	
-						</div><hr>
-
-
-						<div class="row">
+						
 							<div id="resultados" class='col-md-12 table-responsive'></div><!-- Carga los datos ajax -->
 						</div>
+
+						<didv class="row">
+
+							<div class="col-lg-12">
+
+								<div class="text-right form-group row">
+
+									<div class="col-sm-12" >
+
+										<p class="text-right text-info">Seleccione el mantenimiento realizado 2)</p>
+										<!--<button type="button" class="btn btn-info" id="agregarIdMantenimiento"><span class="fa fa-wrench icono-menu"></span>Agregar mantenimiento</button>-->
+
+									</div>
+
+							</div>		
+
+						</div>	
+							
+						</div><hr>
+						<!--FIN DE CARGA DE CATEGORIAS Y SUS MANTENIMIENTOS-->
 						
-						<hr>
 						<div class="text-right form-group row">
-					    	<div class="col-sm-12">
+
+					    	<div class="col-lg-12">
+
 								<!--<a href="mantenimientos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>-->
 								<p class="text-right text-info">Guarde los mantenimientos realizados 3)</p>
 								<button type="submit" class="btn btn-info"><span class="fa fa-save icono-menu"></span>Guardar Mantenimiento</button>
+
 							</div>
+
 						</div>
 
 					</form>
+
 				</div><!-- Contenido Formulario Add mantenimientos -->
+
 		  	</div><!-- Fin Panel -->
+
 		</div><!-- Fin Contenido Ingreso mantenimientos -->
+
 	</div><!-- Row -->
+
 </section>
 
 <!-- Fin Seccion Ingresar mantenimientos -->
@@ -141,6 +164,7 @@
  		<div class="modal-content">
 
 			<div class="modal-header">
+			
 		        <h5 class="modal-title" id="myModalLabel">Vehículos Existentes</h5>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
@@ -148,21 +172,35 @@
 		     </div>
 
 			<div class="modal-body">
-				<div class="col-lg-12 seccion-buscar buscar-modal">
-					<form class="form-inline ">
-			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese las placas" onkeyup="load(1)">
-			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit" onclick="load(1)">Buscar</button>
-		    		</form>
-				</div>
-
-			<!--<div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div> Carga gif animado -->
 				<div class="col-lg-12 contenido-tabla-clientes tabla-modal">
-					<div class="listaVehiculosModal table-responsive" ></div><!-- Datos ajax Final -->
+					<div class="table-responsive" >
+						<table class="table table-bordered table-striped table-hover" id="datosTabla">
+						 	<thead>
+						 		<tr class="tabla-header">
+						 			<th>Nombre cliente</th>
+						 			<th>Placas vehículo</th>
+						 			<th>Marca vehículo</th>
+						 			<th>Modelo  vehículo</th>
+						 			<th>Año vehículo</th>
+						 			<th>Kilometraje vehículo</th>
+						 			<th>Acción agregar vehículo</th>
+						 		</tr>
+						 	</thead>
+						 	<tbody>
+						 		<?php 
+
+						 			$listarVehiculos = new GestorMantenimientosController();
+						 			$listarVehiculos->listarVehiculosMantenimientosController();
+
+						 		?>
+						 	</tbody>
+ 						</table>
+					</div><!-- Datos ajax Final -->
 				</div>		
 		  	</div>
 
 			<div class="modal-footer">
-				<!--<button type="button" class="btn btn-outline-info" data-dismiss="modal">Cerrar</button>-->
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
 			</div>
  		</div>
  	</div>

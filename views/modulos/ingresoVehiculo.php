@@ -12,11 +12,10 @@
 	include "header.php";
 	
  ?>
-<!-- FORMULARIO DE INGRESO DE VEHICULOS -->
+
 
 <!-- Seccion Ingresar vehiculos -->
 <section class="container">
-	
 	<div class="row">
 		
 		<!--Contenido Ingreso Vehiculos-->
@@ -83,6 +82,7 @@
 					      	<label for="ingresoPlacasVehiculo" class="col-sm-2 form-control-label">Placas<span class="text-danger">*</span> </label>
 					      	<div class="col-sm-10">
 					        	<input type="text" name="ingresoPlacasVehiculo" id="ingresoPlacasVehiculo" class="form-control" required="required" placeholder="Ingresa las placas del vehiculo">
+					        	<div id="mensajeValidarPlacas">	</div>
 					      	</div>
 					    </div>
 
@@ -118,7 +118,7 @@
 					    <div class="text-right form-group row">
 					    	<div class="col-sm-12">
 								<a href="vehiculos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>
-								<button type="submit" class="btn btn-info"> Agregar <span class="fa fa-check-circle"></span></button>
+								<button type="submit" id="btnGuardarVehiculo" class="btn btn-info"> Agregar <span class="fa fa-check-circle"></span></button>
 							</div>
 						</div>
 					</form>
@@ -142,24 +142,31 @@
 		     </div>
 
 			<div class="modal-body">
-
-				<div class="col-lg-12 seccion-buscar buscar-modal">
-					<form class="form-inline ">
-			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese la cedula" onkeyup="load(1)">
-			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit" onclick="load(1)">Buscar</button>
-		    		</form>
-				</div>
-
-
-			<!--<div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div> Carga gif animado -->
-
-				<div class="col-lg-12 contenido-tabla-clientes tabla-modal">
-					<div class="outer_div table-responsive" ></div><!-- Datos ajax Final -->
+				<div class="col-lg-12 contenido-tabla-clientes">
+					<div class="table-responsive" >
+						<table class="table table-bordered table-striped table-hover" id="datosTabla">
+							<thead>
+								<tr class="tabla-header">
+									<th>Cedula</th>
+									<th>Nombre</th>
+									<th>Direccion</th>
+									<th>Telefono</th>
+									<th>Accion</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php
+									$listarClientes = new GestorVehiculosController();
+									$listarClientes->listarClientesVehiculosController();  
+								?>
+							</tbody>
+						</table>
+					</div><!-- Datos ajax Final -->
 				</div>		
 		  	</div>
 
 			<div class="modal-footer">
-				<!--<button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>-->
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
 			</div>
  		</div>
  	</div>

@@ -28,7 +28,7 @@
 	            <div class="col-md-6 pull-right seccion-add-clientes wow bounceInDown">
 	                <!--Ingrese Clientes-->
 	                <a id="btnAgregarCliente" href="ingresoCliente" class="btn btn-info pull-right">
-	                <span class="fa fa-plus-circle"> </span> Nuevo cliente</a>
+	                <span class="fa fa-plus-circle"></span> Nuevo cliente</a>
 	            </div>
 	        </div>
 
@@ -39,26 +39,19 @@
 				</div>
 				<hr>
 
-
-				<div class="col-lg-12 seccion-buscar">
-					<form class="form-inline">
-			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese la cedula">
-			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit">Buscar</button>
-		    		</form>
-				</div>
-
 				<!-- Listar Clientes -->
 				<div class="row">
 					<div class="col-lg-12 contenido-tabla-clientes">
 						<div class="table-responsive">
-							<table class="table datatable-basic table-bordered table-striped table-hover">
+							<table class="table table-bordered table-striped table-hover" id="datosTabla">
 								<thead>
 									<tr class="success tabla-header">
-										<th>Cédula</th>
-										<th>Nombre completo</th>
-										<th>Dirección</th>
-										<th>Teléfono</th>
-										<th colspan="3">Acción</th>
+										<th>Cédula cliente</th>
+										<th>Nombre completo cliente</th>
+										<th>Dirección cliente</th>
+										<th>Teléfono cliente</th>
+										<th>Acción editar</th>
+										<th>Acción eliminar</th>
 									</tr>
 								</thead>
 

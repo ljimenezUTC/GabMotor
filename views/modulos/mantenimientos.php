@@ -19,11 +19,11 @@
 	<div class="row">
 
 		<!--Contenido Mantenimientos-->
-		<div id="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
 			<div class="row">
 				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
-					<span class="fa fa-th"> <a href="">Mantenimientos</a></span>
+					<span class="fa fa-wrench"> <a href="">Mantenimientos</a></span>
 					<p class="text-muted small">Administra Lista de Mantenimientos</p>
 	            </div>
 
@@ -41,29 +41,21 @@
 				</div>
 				<hr>
 
-				<div class="col-lg-12 seccion-buscar">
-
-					<form class="form-inline ">
-			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese la ceula del cliente">
-			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit">Buscar</button>
-		    		</form>
-				</div>
-
 				<!-- Listar Mantenimientos -->
 				<div class="row">
 					<div class="col-lg-12 contenido-tabla-clientes">
 						<div class="table-responsive">
-							<table class="table datatable-basic table-bordered table-striped table-hover">
+							<table class="table table-bordered table-striped table-hover" id="datosTabla">
 								<thead>
-									<tr class="success tabla-header">
+									<tr class="tabla-header">
 										<th>Cédula cliente</th>
-										<th>Nombre</th>
+										<th>Nombre cliente</th>
 										<th>Placas del vehículo</th>
-										<th>Marca/Modelo</th>
-										<th>Kilometraje</th>
+										<th>Marca/Modelo vehículo</th>
+										<th>Kilometraje vehículo</th>
 										<th>Categoria mantenimiento</th>
-										<th>Mantenimiento</th>
-										<th>Fecha de realizacion</th>
+										<th>Mantenimiento realizado</th>
+										<th>Fecha de realización</th>
 									</tr>
 								</thead>
 
@@ -76,10 +68,9 @@
 							</table>
 						</div>
 					</div>
-				</div><!-- Fin de Listar Vehiculos -->
+				</div><!-- Fin de Listar Mantenimientos -->
 			</div><!-- Fin Panel -->
-		</div><!-- Fin Contenido Vehiculo -->
+		</div><!-- Fin Contenido Manteniminetos -->
 	</div><!-- Row -->
-</section><!-- Fin Seccion Vehiculos -->
-
-<!-- Fin de Vehiculos -->
+</section><!-- Fin Seccion Mantenimientos -->
+<!-- Fin Contenido Mantenimienos -->

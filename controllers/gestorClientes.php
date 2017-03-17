@@ -62,20 +62,13 @@
 						<td>' .$item["nombre_cliente"]. " " . $item["apellido_cliente"] . '</td>
 						<td>' .$item["direccion_cliente"].'</td>
 						<td>' .$item["telefono_cliente"].'</td>
-
-						<td class="acciones">
-							<a href="editarCliente&idCliente='.$item["id_cliente"].'"><span class="fa fa-eye"></span></a>
-						</td>
-						
 						<td class="acciones">
 							<a href="editarCliente&idCliente='.$item["id_cliente"].'"><span class="fa fa-pencil"></span></a>
 						</td>
-
 						<td class="text-center">
 							<a href="clientes&idBorrar='.$item["id_cliente"].'"onclick="return confirm(\'Estas seguro de que deseas eliminar este cliente !\')" >
 							<span class="fa fa-trash-o"></span></a>
 						</td>
-						
 					</tr>
 				';
 			}
@@ -228,6 +221,26 @@
 
 						</script>';
 
+				}else{
+					echo'<script>
+
+							swal({
+								  title: "¡IMPOSIBLE!",
+								  text: "¡El cliente no se puede eliminar!",
+								  type: "error",
+								  confirmButtonText: "Cerrar",
+								  closeOnConfirm: false
+							},
+
+							function(isConfirm){
+									 if (isConfirm) {	   
+									    window.location = "index.php?action=clientes";
+									  } 
+							});
+
+
+						</script>';
+
 				}
 
 			}
@@ -253,9 +266,6 @@
 			}
 
 		}
-
-
-
 
 	}
 

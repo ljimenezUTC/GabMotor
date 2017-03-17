@@ -24,7 +24,7 @@
 
 			<div class="row">
 				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
-					<span class="fa fa-th"> <a href="">Vehículos</a></span>
+					<span class="fa fa-car"> <a href="">Vehículos</a></span>
 					<p class="text-muted small">Administra Lista de Vehículos</p>
 	            </div>
 
@@ -42,27 +42,21 @@
 				</div>
 				<hr>
 
-				<div class="col-lg-12 seccion-buscar">
-					<form class="form-inline ">
-			      		<input class="form-control mr-sm-0 buscar" type="text" placeholder="Ingrese las placas">
-			      		<button class="btn btn-outline-info my-2 mr-sm-0 btn-buscar" type="submit">Buscar</button>
-		    		</form>
-				</div>
-
 				<!-- Listar Vehiculos -->
 				<div class="row">
 					<div class="col-lg-12 contenido-tabla-clientes">
 						<div class="table-responsive">
-							<table class="table datatable-basic table-bordered table-striped table-hover">
+							<table class="table table-bordered table-striped table-hover" id="datosTabla">
 								<thead>
 									<tr class="success tabla-header">
-										<th>Cliente</th>
-										<th>Placas</th>
-										<th>Marca</th>
-										<th>Modelo</th>
-										<th>Año</th>
-										<th>Kilometraje</th>
-										<th colspan="3">Acción</th>
+										<th>Nombre cliente</th>
+										<th>Placas vehículo</th>
+										<th>Marca vehículo</th>
+										<th>Modelo vehículo</th>
+										<th>Año vehículo</th>
+										<th>Kilometraje vehículo</th>
+										<th>Acción editar</th>
+										<th>Acción eliminar</th>
 									</tr>
 								</thead>
 

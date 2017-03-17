@@ -77,7 +77,7 @@
 
 		}
 
-		#
+		#REGISTRO DE MANTENIMIENTOS EN LA BASE DE DATOS
 		#-----------------------------------------------------------------------------------------------------------
 		public function registrarMantenimientosController(){
 
@@ -130,7 +130,7 @@
 					}
 					
 				}else{
-					
+
 					echo "Seleccione un vehiculo";
 				}
 			   

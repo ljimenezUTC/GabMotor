@@ -593,6 +593,9 @@ body {
   span{padding: 0px 0px 20px 0px;}
 }
 
+.contenedor-mantenimientos .bs .btn-vehiculo{
+  margin-top: 28px;
+}
 
 /********************************
   * Categorias y trabajos
@@ -625,14 +628,10 @@ body {
     }
 
     .list-group{
-  
+        
       .categoria{
         padding: 8px;
 
-      }
-
-       .fa-dollar{
-    
       }
     }
 

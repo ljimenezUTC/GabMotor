@@ -39,7 +39,6 @@
 				<div class="panel-heading wow zoomIn">
 
 					<h6 class="panel-title">DATOS PARA AGREGAR EL MANTENIMIENTO</h6>
-
 				</div><hr>
 
 				<!-- Contenido Formulario Add mantenimientos -->
@@ -148,11 +147,8 @@
 							</div>
 
 
-							<div class="col-lg-2 col-md-12">
-
-								<label class="col-md-12 control-label">Acción</label>
-
-								<button type="button" class="col-md-12 btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span> Agregar Vehículo</button>	
+							<div class="col-lg-2 col-md-12 bs">
+								<button type="button" class="col-md-12 btn btn-info btn-vehiculo" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span> Agregar Vehículo</button>	
 
 							</div>
 

@@ -2,43 +2,49 @@
 /*=============================================
 	Validar cedula del cliente en la BD
 =============================================*/
+$("#ingresoCedulaCliente").on('change',function(event) {
 
-	$("#ingresoCedulaCliente").on('change',function(event) {
-		event.preventDefault();
-		/* Act on the event */
+	event.preventDefault();
 
-		var cedulaCLiente = $("#ingresoCedulaCliente").val();
+	var cedulaCLiente = $("#ingresoCedulaCliente").val();
 
-		$.ajax({
-			url: 'views/ajax/gestorClientes.php',
-			type: 'POST',
-			data: {cedula: cedulaCLiente},
-		})
-		.done(function(response) {
+	$.ajax({
 
-			if (response == "true") {
-				console.log(response);
+		url: 'views/ajax/gestorClientes.php',
+		type: 'POST',
+		data: {cedula: cedulaCLiente},
 
-				$("#mensajeValidarCedula").html('<span class=" has-error alert-dismissable">El usuario con esta cedula ya existe</span>').fadeIn('slow');
+	})
+	.done(function(response) {
 
-				$("#boton_enviar").attr("disabled", true);
+		if (response == "true") {
 
+			$("#mensajeValidarCedula").html('<span class=" has-error alert-dismissable">El usuario con esta cedula ya existe</span>').fadeIn('slow');
+
+			$("#guardarCliente").attr("disabled", true);
+
+		
+		}else{
+
+			$("#mensajeValidarCedula").fadeOut('slow');
+
+			$("#guardarCliente").attr("disabled", false);
 			
-			}else{
-				$("#mensajeValidarCedula").fadeOut('slow');
+		}
 
-				$("#boton_enviar").attr("disabled", false);
-				
-			}
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
+	})
+	.fail(function() {
+
+		console.log("error");
+
+	})
+	.always(function() {
+
+		console.log("complete");
 
 	});
+
+});
 		
 
 

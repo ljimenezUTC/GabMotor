@@ -21,27 +21,35 @@
 	<div class="row">
 		
 		<!--Contenido Editar Clientes-->
-		<div id="seccionClientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
 	        <div class="row">
-				<div class="col-md-6 lista-cliente-detalle detalle-add-cliente">
-					<span class="fa fa-users"> <a href="">Clientes - Editar Cliente</a></span>
+
+				<div class="col-md-6 lista-cliente-detalle detalle-add-cliente wow bounceInDown">
+
+					<span class="fa fa-th"> <a href="">Clientes - Editar Cliente</a></span>
 					<p class="text-muted small">Administra los clientes!</p>
+
 	            </div>
 
-	            <div class="col-md-6 pull-right seccion-add-clientes">
-	                <!--Lista Clientes-->
+	            <!--<div class="col-md-6 pull-right seccion-add-clientes wow zoomIn">
+
+	                Lista Clientes
 	                <a id="btnAgregarCliente" href="clientes" class="btn btn-info pull-right">
 	                <span class="fa fa-users"> </span> Lista de clientes</a>
-	            </div>
+
+	            </div>-->
+
 	        </div>
 
 	        <!-- Inicio Panel -->
 			<div class="panel panel-flat contenido-add-cliente">
+
 				<div class="panel-heading">
+
 					<h5 class="panel-title">DATOS DEL CLIENTE</h5>
-				</div>
-				<hr>
+
+				</div><hr>
 
 				<!-- Contenido Formulario Editar Cliente -->
 				<div class="formulario-add-cliente">
@@ -57,6 +65,7 @@
 						?>
 
 					</form>
+
 				</div><!-- Contenido Formulario Editar Cliente -->
 
 		  	</div><!-- Fin Panel -->

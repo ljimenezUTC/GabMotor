@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	listarCategoriasMantenimientosSubItems();
+	
 });
 
 
@@ -29,14 +30,12 @@ function listarCategoriasMantenimientosSubItems(){
 
 	$.ajax({
 
-		type: 'POST',
 		url: 'views/ajax/cargarMantenimientos.php',
 		data: {"action":"ajaxMantenimiento"}
 
 	})
 	.done(function(datos){
 
-		//console.log(datos);
 		$("#resultados").html(datos);
 
 	})
@@ -52,3 +51,78 @@ function listarCategoriasMantenimientosSubItems(){
 	});
 
 }
+
+/*---------------------------------------------------------------------------
+	Despliega el formulario de mantenimientos
+-----------------------------------------------------------------------------*/
+$("#btnDesplegarMantenimientos").on('click', function(){
+
+	$("#vistaMantenimientos").toggle(400);
+	//iniciarPdf();
+
+});
+
+
+/*--------------------------------------------------------------------------------
+	Registra los mantenimientos seleccionados en la tabla temporal para su 
+	posterior procesamiento.
+--------------------------------------------------------------------------------*/
+
+$("#btnRegistrarMantenimientos").on('click', function(){
+
+	$.ajax({
+		url: 'views/ajax/gestorMantenimientos.php',
+		type: 'POST',
+		data: $("#registrarMantenimientos").serialize(),
+	})
+	.done(function(response) {
+
+		//console.log("--" + response);
+		$("#resultadosMantenimientosTmp").html(response);
+
+	})
+	.fail(function() {
+
+		console.log("error");
+
+	})
+	.always(function() {
+
+		console.log("complete");
+
+	});
+	
+
+	$("#vistaMantenimientos").toggle(400);
+
+});
+
+
+/*-------------------------------------------------------------------------------
+	Desplegar el documento pdf con la factura en caso de que los mantenimientos 
+	seleccionados se guarden correctamento.
+---------------------------------------------------------------------------------*/
+function iniciarPdf(){
+
+	var theURL = "views/pdf/documentos/pedido_pdf.php";
+
+	var winName = "Pedido";
+
+	var features = "";
+
+	var myWidth = "1024";
+
+	var myHeight = "768";
+
+	var isCenter = "true";
+
+	if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!="")?",":"";
+    features+=",left="+myLeft+",top="+myTop;
+  }
+  window.open(theURL,winName,features+((features!="")?",":"")+"width="+myWidth+",height="+myHeight);
+}
+
+

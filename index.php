@@ -15,7 +15,7 @@
 	require_once "controllers/gestorMantenimientos.php";
 	require_once "controllers/gestorPerfil.php";
 
-	require_once 'views/mensajes.php';
+	require_once "views/mensajes.php";
 	
 	$template = new TemplateController();
 	$template->template();

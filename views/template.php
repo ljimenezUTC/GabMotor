@@ -14,7 +14,6 @@
 		<!-- Bootstrap -->
 	    <link rel="stylesheet" href="views/css/bootstrap4.css">
 	    <link rel="stylesheet" href="views/css/dataTables.jqueryui.css">
-		
 		<link rel="stylesheet" href="views/css/animate.min.css">
 		<link rel="stylesheet" href="views/css/font-awesome.css">
 		<link rel="stylesheet" href="views/css/sweetalert.css">
@@ -41,19 +40,18 @@
 			?>
 		</section><!-- Fin contenido -->
 
-
-
 		<!-- Scripts-->
 		<script src="views/js/main.js"></script>
 		<script src="views/js/gestorClientes.js"></script>
 		<script src="views/js/gestorVehiculos.js"></script>
 		<script src="views/js/gestorMantenimientos.js"></script>
-
 		<script src="views/js/jquery.dataTables.js"></script>
 	    <script src="views/js/dataTables.jqueryui.js"></script>
 		
 		<script>
-	      $('#datosTabla').dataTable();
+
+	      $("#datosTabla").dataTable();
+
 	    </script>
 		
 	</body>

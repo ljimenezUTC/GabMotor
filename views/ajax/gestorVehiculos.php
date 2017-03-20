@@ -11,7 +11,7 @@
 
 			public $placasVehiculo;
 
-			#
+			#VALIDAR PLACAS EXITENTES DEL VEHICULO EN LA BD
 			#----------------------------------------------------------------------------------------------------
 			public function validarPlacasVehiculo(){
 
@@ -21,7 +21,6 @@
 
 				echo $respuesta;
 			}
-
 
 		}
 

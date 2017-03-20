@@ -2,10 +2,8 @@
 	
 	class GestorVehiculosController {
 
-
-
 		#LISTAR LISTA DE CLIENTES PARA EL REGISTRO DE LOS VEHICULOS
-		#-------------------------------------------------------------------
+		#----------------------------------------------------------------------------------------------------
 		
 		public function listarClientesVehiculosController(){
 
@@ -18,15 +16,15 @@
 							<td class="acciones">'. $item["nombre_cliente"] .' '. $item["apellido_cliente"] .'</td>
 							<td class="acciones">'. $item["direccion_cliente"] .'</td>
 							<td class="acciones">'. $item["telefono_cliente"] .'</td>
-							<td class="acciones"><a href="#" onclick="agregar( \'' . $item["id_cliente"] . '\' , \'' . $item["cedula_cliente"] . '\' , \'' . $item["nombre_cliente"] . '\' , \'' . $item["apellido_cliente"] . '\' , \'' . $item["direccion_cliente"] . '\' , \'' . $item["telefono_cliente"] . '\')" class="btn btn-info btn-sm btn-modal">Agregar cliente <span class="fa fa-plus-circle"></span></a></td>
+							<td class="acciones"><a href="#" onclick="agregar( \'' . $item["id_cliente"] . '\' , \'' . $item["cedula_cliente"] . '\' , \'' . $item["nombre_cliente"] . '\' , \'' . $item["apellido_cliente"] . '\' , \'' . $item["direccion_cliente"] . '\' , \'' . $item["telefono_cliente"] . '\')" class="btn btn-info btn-sm btn-modal"><span class="fa fa-user"> Agregar</span></a></td>
 						</tr>		
 				';
 			}
 		}
 
 
-		#
-		#--------------------------------------------------------------------------------------
+		# VAILIDAR PLACAS DEL VEHICULO REPETIDAS EN LA BASE DE DATOS
+		#-----------------------------------------------------------------------------------------------
 		public function validarPlacasVehiculoController($placasVehiculo){
 
 			$datosController = $placasVehiculo;
@@ -46,12 +44,8 @@
 		}
 
 
-
-
-
-
 		#REGISTRAR VEHICULOS
-		#----------------------------------------------------------------
+		#----------------------------------------------------------------------------------------------
 		public function ingresarVehiculosController(){
 
 			if (isset($_POST["idClienteIngresoVehiculo"]) && isset($_POST["ingresoPlacasVehiculo"])) {
@@ -62,7 +56,6 @@
 											"modelo"=>$_POST["ingresoModeloVehiculo"],
 											"anio"=>$_POST["ingresoAnioVehiculo"],
 											"kilometraje"=>$_POST["ingresoKilometrajeVehiculo"]);
-
 
 				$respuesta = GestorVehiculosModel::ingresarVehiculosModel($datosController, "vehiculo");
 
@@ -93,17 +86,13 @@
 
 				}
 
-
-
 			}
 
 		}
 
 
-
-
 		#LISTAR VEHICULOS
-		#----------------------------------------------------------------
+		#--------------------------------------------------------------------------------------------
 		public function listarVehiculosController(){
 
 			$respuesta = GestorVehiculosModel::listarVehiculosModel("vehiculo","cliente");
@@ -129,9 +118,8 @@
 		}
 
 
-
 		#EDITAR VEHICULOS
-		#----------------------------------------------------------------
+		#----------------------------------------------------------------------------------------------
 		
 		public function editarVehiculosController(){
 
@@ -227,8 +215,6 @@
 		}
 
 
-
-
 		#ACTUALIZAR VEHICULOS
 		#----------------------------------------------------------------
 		public function actualizarVehiculosController(){
@@ -277,8 +263,6 @@
 		}
 
 
-
-
 		#BORRAR VEHICULOS
 		#----------------------------------------------------------------
 		public function borrarVehiculosController(){
@@ -311,6 +295,7 @@
 						</script>';
 					
 				}else{
+					
 					echo'<script>
 
 							swal({

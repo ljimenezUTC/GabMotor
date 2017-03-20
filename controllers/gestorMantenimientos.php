@@ -34,13 +34,17 @@
 
 			$respuestaCategorias = GestorMantenimientosModel::listarCategoriasModel("categoria");
 
-			echo '<div class="container">';
+			//echo '<div class="container">';
+			echo '<section> <h4 class="categorias-title">Trabajos a realizarse</h4> 
+					        <p class="text-right text-info">Seleccione los trabajos realizados 2)</p>';
+
 
 				echo '<div class="row">';
 
 					foreach ($respuestaCategorias as $row => $itemCategorias) {
 
-						echo '<div class="col-md-3">';
+						//echo '<div class="col-md-3">';
+						echo '<div class="contenido-catagorias col-lg-4 col-md-12">';
 
 							echo '<article>';
 
@@ -49,17 +53,46 @@
 							$respuestaMantenimientos = GestorMantenimientosModel::listarMantenimientosModel($datosController,"mantenimiento");
 
 									
-							echo '<h6>' . $itemCategorias["nombre_categoria"] . '</h6>';
+							//echo '<h6>' . $itemCategorias["nombre_categoria"] . '</h6>';
+							echo '<ul class="list-group">  
+									<li class="list-group-item active categoria">
+										<span class="fa fa-check-circle fa-ck"></span>'. $itemCategorias["nombre_categoria"] . '
+									</li>';
+
 
 							foreach ($respuestaMantenimientos as $row => $itemMantenimientos) {
 
-							echo '<p>';
+							/*echo '<p>';
 
 								echo  '<input type="checkbox" name="idMantenimiento[]" value="'. $itemMantenimientos["id_mantenimiento"] .'">' . $itemMantenimientos["descripcion_mantenimiento"] . '</input>' . '<input type="number" value="'.$itemMantenimientos["costo_mantenimiento"].'" readonly></input>';
 
 								}
 
-							echo '</p>';
+							echo '</p>';*/
+							echo '<li class="list-group-item"> ';
+
+
+								echo '
+									<label class="custom-control custom-checkbox">
+										<div class="cont-check">
+											<input type="checkbox" class="custom-control-input" name="idMantenimiento[]" value="'. $itemMantenimientos["id_mantenimiento"] .'">
+											<span class="custom-control-indicator"></span>
+											<span class="custom-control-description">' . $itemMantenimientos["descripcion_mantenimiento"] . '</span>
+										<div>
+										' 
+										.
+
+										'<div class="cont-precio">
+											<span class="fa fa-dollar"></span> 
+											<input class=" input-precio" type="text" value="'.$itemMantenimientos["costo_mantenimiento"].'" readonly="readonly"></input>
+										</div>
+									</label>
+
+								';
+
+							}
+
+								echo '</li></ul><br>';
 
 							echo '</article>';
 
@@ -69,7 +102,7 @@
 
 				echo '</div>';
 
-			echo '</div>';
+			echo '</section>';
 
 		}
 
@@ -180,7 +213,6 @@
 					}
 				
 			}
-			
 			   
 		}
 		

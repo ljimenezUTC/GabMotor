@@ -55,12 +55,11 @@ function listarCategoriasMantenimientosSubItems(){
 /*---------------------------------------------------------------------------
 	Despliega el formulario de mantenimientos
 -----------------------------------------------------------------------------*/
-$("#btnDesplegarMantenimientos").on('click', function(){
+/*$("#btnDesplegarMantenimientos").on('click', function(){
 
 	$("#vistaMantenimientos").toggle(400);
-	//iniciarPdf();
 
-});
+});*/
 
 
 /*--------------------------------------------------------------------------------

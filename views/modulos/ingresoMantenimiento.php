@@ -47,7 +47,7 @@
 
 					<form method="POST" id="registrarMantenimientos">
 
-						<div class="row">
+						<!--<div class="row">
 
 							<div class="col-md-3">
 
@@ -101,10 +101,65 @@
 
 							</div>
 							
-						</div><br><hr>
+						</div><br><hr>-->
+						<div class="row">
+
+							<div class="col-lg-12">
+
+								<p class="text-right text-info">Seleccione un vehículo para agregar el mantenimiento 1)</p>
+								
+							</div>
+
+							<div class="col-lg-2 col-md-12">
+
+								<label  class="control-label">Nombre del Cliente</label>
+								<input type="text" class="form-control" id="nombresClienteIngresoMantenimiento" readonly="readonly">
+
+							</div>
+
+							<div class="col-lg-2 col-md-12">
+
+						  		<label class="control-label">Placas del vehículo</label>
+								<input type="hidden" class="form-control" name="idVehiculoIngresoMantenimiento" id="idVehiculoIngresoMantenimiento">
+
+								<input type="text" class="form-control" id="placasVehiculoIngresoMantenimiento" readonly="readonly">
+
+							 </div>
+
+							<div class="col-lg-2 col-md-12">
+
+								<label  class="control-label">Marca vehículo</label>
+								<input type="text" class="form-control" id="marcaVehiculoIngresoMantenimiento" readonly="readonly">
+
+							</div>
+						
+							<div class="col-lg-2 col-md-12">
+
+								<label class="control-label">Modelo vehículo</label>
+								<input type="text" class="form-control" id="modeloVehiculoIngresoMantenimiento" readonly="readonly">
+
+							</div>
+						
+							<div class="col-lg-2 col-md-12">
+
+								<label class="control-label">Kilomátraje vehículo</label>
+								<input type="text" class="form-control" id="kilometrajeVehiculoIngresoMantenimiento" readonly="readonly">
+
+							</div>
+
+
+							<div class="col-lg-2 col-md-12">
+
+								<label class="col-md-12 control-label">Acción</label>
+
+								<button type="button" class="col-md-12 btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span> Agregar Vehículo</button>	
+
+							</div>
+
+						</div><br> <hr>
 
 						<!--CARGA DE CATEGORIAS Y SUS MANTENIMIENTOS-->
-						<div class="row">
+						<!--<div class="row">
 
 							<div class="col-lg-12">
 
@@ -121,7 +176,7 @@
 
 							</div>		
 							
-						</div>
+						</div>-->
 
 						<div class="row">
 						
@@ -144,9 +199,9 @@
 						<!--LISTAR MANTENIMIENTOS TEMPORALES PREVIOS A SER PROCESADOS-->
 						<div class="row">
 
-							<div class="col-lg-12">
+							<div class="col-lg-12 table-responsive">
 								
-								<div id="resultadosMantenimientosTmp"></div><!-- Carga los datos ajax -->
+								<div id="resultadosMantenimientosTmp" class="resultados"></div><!-- Carga los datos ajax -->
 
 							</div>
 							

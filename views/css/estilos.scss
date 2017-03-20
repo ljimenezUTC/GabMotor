@@ -48,8 +48,6 @@ body {
 
 .detalle-login{
   text-align:center;
-  //text-shadow: 0px 1px 1px $color-texto-negro;
-  p{font-size: 14px;}
 }
 
 .formulario-header{ 
@@ -71,7 +69,10 @@ body {
   padding: 5px 30px 5px 30px;
   input{
     text-align: left;
-    font-size: 14px;
+    font-size: 12px;
+  }
+  button{
+    font-size: 12px;
   }
   button:hover{
     cursor: pointer;
@@ -80,7 +81,7 @@ body {
 
 .footer-form{
   padding: 5px 30px 40px 30px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .reguistrar a{
@@ -89,7 +90,7 @@ body {
 
 .input-group-addon{
   background: $text-primary-color;
-  font-size: 20px;
+  font-size: 18px;
   width: 40px;
 }
 
@@ -111,7 +112,7 @@ body {
   }
   
   .bt-login{
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .rec-password{
@@ -244,11 +245,11 @@ body {
   p{color: #212121;}
   h6{
     color:#f44336;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .alert {
-  font-size:13px;
+  font-size:12px;
   border-radius: 0;
   -webkit-border-radius: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.11);
@@ -295,7 +296,7 @@ body {
 }
 
 .alert-white .icon i {
-  font-size: 20px;
+  font-size: 24px;
   color: $text-primary-color;
   left: 15px;
   margin-top: -10px;
@@ -325,11 +326,8 @@ body {
 }
 
 @media (max-width:390px){
-  .inicio{
+  .inicio,p{
     font-size: 12px;
-  }
-  p{
-    font-size: 11px;
   }
 }
 
@@ -416,20 +414,29 @@ body {
   }
 }
 
+.alert-validar{
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 0px 0px 0px 4px;
+  font-size: 14px;
+}
+
+
 @media (max-width: 770px) {
   .detalle-add-cliente{
-    font-size: 18px;
+    font-size: 16px;
     text-align:center;
   }
 
   .seccion-add-clientes{
     a{
-      font-size:14px;
-    }
-    .btn-success{
-      width: 100%;
       font-size:12px;
+      height: 34px;
     }
+  }
+
+  .alert-validar{
+    font-size: 12px;
   }
 
   .contenido-add-cliente{
@@ -440,6 +447,7 @@ body {
     .btn-success, .btn-info{
       text-align: center;
       font-size: 11px;
+      height: 34px;
     }
   }
 }
@@ -514,7 +522,16 @@ body {
  * Modales
  ***************/
  .btn-modal{
-  font-size:12px;
+  font-size:13px;
+ }
+
+ @media (max-width: 770px){
+  .btn-modal{
+    height: 28px;
+   }
+   #datosTabla{
+    font-size: 12px;
+   }
  }
  
 /****************
@@ -542,3 +559,118 @@ body {
   }
 }
 
+
+/********************************
+  * Ingreso manteniminetos
+*********************************/
+.detalle-add-mantenimiento{
+  font-size: 14px;
+  span,a{
+    font-size: 24px;
+  } 
+}
+
+.contenedor-mantenimientos{
+  .col-lg-2{
+    text-align: center;
+  }
+  input, button{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .icono-menu{
+    padding-right: 2px;
+  }
+  
+}
+
+@media (max-width:770px){
+  .d-mantenimentos{
+    text-align:center;
+    font-size: 16px;
+  }
+  span{padding: 0px 0px 20px 0px;}
+}
+
+
+/********************************
+  * Categorias y trabajos
+*********************************/
+.categorias-title{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenido-catagorias{
+    .fa-ck{
+      padding-right: 4px;
+    }
+
+    .custom-control{
+      font-size: 12px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .list-group .list-group-item{
+      padding-left: 8px;
+    }
+    
+    .cont-check{
+      width: 100%;
+      height: 100%;
+      float: left;
+      text-align: left;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .cont-precio{
+      text-align: right;
+      width: 100%;
+      height: 100%;
+      float: right;
+      margin-top: -21px;
+      margin-right: -24px;
+      font-size: 12px;
+
+    .input-precio{
+      color: $dark-primary-color;
+      width: 37px;
+      height: 100%;
+      font-size: 12px;
+      border: 1px solid $divider-color;
+      box-shadow: 0 0 1px $divider-color;
+      border-radius:5px;
+    }
+  }
+}
+
+@media (max-width: 770px){
+  .categorias-title{
+    font-size: 20px !important;
+  }
+
+  .contenido-catagorias{
+    .fa-ck{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 345px){
+  .contenido-catagorias{
+    .fa-ck{
+      display: none;
+    }
+
+    .cont-precio{
+       margin-top: 6px;
+
+      .input-precio{
+        width: 90%;
+        font-size: 12px;
+      }
+    }
+  }
+}

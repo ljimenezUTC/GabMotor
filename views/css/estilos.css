@@ -27,8 +27,6 @@ body {
 
 .detalle-login {
   text-align: center; }
-  .detalle-login p {
-    font-size: 14px; }
 
 .formulario-header {
   text-align: center;
@@ -44,20 +42,22 @@ body {
   padding: 5px 30px 5px 30px; }
   .contenido-form-login input {
     text-align: left;
-    font-size: 14px; }
+    font-size: 12px; }
+  .contenido-form-login button {
+    font-size: 12px; }
   .contenido-form-login button:hover {
     cursor: pointer; }
 
 .footer-form {
   padding: 5px 30px 40px 30px;
-  font-size: 14px; }
+  font-size: 12px; }
 
 .reguistrar a {
   float: right; }
 
 .input-group-addon {
   background: #FFFFFF;
-  font-size: 20px;
+  font-size: 18px;
   width: 40px; }
 
 @media (max-width: 990px) {
@@ -71,7 +71,7 @@ body {
     font-size: 12px; }
 
   .bt-login {
-    font-size: 14px; }
+    font-size: 12px; }
 
   .rec-password a {
     font-size: 12px;
@@ -167,10 +167,10 @@ body {
   color: #212121; }
 .snippet h6 {
   color: #f44336;
-  font-size: 14px; }
+  font-size: 12px; }
 
 .alert {
-  font-size: 13px;
+  font-size: 12px;
   border-radius: 0;
   -webkit-border-radius: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.11);
@@ -211,7 +211,7 @@ body {
   margin-top: -3px; }
 
 .alert-white .icon i {
-  font-size: 20px;
+  font-size: 24px;
   color: #FFFFFF;
   left: 15px;
   margin-top: -10px;
@@ -235,11 +235,8 @@ body {
   padding-left: 24px; }
 
 @media (max-width: 390px) {
-  .inicio {
-    font-size: 12px; }
-
-  p {
-    font-size: 11px; } }
+  .inicio, p {
+    font-size: 12px; } }
 /**************************
   * Clientes
   ************************/
@@ -298,15 +295,22 @@ body {
 .formulario-add-cliente button, .formulario-add-cliente a {
   font-size: 14px; }
 
+.alert-validar {
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 0px 0px 0px 4px;
+  font-size: 14px; }
+
 @media (max-width: 770px) {
   .detalle-add-cliente {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center; }
 
   .seccion-add-clientes a {
-    font-size: 14px; }
-  .seccion-add-clientes .btn-success {
-    width: 100%;
+    font-size: 12px;
+    height: 34px; }
+
+  .alert-validar {
     font-size: 12px; }
 
   .contenido-add-cliente input, .contenido-add-cliente label, .contenido-add-cliente h5 {
@@ -314,7 +318,8 @@ body {
     text-align: center; }
   .contenido-add-cliente .btn-success, .contenido-add-cliente .btn-info {
     text-align: center;
-    font-size: 11px; } }
+    font-size: 11px;
+    height: 34px; } }
 /**************************
   * Seccion mantenimentos
   ************************/
@@ -374,8 +379,14 @@ body {
  * Modales
  ***************/
 .btn-modal {
-  font-size: 12px; }
+  font-size: 13px; }
 
+@media (max-width: 770px) {
+  .btn-modal {
+    height: 28px; }
+
+  #datosTabla {
+    font-size: 12px; } }
 /****************
  * Perfil
  ***************/
@@ -395,5 +406,80 @@ body {
 @media (max-width: 575px) {
   .cont-perfil, h4 {
     text-align: center; } }
+/********************************
+  * Ingreso manteniminetos
+*********************************/
+.detalle-add-mantenimiento {
+  font-size: 14px; }
+  .detalle-add-mantenimiento span, .detalle-add-mantenimiento a {
+    font-size: 24px; }
+
+.contenedor-mantenimientos .col-lg-2 {
+  text-align: center; }
+.contenedor-mantenimientos input, .contenedor-mantenimientos button {
+  font-size: 12px;
+  text-align: center; }
+.contenedor-mantenimientos .icono-menu {
+  padding-right: 2px; }
+
+@media (max-width: 770px) {
+  .d-mantenimentos {
+    text-align: center;
+    font-size: 16px; }
+
+  span {
+    padding: 0px 0px 20px 0px; } }
+/********************************
+  * Categorias y trabajos
+*********************************/
+.categorias-title {
+  font-family: 'Open Sans', sans-serif; }
+
+.contenido-catagorias .fa-ck {
+  padding-right: 4px; }
+.contenido-catagorias .custom-control {
+  font-size: 12px;
+  width: 100%;
+  height: 100%; }
+.contenido-catagorias .list-group .list-group-item {
+  padding-left: 8px; }
+.contenido-catagorias .cont-check {
+  width: 100%;
+  height: 100%;
+  float: left;
+  text-align: left;
+  font-size: 12px;
+  margin-top: 3px; }
+.contenido-catagorias .cont-precio {
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  float: right;
+  margin-top: -21px;
+  margin-right: -24px;
+  font-size: 12px; }
+  .contenido-catagorias .cont-precio .input-precio {
+    color: #0288D1;
+    width: 37px;
+    height: 100%;
+    font-size: 12px;
+    border: 1px solid #BDBDBD;
+    box-shadow: 0 0 1px #BDBDBD;
+    border-radius: 5px; }
+
+@media (max-width: 770px) {
+  .categorias-title {
+    font-size: 20px !important; }
+
+  .contenido-catagorias .fa-ck {
+    display: none; } }
+@media (max-width: 345px) {
+  .contenido-catagorias .fa-ck {
+    display: none; }
+  .contenido-catagorias .cont-precio {
+    margin-top: 6px; }
+    .contenido-catagorias .cont-precio .input-precio {
+      width: 90%;
+      font-size: 12px; } }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -57,6 +57,7 @@
 							echo '<ul class="list-group">  
 									<li class="list-group-item active categoria">
 										<span class="fa fa-check-circle fa-ck"></span>'. $itemCategorias["nombre_categoria"] . '
+										<span class="fa fa-dollar"></span> 
 									</li>';
 
 
@@ -83,7 +84,6 @@
 										.
 
 										'<div class="cont-precio">
-											<span class="fa fa-dollar"></span> 
 											<input class=" input-precio" type="text" value="'.$itemMantenimientos["costo_mantenimiento"].'" readonly="readonly"></input>
 										</div>
 									</label>

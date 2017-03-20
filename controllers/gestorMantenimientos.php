@@ -142,6 +142,7 @@
 								<td class="text-center">
 								<button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><span class="fa fa-trash-o"></span></button></td>
 							</tr>
+							
 
 							';
 

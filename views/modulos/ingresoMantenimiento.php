@@ -25,7 +25,7 @@
 			
 			<div class="row">
 
-				<div class="col-md-6 lista-cliente-detalle wow bounceInDown">
+				<div class="col-md-6 lista-cliente-detalle titulo-add-mantenimento wow bounceInDown">
 
 					<span class="fa fa-wrench"><a href="mantenimientos"> Añadir Mantenimiento</a></span>
 
@@ -36,8 +36,7 @@
 			<!-- Inicio Panel -->
 			<div class="panel panel-flat ">
 
-				<div class="panel-heading wow zoomIn">
-
+				<div class="panel-heading titulo-agregar wow zoomIn">
 					<h6 class="panel-title">DATOS PARA AGREGAR EL MANTENIMIENTO</h6>
 				</div><hr>
 

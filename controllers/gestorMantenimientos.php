@@ -57,9 +57,10 @@
 							echo '<ul class="list-group">  
 									<li class="list-group-item active categoria">
 										<span class="fa fa-check-circle fa-ck"></span>'. $itemCategorias["nombre_categoria"] . '
-										<span class="fa fa-dollar"></span> 
+										<div class="dolar">
+											<span class="fa fa-dollar pull-right"></span>
+										</div> 
 									</li>';
-
 
 							foreach ($respuestaMantenimientos as $row => $itemMantenimientos) {
 
@@ -71,7 +72,6 @@
 
 							echo '</p>';*/
 							echo '<li class="list-group-item"> ';
-
 
 								echo '
 									<label class="custom-control custom-checkbox">

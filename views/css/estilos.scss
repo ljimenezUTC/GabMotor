@@ -416,11 +416,10 @@ body {
 
 .alert-validar{
   border-radius: 4px;
-  margin-top: 4px;
-  padding: 0px 0px 0px 4px;
+  margin-top: 1px;
+  padding: 4px 4px 4px 4px;
   font-size: 14px;
 }
-
 
 @media (max-width: 770px) {
   .detalle-add-cliente{
@@ -508,7 +507,7 @@ body {
 
 .texto-n{
   font-size: 14px;
-  text-aling:center;
+  text-align: center;
 }
 
 .tabla-header:hover{
@@ -628,10 +627,6 @@ body {
       padding: 6px 12px 0px 4px;// Espacio items lista
       height: 40px;//Ancho items lista
     }
-
-    
-
-
     .list-group{ 
       .categoria{
         padding: 8px;

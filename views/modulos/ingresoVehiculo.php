@@ -108,7 +108,7 @@
 
 					        	<input type="text" name="ingresoPlacasVehiculo" id="ingresoPlacasVehiculo" class="form-control" required="required" placeholder="Ingresa las placas del vehiculo">
 
-					        	<div id="mensajeValidarPlacas">	</div>
+					        	<div id="mensajeValidarPlacas" class="alert-validar"></div>
 
 					      	</div>
 

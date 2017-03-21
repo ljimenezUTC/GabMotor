@@ -19,7 +19,7 @@ $("#ingresoCedulaCliente").on('change',function(event) {
 
 		if (response == "true") {
 
-			$("#mensajeValidarCedula").html('<span class=" has-error alert-dismissable">El usuario con esta cedula ya existe</span>').fadeIn('slow');
+			$("#mensajeValidarCedula").html('<div class="bg-danger text-white alert-validar">El usuario con esta cedula ya existe.!</div>').fadeIn('slow');
 
 			$("#guardarCliente").attr("disabled", true);
 

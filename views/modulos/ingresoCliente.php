@@ -54,11 +54,9 @@
 						    <label for="ingresoCedulaCliente" class="col-sm-2 form-control-label">Cédula <span class="text-danger">*</span> </label>
 
 						    <div class="col-sm-10">
-
+							
 						    	<input type="text" name="ingresoCedulaCliente" id="ingresoCedulaCliente" class="form-control" minlength="10" maxlength="10" required="required" placeholder="Ingresa la cedula del cliente">
-
-						    	<div id="mensajeValidarCedula" class="has-error"></div>
-
+								<div id="mensajeValidarCedula" class="alert-validar"></div>
 							</div>
 
 					    </div>

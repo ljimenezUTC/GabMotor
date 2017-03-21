@@ -17,7 +17,7 @@ $("#ingresoPlacasVehiculo").on('change',function() {
 
 		if (response == "true") {
 
-			$("#mensajeValidarPlacas").html('<span class=" has-error alert-dismissable">El usuario con esta cedula ya existe</span>').fadeIn('slow');
+			$("#mensajeValidarPlacas").html('<div class="bg-danger text-white alert-validar">Ya existe un vehículo con esa placa.!</div>').fadeIn('slow');
 
 			$("#btnGuardarVehiculo").attr("disabled", true);
 

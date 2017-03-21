@@ -106,7 +106,7 @@
 
 					      	<div class="col-sm-10">
 
-					        	<input type="text" name="ingresoPlacasVehiculo" id="ingresoPlacasVehiculo" class="form-control" required="required" placeholder="Ingresa las placas del vehiculo">
+					        	<input type="text" name="ingresoPlacasVehiculo" id="ingresoPlacasVehiculo" class="form-control" required="required" maxlength="8" placeholder="Ingresa las placas del vehiculo" pattern="^[A-Z\-0-9]{7,8}$" title="Ingrese un numero de placa">
 
 					        	<div id="mensajeValidarPlacas">	</div>
 
@@ -120,7 +120,7 @@
 
 					      	<div class="col-sm-10">
 
-					        	<input type="text" name="ingresoMarcaVehiculo" id="ingresoMarcaVehiculo" class="form-control" required="required" placeholder="Ingresa la marca del vehiculo">
+					        	<input type="text" name="ingresoMarcaVehiculo" id="ingresoMarcaVehiculo" class="form-control" required="required" placeholder="Ingresa la marca del vehiculo" pattern="[a-zA-ZñÑÁÉÍÓÚ\s]+" title="Solo puede ingresar letras">
 
 					      	</div>
 
@@ -132,7 +132,7 @@
 
 					      	<div class="col-sm-10">
 
-					        	<input type="text" name="ingresoModeloVehiculo" id="ingresoModeloVehiculo" class="form-control" required="required" placeholder="Ingresa el modelo del vehiculo">
+					        	<input type="text" name="ingresoModeloVehiculo" id="ingresoModeloVehiculo" class="form-control" required="required" placeholder="Ingresa el modelo del vehiculo" pattern="[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="No puede ingresar caracteres especiales">
 
 					      	</div>
 
@@ -145,7 +145,7 @@
 
 						    <div class="col-sm-10">
 
-						    	<input type="text" name="ingresoAnioVehiculo" id="ingresoAnioVehiculo" class="form-control" required="required" placeholder="Ingresa el año del vehiculo">
+						    	<input type="number" name="ingresoAnioVehiculo" id="ingresoAnioVehiculo" class="form-control" required="required" placeholder="Ingresa el año del vehiculo" pattern="[0-9{4,4}" title="No puede ingresar letras ni caracteres especiales">
 
 						    </div>
 

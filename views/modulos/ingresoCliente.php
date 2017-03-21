@@ -55,7 +55,7 @@
 
 						    <div class="col-sm-10">
 
-						    	<input type="text" name="ingresoCedulaCliente" id="ingresoCedulaCliente" class="form-control" minlength="10" maxlength="10" required="required" placeholder="Ingresa la cedula del cliente">
+						    	<input type="text" name="ingresoCedulaCliente" id="ingresoCedulaCliente" class="form-control" maxlength="10" required="required" placeholder="Ingresa la cedula del cliente" pattern="[0-9]{10,10}" title="No es un numero de cedula valido">
 
 						    	<div id="mensajeValidarCedula" class="has-error"></div>
 
@@ -70,7 +70,7 @@
 
 						    <div class="col-sm-10">
 
-						   		<input type="text" name="ingresoNombreCliente" class="form-control" required="required" placeholder="Ingresa el nombre del cliente">
+						   		<input type="text" name="ingresoNombreCliente" class="form-control" required="required" placeholder="Ingresa el nombre del cliente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="Solo puede ingresar letras">
 
 						    </div>
 
@@ -83,7 +83,7 @@
 
 					    	<div class="col-sm-10">
 
-					        	<input type="text" name="ingresoApellidoCliente" class="form-control" required="required" placeholder="Ingresa el apellido del cliente">
+					        	<input type="text" name="ingresoApellidoCliente" class="form-control" required="required" placeholder="Ingresa el apellido del cliente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="Solo puede ingresar letras">
 
 					    	</div>
 
@@ -96,7 +96,7 @@
 
 					    	<div class="col-sm-10">
 
-					        	<input type="text" name="ingresoDireccionCliente" class="form-control" required="required" placeholder="Ingresa la direccion del cliente">
+					        	<input type="text" name="ingresoDireccionCliente" class="form-control" required="required" placeholder="Ingresa la direccion del cliente" pattern="^.*(?=.*[0-9])(?=.*[a-zA-ZñÑ\s]).*$" title="Ingrese una direccion valida">
 
 					    	</div>
 
@@ -109,7 +109,7 @@
 
 					    	<div class="col-sm-10">
 
-					        	<input type="text" name="ingresoTelefonoCliente" class="form-control" required="required" maxlength="10" minlength="10" placeholder="Ingresa el telefono del cliente">
+					        	<input type="text" name="ingresoTelefonoCliente" class="form-control" required="required" maxlength="10" minlength="10" placeholder="Ingresa el telefono del cliente" pattern="[0-9]{10,10}" title="Solo puede ingresar numeros">
 
 					    	</div>
 

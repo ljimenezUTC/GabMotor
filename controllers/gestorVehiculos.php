@@ -169,21 +169,21 @@
 			      	<label for="editarPlacasVehiculo" class="col-sm-2 form-control-label">Placas<span class="text-danger">*</span> </label>
 			      	<div class="col-sm-10">
 			      		<input type="hidden" name="editarIdVehiculo" id="editarIdVehiculo" class="form-control" required="required" value = "' . $respuesta["id_vehiculo"] . '">
-			        	<input type="text" name="editarPlacasVehiculo" id="editarPlacasVehiculo" class="form-control" required="required" value = "' . $respuesta["placas_vehiculo"] . '" readonly="readonly">
+			        	<input type="text" name="editarPlacasVehiculo" id="editarPlacasVehiculo" class="form-control" required="required" value = "' . $respuesta["placas_vehiculo"] . '" readonly="readonly" laceholder="Ingresa las placas del vehiculo" pattern="^[A-Z\-0-9]{7,8}$" title="Ingrese un numero de placa">
 			      	</div>
 			    </div>
 
 			    <div class="form-group row">
 			      	<label for="editarMarcaVehiculo" class="col-sm-2 form-control-label">Marca<span class="text-danger">*</span> </label>
 			      	<div class="col-sm-10">
-			        	<input type="text" name="editarMarcaVehiculo" id="editarMarcaVehiculo" class="form-control" required="required" value = "' . $respuesta["marca_vehiculo"] . '" readonly="readonly">
+			        	<input type="text" name="editarMarcaVehiculo" id="editarMarcaVehiculo" class="form-control" required="required" value = "' . $respuesta["marca_vehiculo"] . '" readonly="readonly" pattern="[a-zA-ZñÑÁÉÍÓÚ\s]+" title="Solo puede ingresar letras">
 			      </div>
 			    </div>
 
 		      	<div class="form-group row">
 			      	<label for="editarModeloVehiculo" class="col-sm-2 form-control-label">Modelo<span class="text-danger">*</span> </label>
 			      	<div class="col-sm-10">
-			        	<input type="text" name="editarModeloVehiculo" id="editarModeloVehiculo" class="form-control" required="required" value = "' . $respuesta["modelo_vehiculo"] . '" readonly="readonly">
+			        	<input type="text" name="editarModeloVehiculo" id="editarModeloVehiculo" class="form-control" required="required" value = "' . $respuesta["modelo_vehiculo"] . '" readonly="readonly" pattern="[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="No puede ingresar caracteres especiales">
 			      </div>
 			    </div>
 
@@ -191,7 +191,7 @@
 			    <div class="form-group row">
 			      <label for="editarAnioVehiculo" class="col-sm-2 form-control-label">Año<span class="text-danger">*</span> </label>
 			      <div class="col-sm-10">
-			        <input type="text" name="editarAnioVehiculo" id="editarAnioVehiculo" class="form-control" required="required" value = "' . $respuesta["anio_vehiculo"] . '" readonly="readonly">
+			        <input type="number" name="editarAnioVehiculo" id="editarAnioVehiculo" class="form-control" required="required" value = "' . $respuesta["anio_vehiculo"] . '" readonly="readonly" pattern="[0-9{4,4}" title="No puede ingresar letras ni caracteres especiales">
 			      </div>
 			    </div>
 

@@ -254,26 +254,9 @@
 				
 						echo'<script>
 
-								swal({
-									  title: "¡OK!",
-									  text: "¡Los mantenimientos han sido insertados correctamente!",
-									  type: "success",
-									  confirmButtonText: "Cerrar",
-									  closeOnConfirm: false
-								},
-
-								function(isConfirm){
-
-										 if (isConfirm) {	   
-										    window.location = "ingresoMantenimiento";
-										  } 
-
-								});	
-
 								$(document).ready(function() {
-
 									iniciarPdf();
-
+									window.location = "ingresoMantenimiento";
 								});
 
 							</script>';

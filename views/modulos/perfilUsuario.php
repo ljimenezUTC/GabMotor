@@ -57,7 +57,8 @@
 		  	<div class="form-group row">
 				<label class="col-sm-3 form-control-label">Contraseña actual</label>
 				<div class="col-sm-9">
-					<input type="text" name="passwordActual" id="" class="form-control">
+					<input type="text" id="passwordActual" class="form-control">
+					<div id="mensajeValidarPass"></div>
 				</div>
 			</div>
 
@@ -75,11 +76,11 @@
 				</div>
 			</div>
 			
-			<input type="hidden" id="" name="idUsuarioPerfil" value="<?php echo $_SESSION["id_usuario"]; ?>"><br>
+			<input type="hidden" id="idUsuarioPerfil" name="idUsuarioPerfil" value="<?php echo $_SESSION["id_usuario"]; ?>"><br>
 
 			<div class="text-right form-group row">
 				<div class="col-sm-12">
-					<button type="submit" class="btn btn-info" id="boton_enviar">Cambiar contraseña <span class="fa fa-check"></span></button>
+					<button type="submit" class="btn btn-info" id="idValidarPass">Cambiar contraseña <span class="fa fa-check"></span></button>
 				</div>
 			</div>
 		</form>		

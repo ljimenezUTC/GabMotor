@@ -9,6 +9,7 @@
 		exit();
 	}
 
+
 	include "header.php";
 	
  ?>
@@ -45,61 +46,7 @@
 
 					<form method="POST" id="registrarMantenimientos">
 
-						<!--<div class="row">
-
-							<div class="col-md-3">
-
-								<label  class="control-label">Cliente</label>
-								<input type="text" class="form-control" id="nombresClienteIngresoMantenimiento" readonly="readonly">
-
-							</div><div class="col-md-3"></div>
-
-							<div class="col-md-6">
-
-								<p class="text-right text-info">Seleccione el vehiculo para agregar el mantenimiento 1)</p>
-
-								<div class="pull-right">
-
-									<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span>Agregar Vehiculo</button>
-
-								</div>
-
-							</div>
-							
-						</div><br>
-
-						<div class="row">
-
-							<div class="col-md-3">
-
-						  		<label class="control-label">Placas del vehículo</label>
-								<input type="hidden" class="form-control" name="idVehiculoIngresoMantenimiento" id="idVehiculoIngresoMantenimiento" >
-								<input type="text" class="form-control" id="placasVehiculoIngresoMantenimiento" readonly="readonly">
-
-							 </div>
-
-							 <div class="col-md-3">
-
-								<label  class="control-label">Marca</label>
-								<input type="text" class="form-control" id="marcaVehiculoIngresoMantenimiento" readonly="readonly">
-
-							</div>
-
-							<div class="col-md-3">
-
-								<label class="control-label">Modelo</label>
-								<input type="text" class="form-control" id="modeloVehiculoIngresoMantenimiento" readonly="readonly">
-
-							</div>
-
-							<div class="col-md-3">
-
-								<label class="control-label">Kilomátraje</label>
-								<input type="text" class="form-control" id="kilometrajeVehiculoIngresoMantenimiento" readonly="readonly">
-
-							</div>
-							
-						</div><br><hr>-->
+						
 						<div class="row">
 
 							<div class="col-lg-12">
@@ -154,25 +101,6 @@
 						</div><br> <hr>
 
 						<!--CARGA DE CATEGORIAS Y SUS MANTENIMIENTOS-->
-						<!--<div class="row">
-
-							<div class="col-lg-12">
-
-								<div class="text-right form-group row">
-
-									<div class="col-sm-12" >
-
-										<p class="text-right text-info">Seleccione el mantenimiento realizado 2)</p>
-										<button type="button" class="btn btn-info" id="btnDesplegarMantenimientos"><span class="fa fa-wrench icono-menu"></span>Seleccionar mantenimientos</button>
-
-									</div>
-
-								</div>
-
-							</div>		
-							
-						</div>-->
-
 						<div class="row">
 						
 							<div id="vistaMantenimientos" class="col-lg-12" ><!--style="display:none"-->
@@ -188,7 +116,7 @@
 
 							</div>
 
-						</div><hr>
+						</div>
 						<!--FIN DE CARGA DE CATEGORIAS Y SUS MANTENIMIENTOS-->
 
 						<!--LISTAR MANTENIMIENTOS TEMPORALES PREVIOS A SER PROCESADOS-->
@@ -205,9 +133,8 @@
 
 						<div class="text-right form-group row">
 
-					    	<div class="col-lg-12">
+					    	<div class="col-lg-12" id="contenedorGuardarMant" style="display: none">
 
-								<!--<a href="mantenimientos" class="btn btn-success">Cancaler <span class="fa fa-undo"></span></a>-->
 								<p class="text-right text-info">Guarde los mantenimientos realizados 3)</p>
 								<button type="submit" class="btn btn-info" onc><span class="fa fa-save icono-menu"></span>Guardar Mantenimiento</button>
 

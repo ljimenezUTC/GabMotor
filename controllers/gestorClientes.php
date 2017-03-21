@@ -93,7 +93,7 @@
 				    <div class="col-sm-10">
 
 					  	<input type="hidden" value="'.$respuesta["id_cliente"].'" name="idClienteEditar" >
-						<input type="text" value="'.$respuesta["cedula_cliente"].'" name="cedulaClienteEditar" minlength="10" maxlength="10" class="form-control">
+						<input type="text" value="'.$respuesta["cedula_cliente"].'" name="cedulaClienteEditar" minlength="10" maxlength="10" class="form-control" readonly="readonly">
 
 				    </div>
 

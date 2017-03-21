@@ -37,6 +37,7 @@
 		#-----------------------------------------------------------------------------------------------
 		public function listarMantenimientosModel($datosModel, $tablaMantenimiento){
 
+
 			$stmt = Conexion::conectar()->prepare("SELECT * FROM mantenimiento  WHERE id_categoria = :idCategoria");
 
 			$stmt->bindParam(":idCategoria", $datosModel["idCategoria"], PDO::PARAM_INT);
@@ -72,12 +73,13 @@
 						foreach ($datos as $row => $itemCostoMantenimiento) {
 
 							$costoMantenimiento = $itemCostoMantenimiento["costo_mantenimiento"];
+							$costoMantenimientoF = number_format($costoMantenimiento, 2);
 
 							$stmtTmpInsertar = Conexion::conectar()->prepare("INSERT INTO $tablaTemporalMantenimientos (id_mantenimiento, session_id, costo_tmp_mantenimiento) VALUES(:idMantenimiento, :sessionId, :costoMantenimiento) ");
 
 							$stmtTmpInsertar->bindParam(":idMantenimiento",$item,PDO::PARAM_INT);
 							$stmtTmpInsertar->bindParam(":sessionId",$sessionId, PDO::PARAM_STR);
-							$stmtTmpInsertar->bindParam(":costoMantenimiento",$costoMantenimiento);
+							$stmtTmpInsertar->bindParam(":costoMantenimiento",$costoMantenimientoF);
 
 							$stmtTmpInsertar->execute();
 
@@ -101,6 +103,35 @@
 
 		}
 
+		#ELIMINAR MANTENIMIENTOS DE LA TABLA TEMPORAL Y PRESENTACION EN LA VISTA DE AGREGAR MANTENIMIENTOS
+		#---------------------------------------------------------------------------------------------------
+		public function eliminarMantenimientosTemporalModel($datosModel, $tablaTemporalMantenimientos, $tablaMantenimiento, $tablaCategoria){
+
+
+			$stmtEliminar = Conexion::conectar()->prepare("DELETE FROM $tablaTemporalMantenimientos WHERE id_temporal = :idTemporal");
+
+			$stmtEliminar->bindParam(":idTemporal", $datosModel, PDO::PARAM_INT);
+
+			if ($stmtEliminar->execute()) {
+
+				$stmt = Conexion::conectar()->prepare("SELECT $tablaTemporalMantenimientos.id_mantenimiento, $tablaTemporalMantenimientos.id_temporal, $tablaTemporalMantenimientos.costo_tmp_mantenimiento, $tablaMantenimiento.descripcion_mantenimiento, $tablaCategoria.nombre_categoria FROM $tablaTemporalMantenimientos INNER JOIN $tablaMantenimiento ON $tablaTemporalMantenimientos.id_mantenimiento = $tablaMantenimiento.id_mantenimiento INNER JOIN categoria ON $tablaMantenimiento.id_categoria = $tablaCategoria.id_categoria ORDER BY $tablaCategoria.id_categoria ASC");
+
+				$stmt->execute();
+
+				return $stmt->fetchAll();
+
+				$stmt->close();
+
+			}else{
+
+				return 'error';
+
+			}
+
+			$stmtEliminar->close();
+
+		}
+
 		#  GUARDAR DE MANTENIMIENTOS EN LA BASE DE DATOS
 		#-----------------------------------------------------------------------------------------------
 		public function guardarMantenimientosModel($datosModel){
@@ -121,27 +152,54 @@
 
 					$stmtTmpObtenerRegistros = Conexion::conectar()->prepare("SELECT id_mantenimiento, costo_tmp_mantenimiento FROM temporal_mantenimientos");
 
-
 					if ($stmtTmpObtenerRegistros->execute()) {
 
 						$registroTemporal = $stmtTmpObtenerRegistros->fetchAll();
+
+						#---------------------------------------------------------------------
+						$subtototal = 0;
+						$iva = 0.12;
+						$totalIva = 0;
+						$total = 0;
+						#---------------------------------------------------------------------
 
 						foreach ($registroTemporal as $row => $item) {
 
 							$idOrdenPago =  $idOrden["last"];
 							$idMantenimiento =  $item["id_mantenimiento"];
 							$costoTmpMantenimiento = $item["costo_tmp_mantenimiento"];
+							$costoTmpMantenimientoF = number_format($costoTmpMantenimiento, 2);
 
 
-							$stmtInertarDetalleOrden = Conexion::conectar()->prepare("INSERT INTO detalle_orden_pago (id_orden, id_mantenimiento, costo_detalle_mantenimiento) VALUES($idOrdenPago, $idMantenimiento, $costoTmpMantenimiento )"); 
+							$stmtInertarDetalleOrden = Conexion::conectar()->prepare("INSERT INTO detalle_orden_pago (id_orden, id_mantenimiento, costo_detalle_mantenimiento) VALUES($idOrdenPago, $idMantenimiento, $costoTmpMantenimientoF )"); 
 
-							$stmtInertarDetalleOrden->execute();
+							if($stmtInertarDetalleOrden->execute()){
 
-							$stmtEliminarRegistrosTemporal = Conexion::conectar()->prepare("DELETE FROM temporal_mantenimientos");
+								$stmtEliminarRegistrosTemporal = Conexion::conectar()->prepare("DELETE FROM temporal_mantenimientos");
 
-							$stmtEliminarRegistrosTemporal->execute();
+								$stmtEliminarRegistrosTemporal->execute();
+
+							}
+
+							#----------------------------------------------------------------------------------
+							$costoMantenimiento = $item["costo_tmp_mantenimiento"];
+							$costoMantenimientoF = number_format($costoMantenimiento,2); # Formateo de variables
+							$costoMantenimientoR = str_replace(",", "", $costoMantenimientoF); #Reemplazo de las comas
+							$subtototal += $costoMantenimientoR;
+							#----------------------------------------------------------------------------------
 
 						}
+
+						#-------------------------------------------------------------------------------------------
+						$idOrdenActualizar = $idOrden["last"];
+						$totalIva = $subtototal * $iva;
+						$total = $subtototal + $totalIva;
+						$totalF = number_format($total, 2);
+
+						$actualizarTotalOrden = Conexion::conectar()->prepare("UPDATE orden_pago SET total_orden = $totalF WHERE id_orden = $idOrdenActualizar");
+
+						$actualizarTotalOrden->execute();
+						#--------------------------------------------------------------------------------------------
 
 						return 'success';
 

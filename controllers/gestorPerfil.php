@@ -2,6 +2,31 @@
 	
 	class GestorPerfilController{
 
+		#VALIDAR PASSWORD ACTUAL CORRECTO
+		#-----------------------------------------------------------------------------
+		public function validarPasswordActualController($datos){
+
+			$datosController = array("passwordActual"=>$datos["passwordActual"],"idUsuarioPerfil"=>$datos["idUsuarioPerfil"]);
+
+			$respuesta = GestorPerfilModel::validarPasswordActualModel($datosController, 'usuario');
+
+			if ($respuesta == 1) {
+
+				return 'success';
+
+			}else{
+
+				return 'error';
+
+			}
+
+
+
+		}
+
+
+		# ACTUALIZAR PERFIL
+		# -------------------------------------------------------------------------------------------------
 		public function perfilUsuarioController( array $datos){
 
 			$trimmed_data = array_map('trim', $datos);

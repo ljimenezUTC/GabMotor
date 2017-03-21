@@ -52,20 +52,11 @@ function listarCategoriasMantenimientosSubItems(){
 
 }
 
-/*---------------------------------------------------------------------------
-	Despliega el formulario de mantenimientos
------------------------------------------------------------------------------*/
-/*$("#btnDesplegarMantenimientos").on('click', function(){
 
-	$("#vistaMantenimientos").toggle(400);
-
-});*/
-
-
-/*--------------------------------------------------------------------------------
+/*=============================================================================
 	Registra los mantenimientos seleccionados en la tabla temporal para su 
 	posterior procesamiento.
---------------------------------------------------------------------------------*/
+==============================================================================*/
 
 $("#btnRegistrarMantenimientos").on('click', function(){
 
@@ -76,7 +67,6 @@ $("#btnRegistrarMantenimientos").on('click', function(){
 	})
 	.done(function(response) {
 
-		//console.log("--" + response);
 		$("#resultadosMantenimientosTmp").html(response);
 
 	})
@@ -90,17 +80,47 @@ $("#btnRegistrarMantenimientos").on('click', function(){
 		console.log("complete");
 
 	});
-	
 
-	$("#vistaMantenimientos").toggle(400);
+	$("#vistaMantenimientos").fadeOut(400);
+	$("#contenedorGuardarMant").fadeIn(400);
 
 });
 
+/*========================================================================================
+	Eliminar  mantenimientos en la tabla temporal
+==========================================================================================*/
+function eliminarMantenimiento(idTemporalMantenimiento) {
 
-/*-------------------------------------------------------------------------------
+
+	$.ajax({
+		url: 'views/ajax/gestorMantenimientos.php',
+		type: 'GET',
+		data: {'idTemporalMantenimiento': idTemporalMantenimiento},
+	})
+	.done(function(datos) {
+
+		//console.log(datos);
+		$("#resultadosMantenimientosTmp").html(datos);
+
+	})
+	.fail(function() {
+
+		console.log("error");
+
+	})
+	.always(function() {
+
+		console.log("complete");
+
+	});
+	
+}
+
+
+/*================================================================================
 	Desplegar el documento pdf con la factura en caso de que los mantenimientos 
 	seleccionados se guarden correctamento.
----------------------------------------------------------------------------------*/
+=================================================================================*/
 function iniciarPdf(){
 
 	var theURL = "views/pdf/documentos/pedido_pdf.php";

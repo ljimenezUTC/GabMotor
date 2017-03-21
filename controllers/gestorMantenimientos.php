@@ -34,7 +34,6 @@
 
 			$respuestaCategorias = GestorMantenimientosModel::listarCategoriasModel("categoria");
 
-			//echo '<div class="container">';
 			echo '<section> <h4 class="categorias-title">Trabajos a realizarse</h4> 
 					        <p class="text-right text-info">Seleccione los trabajos realizados 2)</p>';
 
@@ -43,7 +42,6 @@
 
 					foreach ($respuestaCategorias as $row => $itemCategorias) {
 
-						//echo '<div class="col-md-3">';
 						echo '<div class="contenido-catagorias col-lg-4 col-md-12">';
 
 							echo '<article>';
@@ -52,8 +50,6 @@
 
 							$respuestaMantenimientos = GestorMantenimientosModel::listarMantenimientosModel($datosController,"mantenimiento");
 
-									
-							//echo '<h6>' . $itemCategorias["nombre_categoria"] . '</h6>';
 							echo '<ul class="list-group">  
 									<li class="list-group-item active categoria">
 										<span class="fa fa-check-circle fa-ck"></span>'. $itemCategorias["nombre_categoria"] . '
@@ -64,13 +60,6 @@
 
 							foreach ($respuestaMantenimientos as $row => $itemMantenimientos) {
 
-							/*echo '<p>';
-
-								echo  '<input type="checkbox" name="idMantenimiento[]" value="'. $itemMantenimientos["id_mantenimiento"] .'">' . $itemMantenimientos["descripcion_mantenimiento"] . '</input>' . '<input type="number" value="'.$itemMantenimientos["costo_mantenimiento"].'" readonly></input>';
-
-								}
-
-							echo '</p>';*/
 							echo '<li class="list-group-item"> ';
 
 								echo '
@@ -117,34 +106,111 @@
 				$respuesta = GestorMantenimientosModel::registrarMantenimientosModel($datosController, 'categoria', 'mantenimiento', 'temporal_mantenimientos');
 
 
-				if ($respuesta) {
+				echo '
+					<table class="table datatable-basic table-bordered table-striped table-hover text-center">
+						<thead class="success tabla-header">
+							<tr>
+								<th>Categoria</th>
+								<th>Mantenimiento</th>
+								<th>Costo</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+				';
+
+				$subtototal = 0;
+				$iva = 0.12;
+				$totalIva = 0;
+				$total = 0;
+
+				foreach ($respuesta as $row => $item) {
+					
+					echo '
+						<tr>
+							<td >' . $item["nombre_categoria"] . '</td>
+							<td >' . $item["descripcion_mantenimiento"] . '</td>
+							<td >' . $item["costo_tmp_mantenimiento"] . '</td>
+							<td class="text-justify">
+							<button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><span class="fa fa-trash-o"></span></button></td>
+						</tr>
+						
+
+						';
+					$costoMantenimiento = $item["costo_tmp_mantenimiento"];
+					$costoMantenimientoF = number_format($costoMantenimiento,2); # Formateo de variables
+					$costoMantenimientoR = str_replace(",", "", $costoMantenimientoF); #Reemplazo de las comas
+					$subtototal += $costoMantenimientoR;
+
+				}
+
+				echo '
+					
+						</tbody>
+					</table>
+
+				';
+
+				echo '<div>';
+
+					$totalIva = $subtototal * $iva;
+					$total = $subtototal + $totalIva;
+					echo '<p><label>Subtotal : </label>' . ' $ ' . number_format($subtototal, 2) . '</p>';
+					echo '<p><label>IVA : </label>' . ' $ ' . number_format($totalIva, 2) .'</p>';
+					echo '<p><label>Total : </label>' . ' $ ' . number_format($total, 2) .'</p>';
+
+				echo '</div>';
+
+			}
+
+		}
+
+		#ELIMINAR MANTENIMIENTOS DE LA TABLA TEMPORAL Y PRESENTACION EN LA VISTA DE AGREGAR MANTENIMIENTOS
+		#------------------------------------------------------------------------------------------------
+		public function eliminarMantenimientosTemporalController($datos){
+
+			$datosController = $datos;
+
+			$respuesta = GestorMantenimientosModel::eliminarMantenimientosTemporalModel($datosController, "temporal_mantenimientos", "mantenimiento", "categoria");
+
+			if ($respuesta) {
+				
 
 					echo '
-						<table class="table datatable-basic table-bordered table-striped table-hover">
+						<table class="table datatable-basic table-bordered table-striped table-hover text-center">
 							<thead class="success tabla-header">
 								<tr>
-									<th class="text-center">Categoria</th>
-									<th class="text-center">Mantenimiento</th>
-									<th class="text-center">Costo</th>
-									<th class="text-center">Accion</th>
+									<th>Categoria</th>
+									<th>Mantenimiento</th>
+									<th>Costo</th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
 					';
 
+					$subtototal = 0;
+					$iva = 0.12;
+					$totalIva = 0;
+					$total = 0;
+
 					foreach ($respuesta as $row => $item) {
 						
 						echo '
 							<tr>
-								<td class="text-center">' . $item["nombre_categoria"] . '</td>
-								<td class="text-center">' . $item["descripcion_mantenimiento"] . '</td>
-								<td class="text-center">' . $item["costo_tmp_mantenimiento"] . '</td>
-								<td class="text-center">
+								<td >' . $item["nombre_categoria"] . '</td>
+								<td >' . $item["descripcion_mantenimiento"] . '</td>
+								<td >' . $item["costo_tmp_mantenimiento"] . '</td>
+								<td class="text-justify">
 								<button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><span class="fa fa-trash-o"></span></button></td>
 							</tr>
 							
 
 							';
+						$costoMantenimiento = $item["costo_tmp_mantenimiento"];
+						$costoMantenimientoF = number_format($costoMantenimiento,2); # Formateo de variables
+						$costoMantenimientoR = str_replace(",", "", $costoMantenimientoF); #Reemplazo de las comas
+						$subtototal += $costoMantenimientoR;
 
 					}
 
@@ -155,15 +221,23 @@
 
 					';
 
-					echo '';
-					
-				}else{
+					echo '<div>';
 
-					return 'error';
-				}
+						$totalIva = $subtototal * $iva;
+						$total = $subtototal + $totalIva;
+						echo '<p><label>Subtotal : </label>' . ' $ ' . number_format($subtototal, 2) . '</p>';
+						echo '<p><label>IVA : </label>' . ' $ ' . number_format($totalIva, 2) .'</p>';
+						echo '<p><label>Total : </label>' . ' $ ' . number_format($total, 2) .'</p>';
 
+					echo '</div>';
+			}else{
+
+				echo '<script>
+					window.location = "ingresoMantenimiento";
+				</script>';
 			}
-
+						
+				
 		}
 
 		# GUARDAR DE MANTENIMIENTOS EN LA BASE DE DATOS
@@ -189,24 +263,21 @@
 								},
 
 								function(isConfirm){
+
 										 if (isConfirm) {	   
 										    window.location = "ingresoMantenimiento";
 										  } 
 
 								});	
 
-							</script>';
-							
-							echo'<script>
-								
 								$(document).ready(function() {
 
 									iniciarPdf();
 
 								});
-								
-							
+
 							</script>';
+							
 							
 					}else{
 

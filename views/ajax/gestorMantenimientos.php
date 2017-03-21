@@ -9,6 +9,7 @@
 class Ajax{
 
 	public $idMantenimiento;
+	public $idMantenimientoTemporal;
 
 	public function registrarMantenimientos(){
 
@@ -20,6 +21,16 @@ class Ajax{
 
 	}
 
+	public function EliminarIdTemporal(){
+
+			$idTemporal = $this->idMantenimientoTemporal;
+
+			$respuesta = GestorMantenimientosController::eliminarMantenimientosTemporalController($idTemporal);
+
+			echo  $respuesta;
+
+		}
+
 }
 
 #OBJETOS
@@ -30,10 +41,14 @@ if (isset($_POST["idMantenimiento"])) {
 	$a->idMantenimiento = array("id"=>$_POST["idMantenimiento"]);
 	$a->registrarMantenimientos();
 
-}else{
-
-	echo 'error';
 }
+#-------------------------------------------------------------------------
+if (isset($_GET["idTemporalMantenimiento"])) {
+
+		$b = new Ajax();
+		$b->idMantenimientoTemporal = $_GET["idTemporalMantenimiento"];
+		$b-> EliminarIdTemporal();
+	}
 
 
  ?>

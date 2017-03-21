@@ -45,6 +45,7 @@
 		<script src="views/js/gestorClientes.js"></script>
 		<script src="views/js/gestorVehiculos.js"></script>
 		<script src="views/js/gestorMantenimientos.js"></script>
+		<script src="views/js/gestorPerfil.js"></script>
 		<script src="views/js/jquery.dataTables.js"></script>
 	    <script src="views/js/dataTables.jqueryui.js"></script>
 		

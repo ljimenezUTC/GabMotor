@@ -9,10 +9,9 @@
 		exit();
 	}
 
-
 	include "header.php";
-	
  ?>
+
 
 
 <!-- Seccion Ingresar mantenimientos -->

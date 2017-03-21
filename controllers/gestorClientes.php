@@ -107,7 +107,7 @@
 
 				      <div class="col-sm-10">
 
-				   		 <input type="text" value="'.$respuesta["nombre_cliente"].'" name="nombreClienteEditar" class="form-control">
+				   		 <input type="text" value="'.$respuesta["nombre_cliente"].'" name="nombreClienteEditar" class="form-control" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="Solo puede ingresar letras">
 
 				      </div>
 
@@ -120,7 +120,7 @@
 
 				      <div class="col-sm-10">
 
-				        <input type="text" value="'.$respuesta["apellido_cliente"].'" name="apellidoClienteEditar" class="form-control">
+				        <input type="text" value="'.$respuesta["apellido_cliente"].'" name="apellidoClienteEditar" class="form-control" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="Solo puede ingresar letras">
 
 				      </div>
 
@@ -133,7 +133,7 @@
 
 				      <div class="col-sm-10">
 
-				        <input type="text" value="'.$respuesta["direccion_cliente"].'" name="direccionClienteEditar" class="form-control">
+				        <input type="text" value="'.$respuesta["direccion_cliente"].'" name="direccionClienteEditar" class="form-control" pattern="^.*(?=.*[0-9])(?=.*[a-zA-ZñÑ\s]).*$" title="Ingrese una direccion valida">
 
 				      </div>
 
@@ -146,7 +146,7 @@
 
 				      <div class="col-sm-10">
 
-				        <input type="text" value="'.$respuesta["telefono_cliente"].'" name="telefonoClienteEditar" minlength="10" maxlength="10" class="form-control">
+				        <input type="text" value="'.$respuesta["telefono_cliente"].'" name="telefonoClienteEditar" minlength="10" maxlength="10" class="form-control"  pattern="[0-9]{10,10}" title="Solo puede ingresar numeros">
 
 				      </div>
 

@@ -35,7 +35,7 @@
 			$respuestaCategorias = GestorMantenimientosModel::listarCategoriasModel("categoria");
 
 			echo '<section> <h4 class="categorias-title">Trabajos a realizarse</h4> 
-					        <p class="text-right text-info">Seleccione los trabajos realizados 2)</p>';
+					        <p class="text-right text-uppercase"><span class="text-danger lead">*</span> Seleccione los trabajos realizados 2)</p>';
 
 
 				echo '<div class="row">';
@@ -113,7 +113,7 @@
 								<th>Categoria</th>
 								<th>Mantenimiento</th>
 								<th>Costo</th>
-								<th></th>
+								<th>Eliminar</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -131,7 +131,7 @@
 							<td >' . $item["nombre_categoria"] . '</td>
 							<td >' . $item["descripcion_mantenimiento"] . '</td>
 							<td >' . $item["costo_tmp_mantenimiento"] . '</td>
-							<td class="text-justify">
+							<td class="text-center">
 							<button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><span class="fa fa-trash-o"></span></button></td>
 						</tr>
 						
@@ -151,15 +151,28 @@
 
 				';
 
-				echo '<div>';
+				echo '<div class="row">';
 
-					$totalIva = $subtototal * $iva;
-					$total = $subtototal + $totalIva;
-					echo '<p><label>Subtotal : </label>' . ' $ ' . number_format($subtototal, 2) . '</p>';
-					echo '<p><label>IVA : </label>' . ' $ ' . number_format($totalIva, 2) .'</p>';
-					echo '<p><label>Total : </label>' . ' $ ' . number_format($total, 2) .'</p>';
+					echo '<div class="col-md-8 col-sm-6 col-xs-12 titulo-total">
+							<h4>Total a Pagar</h4>
+						</div>
+					';
+
+						
+
+					echo '<div class="col-md-4 col-sm-6 col-xs-12 seccion-total">';
+
+						$totalIva = $subtototal * $iva;
+						$total = $subtototal + $totalIva;
+						echo '<label>Subtotal </label> <label>' . ' $ ' . number_format($subtototal, 2) . '</label><br>';
+						echo '<label>IVA </label> <label>' . ' $ ' . number_format($totalIva, 2) .'</label><br>';
+						echo '<label>Total </label> <label>' . ' $ ' . number_format($total, 2) .'</label>';
+
+					echo '</div>';
 
 				echo '</div>';
+
+				echo '<hr>';
 
 			}
 
@@ -183,7 +196,7 @@
 									<th>Categoria</th>
 									<th>Mantenimiento</th>
 									<th>Costo</th>
-									<th></th>
+									<th>Eliminar</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -201,7 +214,7 @@
 								<td >' . $item["nombre_categoria"] . '</td>
 								<td >' . $item["descripcion_mantenimiento"] . '</td>
 								<td >' . $item["costo_tmp_mantenimiento"] . '</td>
-								<td class="text-justify">
+								<td class="text-center">
 								<button type="button" onclick="eliminarMantenimiento(\'' . $item["id_temporal"] . '\')"><span class="fa fa-trash-o"></span></button></td>
 							</tr>
 							
@@ -221,15 +234,28 @@
 
 					';
 
-					echo '<div>';
+					echo '<div class="row">';
+
+					echo '<div class="col-md-8 col-sm-6 col-xs-12 titulo-total">
+							<h4>Total a Pagar</h4>
+						</div>
+					';
+
+						
+
+					echo '<div class="col-md-4 col-sm-6 col-xs-12 seccion-total">';
 
 						$totalIva = $subtototal * $iva;
 						$total = $subtototal + $totalIva;
-						echo '<p><label>Subtotal : </label>' . ' $ ' . number_format($subtototal, 2) . '</p>';
-						echo '<p><label>IVA : </label>' . ' $ ' . number_format($totalIva, 2) .'</p>';
-						echo '<p><label>Total : </label>' . ' $ ' . number_format($total, 2) .'</p>';
+						echo '<label>Subtotal </label> <label>' . ' $ ' . number_format($subtototal, 2) . '</label><br>';
+						echo '<label>IVA </label> <label>' . ' $ ' . number_format($totalIva, 2) .'</label><br>';
+						echo '<label>Total </label> <label>' . ' $ ' . number_format($total, 2) .'</label>';
 
 					echo '</div>';
+
+				echo '</div>';
+
+				echo '<hr>';
 			}else{
 
 				echo '<script>

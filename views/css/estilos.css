@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: 'Open Sans', sans-serif;
   padding-top: 60px;
@@ -156,7 +157,7 @@ body {
   .dropdown-menu {
     margin-left: 0px; } }
 /****************************
-* Seccion Inicio
+ * Seccion Inicio
 ****************************/
 .inicio {
   padding: 10px 0px 6px 0px;
@@ -239,7 +240,7 @@ body {
     font-size: 12px; } }
 /**************************
   * Clientes
-  ************************/
+**************************/
 .panel {
   border: 1px #FFFFFF;
   background: #FFFFFF; }
@@ -288,7 +289,7 @@ body {
     font-size: 12px; } }
 /**************************
   * Agregar Clientes
-  ************************/
+*************************/
 .formulario-add-cliente .row {
   padding: 0px 20px 10px 20px;
   font-family: 'Open Sans', sans-serif; }
@@ -322,7 +323,7 @@ body {
     height: 34px; } }
 /**************************
   * Seccion mantenimentos
-  ************************/
+**************************/
 .contenedor-mantenimientos {
   font-size: 14px; }
   .contenedor-mantenimientos button, .contenedor-mantenimientos input, .contenedor-mantenimientos select {
@@ -330,7 +331,7 @@ body {
 
 /**************************
   * Modales
-  ************************/
+**************************/
 .modal-header {
   background: #0288D1;
   color: #FFFFFF; }
@@ -343,9 +344,9 @@ body {
 .tabla-modal a {
   font-size: 12px; }
 
-/***********************************
+/**************************************
   * Tabla Paginacion & buscar & items
-  *********************************/
+**************************************/
 .input-buscar {
   padding: 5px;
   border: 1px solid #BDBDBD;
@@ -377,7 +378,7 @@ body {
 
 /****************
  * Modales
- ***************/
+****************/
 .btn-modal {
   font-size: 13px; }
 
@@ -389,7 +390,7 @@ body {
     font-size: 12px; } }
 /****************
  * Perfil
- ***************/
+****************/
 .perfil {
   font-size: 14px; }
   .perfil input, .perfil button {
@@ -421,6 +422,8 @@ body {
   text-align: center; }
 .contenedor-mantenimientos .icono-menu {
   padding-right: 2px; }
+.contenedor-mantenimientos p {
+  color: #212121; }
 
 @media (max-width: 770px) {
   .d-mantenimentos {
@@ -508,5 +511,31 @@ body {
     display: none; }
   .contenido-catagorias .cont-precio .input-precio {
     font-size: 10px; } }
+/**********************
+  * Dise├▒o total pago
+**********************/
+.titulo-total {
+  text-align: right; }
+  .titulo-total h4 {
+    margin-top: 24px; }
+
+.seccion-guardar {
+  padding: 6px 14px 0px 0px; }
+
+.seccion-total {
+  text-align: right; }
+  .seccion-total label {
+    width: 100px;
+    background: #F2F2F2; }
+
+@media (max-width: 770px) {
+  .contenido-temporal span, .contenido-temporal button, .seccion-guardar span, .seccion-guardar button {
+    height: 32px; } }
+@media (max-width: 575px) {
+  .seccion-total {
+    text-align: center; }
+    .seccion-total label {
+      width: 100%;
+      background: #F2F2F2; } }
 
 /*# sourceMappingURL=estilos.css.map */

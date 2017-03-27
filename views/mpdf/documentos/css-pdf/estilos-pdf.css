@@ -1,0 +1,198 @@
+
+/*****************
+ * Estilos PDF
+ ****************/
+ html, body, div, span, h1, h2, h3, h4, h5, h6, p, table, tbody, tfoot, thead, tr, th, td, footer{
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ }
+
+ body .left {
+ 	float: left;
+ }
+
+ body .right {
+ 	float: right;
+ }
+
+.contenido-logo{
+	margin-left: 5px;
+	background: #FFFFFF;
+	width: 112px;
+	border-radius: 0px 60px 60px 0px;
+	z-index: 2;
+}
+
+.orden-trabajo{
+	margin-right: -6px;
+	margin-top: -118px;
+	padding: 41px 20px 29px 90px;
+}
+
+.orden-trabajo h3{
+	background: rgba(66,66,66 ,0.8);
+	color: #FFFFFF;
+	padding: 16px;
+}
+
+.numero-factura h6{
+ 	font-size: 16px;
+	color: rgba(139,195,74 ,1);
+	margin-top: -124px;
+	padding: 41px 24px 29px 550px;
+}
+
+.container{
+	margin-top: -20px;
+}
+
+.fecha{
+	padding: 5px 0px 5px 0px;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+/*******************
+  * Diseño Tablas
+********************/
+table{
+	font-size: 10px;
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table thead tr th{
+	background-color: #0288D1;
+}
+
+section table {
+ 	width: 100%;
+}
+
+section table thead th {
+	padding: 5px 10px; /*Margen tabla*/
+	border-bottom: 5px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	color: white;
+}
+
+section table tbody td {
+	padding: 10px;
+}
+
+section .details {
+	margin-bottom: 20px;
+}
+
+section .details .client {
+ 	width: 50%;
+ 	line-height: 20px;
+}
+
+/*********************
+  * Seccion cliente
+**********************/
+.cliente-contenido thead th {
+ 	padding: 5px 10px;
+ 	text-align: right;
+}
+
+section table .cliente {
+	width: 20%;
+	background: white;
+}
+
+section table tbody .cliente {
+	text-align: left;
+	background: white;
+}
+
+/*Item Cliente*/
+section table .item-cliente {
+	width: 80%;
+	text-align: left;
+	background: rgba(158,158,158 ,0.1);
+}
+
+section .cliente-contenido tr {
+	/*Margen tabla*/
+	border-bottom: 3px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+
+/*******************************
+  * Contenido Detalle
+********************************/
+.titulo-trabajos{
+	color: rgba(139,195,74 ,1);
+	font-size: 16px;
+	padding: 2px 0px 6px 0px;
+}
+
+.tabla-detalle thead tr th{
+ 	padding: 10px;
+}
+
+section .tabla-detalle tbody td {
+	padding: 10px; /*Margen tabla*/
+	background: rgba(158,158,158 ,0.1);
+	text-align: left;
+}
+
+section .tabla-detalle tr {
+ 	/*Margen tabla*/
+ 	border-bottom: 1px solid #FFFFFF;
+}
+
+section table .desc {
+ 	width: 30%;
+}
+
+section table .qty{
+	width: 60%;
+}
+
+section table .unit{
+	width: 10%;
+	text-align: right;
+}
+
+section table .categoria, .mantenimiento, .costo{
+	text-align: center;
+}
+
+/*********************************
+  * Seccion tabla totol a pagar
+*********************************/
+.total-pagar{
+	color: rgba(139,195,74 ,1);
+	font-size: 16px;
+}
+
+.total{
+	width: 90%;
+}
+
+/******************
+  * Pie de pagina
+******************/
+footer {
+	margin-bottom: 20px;
+}
+
+footer .thanks {
+	margin-bottom: 40px;
+	color: #8BC34A;
+	font-size: 1.16666666666667em;
+	font-weight: 600;
+}
+
+footer .notice {
+	margin-bottom: 25px;
+}
+
+footer .end {
+	padding-top: 5px;
+	border-top: 2px solid #8BC34A;
+	text-align: center;
+}

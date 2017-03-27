@@ -122,8 +122,10 @@ function eliminarMantenimiento(idTemporalMantenimiento) {
 	seleccionados se guarden correctamento.
 =================================================================================*/
 function iniciarPdf(){
+	
+	var theURL = "views/mpdf/documentos/orden_pago_pdf.php";
 
-	var theURL = "views/pdf/documentos/pedido_pdf.php";
+	//var theURL = "views/pdf/documentos/pedido_pdf.php";
 
 	var winName = "Pedido";
 
@@ -136,12 +138,12 @@ function iniciarPdf(){
 	var isCenter = "true";
 
 	if(window.screen)if(isCenter)if(isCenter=="true"){
-    var myLeft = (screen.width-myWidth)/2;
-    var myTop = (screen.height-myHeight)/2;
-    features+=(features!="")?",":"";
-    features+=",left="+myLeft+",top="+myTop;
-  }
-  window.open(theURL,winName,features+((features!="")?",":"")+"width="+myWidth+",height="+myHeight);
+	    var myLeft = (screen.width-myWidth)/2;
+	    var myTop = (screen.height-myHeight)/2;
+	    features+=(features!="")?",":"";
+	    features+=",left="+myLeft+",top="+myTop;
+	 }
+  window.open(theURL);
 }
 
 

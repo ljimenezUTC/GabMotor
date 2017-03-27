@@ -146,6 +146,8 @@
 
 				$stmtObtenerIdOrden = Conexion::conectar()->prepare("SELECT LAST_INSERT_ID(id_orden) as last FROM orden_pago ORDER BY id_orden DESC LIMIT 0,1");
 
+				
+
 				if ($stmtObtenerIdOrden->execute()) {
 
 					$idOrden = $stmtObtenerIdOrden->fetch();
@@ -218,7 +220,24 @@
 
 			}else{
 
-				return 'error';
+				return '<script>
+
+							swal({
+								  title: "¡Error no se pudo guardar!",
+								  text: "¡No olvide realizar el proceso 1), 2) y 3) correctamente!",
+								  type: "error",
+								  confirmButtonText: "Cerrar",
+								  closeOnConfirm: false
+							},
+
+							function(isConfirm){
+									 if (isConfirm) {	   
+									    window.location = "ingresoMantenimiento";
+									  } 
+							});
+
+
+						</script>';
 
 			}	
 

@@ -233,7 +233,7 @@ body {
 }
 
 /****************************
-* Seccion Inicio
+ * Seccion Inicio
 ****************************/
 .inicio{ 
   padding: 10px 0px 6px 0px;
@@ -334,7 +334,7 @@ body {
 
 /**************************
   * Clientes
-  ************************/
+**************************/
 .panel{
   border: 1px $text-primary-color;
   background: $text-primary-color;
@@ -402,7 +402,7 @@ body {
 
 /**************************
   * Agregar Clientes
-  ************************/
+*************************/
 .formulario-add-cliente{
   .row{
     padding: 0px 20px 10px 20px;
@@ -453,7 +453,7 @@ body {
 
 /**************************
   * Seccion mantenimentos
-  ************************/
+**************************/
 .contenedor-mantenimientos{
   font-size:14px;
   button, input, select{font-size:14px;}
@@ -461,7 +461,7 @@ body {
 
 /**************************
   * Modales
-  ************************/
+**************************/
 .modal-header{
   background: $dark-primary-color;
   color: $text-primary-color;
@@ -478,9 +478,9 @@ body {
 }
 
 
-/***********************************
+/**************************************
   * Tabla Paginacion & buscar & items
-  *********************************/
+**************************************/
 .input-buscar{
   padding:5px;
   border: 1px solid $divider-color;
@@ -519,7 +519,7 @@ body {
 
 /****************
  * Modales
- ***************/
+****************/
  .btn-modal{
   font-size:13px;
  }
@@ -535,7 +535,7 @@ body {
  
 /****************
  * Perfil
- ***************/
+****************/
 .perfil{
   font-size: 14px;
   input,button{font-size: 14px;}
@@ -580,6 +580,10 @@ body {
 
   .icono-menu{
     padding-right: 2px;
+  }
+
+  p{
+    color: $primary-text-color;
   }
   
 }
@@ -710,6 +714,47 @@ body {
       .input-precio{
         font-size: 10px;
       }
+    }
+  }
+}
+
+
+/**********************
+  * Diseño total pago
+**********************/
+.titulo-total{
+   text-align: right;
+   h4{
+    margin-top: 24px;
+   }
+}
+
+.seccion-guardar{
+  padding: 6px 14px 0px 0px;
+}
+
+.seccion-total{
+  text-align: right;
+  label{
+    width: 100px;
+    background: #F2F2F2;
+  }
+}
+
+@media (max-width: 770px){
+  .contenido-temporal, .seccion-guardar{
+    span, button{
+      height: 32px;
+    }
+  }
+}
+
+@media (max-width: 575px){
+  .seccion-total{
+    text-align: center;
+    label{
+      width: 100%;
+      background: #F2F2F2;
     }
   }
 }

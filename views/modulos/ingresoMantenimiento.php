@@ -50,7 +50,7 @@
 
 							<div class="col-lg-12">
 
-								<p class="text-right text-info">Seleccione un vehículo para agregar el mantenimiento 1)</p>
+								<p id="seleccionVehiculo" class="text-right text-uppercase"><span class="text-danger lead">*</span> Seleccione un vehículo para agregar el mantenimiento 1)</p>
 								
 							</div>
 
@@ -93,7 +93,7 @@
 
 
 							<div class="col-lg-2 col-md-12 bs">
-								<button type="button" class="col-md-12 btn btn-info btn-vehiculo" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span> Agregar Vehículo</button>	
+								<button id="agregarVehiculo" type="button" class="col-md-12 btn btn-info btn-vehiculo" data-toggle="modal" data-target="#myModal" data-whatever="@getbootstrap"><span class="fa fa-car icono-menu"></span> Agregar Vehículo</button>	
 
 							</div>
 
@@ -108,38 +108,31 @@
 
 								<div class="text-right form-group">
 
-									<p class="text-right text-info">Agregue los mantenimientos realizados 3)</p>
-									<button type="button" class="btn btn-info" id="btnRegistrarMantenimientos"><span class="fa fa-wrench icono-menu"></span>Agregar mantenimientos</button>
+									<p class="text-right text-uppercase"><span class="text-danger lead">*</span>Agregue los mantenimientos realizados 3)</p>
+									<button type="button" class="btn btn-info" id="btnRegistrarMantenimientos"><span class="fa fa-wrench icono-menu"></span> Agregar mantenimientos</button>
 
 								</div>
 
 							</div>
 
-						</div>
-						<!--FIN DE CARGA DE CATEGORIAS Y SUS MANTENIMIENTOS-->
 
-						<!--LISTAR MANTENIMIENTOS TEMPORALES PREVIOS A SER PROCESADOS-->
-						<div class="row">
-
-							<div class="col-lg-12 table-responsive">
+							<div class="col-lg-12 table-responsive contenido-temporal">
 								
 								<div id="resultadosMantenimientosTmp" class="resultados"></div><!-- Carga los datos ajax -->
 
 							</div>
-							
-						</div>
-						<!-- FIN LISTAR MANTENIMIENTOS TEMPORALES PREVIOS A SER PROCESADOS-->
 
-						<div class="text-right form-group row">
 
-					    	<div class="col-lg-12" id="contenedorGuardarMant" style="display: none">
+							<!--LISTAR MANTENIMIENTOS TEMPORALES PREVIOS A SER PROCESADOS-->
+							<div class="col-md-12 seccion-guardar" id="contenedorGuardarMant" style="display: none;">
+								
+								<p class="text-right text-uppercase">Guarde los mantenimientos realizados 4)</p>
+								<button type="submit" class="btn btn-info pull-right">
+								<span class="fa fa-save"></span> Guardar Mantenimiento</button>
 
-								<p class="text-right text-info">Guarde los mantenimientos realizados 3)</p>
-								<button type="submit" class="btn btn-info" onc><span class="fa fa-save icono-menu"></span>Guardar Mantenimiento</button>
+							</div><!-- FIN LISTAR MANTENIMIENTOS TEMPORALES PREVIOS A SER PROCESADOS-->
 
-							</div>
-
-						</div>
+						</div><!--FIN DE CARGA DE CATEGORIAS Y SUS MANTENIMIENTOS-->
 
 					</form>
 
@@ -184,13 +177,13 @@
 
 						 		<tr class="tabla-header">
 
-						 			<th>Nombre cliente</th>
-						 			<th>Placas vehículo</th>
-						 			<th>Marca vehículo</th>
-						 			<th>Modelo  vehículo</th>
-						 			<th>Año vehículo</th>
-						 			<th>Kilometraje vehículo</th>
-						 			<th>Acción agregar vehículo</th>
+						 			<th>Propietario</th>
+						 			<th>Placas</th>
+						 			<th>Marca</th>
+						 			<th>Modelo</th>
+						 			<th>Año</th>
+						 			<th>Kilometraje</th>
+						 			<th>Agregar vehículo</th>
 
 						 		</tr>
 

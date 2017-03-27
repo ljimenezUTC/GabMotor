@@ -39,7 +39,7 @@
 			</li>
 			<li class="nav-item" 
 				<?php if($uri == 'citas') echo "class='active'"; ?>>
-				<a class="nav-link" href="citas"><span class="fa fa-wrench icono-menu"></span>Citas</a>
+				<a class="nav-link" href="citas"><span class="fa fa-calendar-o"></span> Citas</a>
 			</li>
 
 		</ul>

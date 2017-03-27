@@ -37,6 +37,10 @@
 				<?php if($uri == 'mantenimientos') echo "class='active'"; ?>>
 				<a class="nav-link" href="mantenimientos"><span class="fa fa-wrench icono-menu"></span>Mantenimientos</a>
 			</li>
+			<li class="nav-item" 
+				<?php if($uri == 'citas') echo "class='active'"; ?>>
+				<a class="nav-link" href="citas"><span class="fa fa-wrench icono-menu"></span>Citas</a>
+			</li>
 
 		</ul>
 

@@ -73,6 +73,7 @@
 					</tr>
 				';
 			}
+			
 		}
 
 
@@ -252,7 +253,7 @@
 
 							function(isConfirm){
 									 if (isConfirm) {	   
-									    window.location = "index.php?action=clientes";
+									    window.location = "clientes";
 									  } 
 							});
 
@@ -272,7 +273,7 @@
 
 							function(isConfirm){
 									 if (isConfirm) {	   
-									    window.location = "index.php?action=clientes";
+									    window.location = "clientes";
 									  } 
 							});
 

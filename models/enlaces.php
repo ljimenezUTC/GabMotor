@@ -5,7 +5,7 @@
 
 		public function enlacesModel($enlaces){
 
-			if ($enlaces == "ingreso" || $enlaces == "inicio" || $enlaces == "clientes" || $enlaces == "vehiculos" || $enlaces == "mantenimientos" || $enlaces == "reportes" || $enlaces == "salir" || $enlaces == "ingresoCliente" || $enlaces == "editarCliente" || $enlaces == "vehiculos" || $enlaces == "ingresoVehiculo" || $enlaces == "editarVehiculo" || $enlaces == "mantenimientos" || $enlaces == "ingresoMantenimiento" || $enlaces == "perfilUsuario") {
+			if ($enlaces == "ingreso" || $enlaces == "inicio" || $enlaces == "clientes" || $enlaces == "vehiculos" || $enlaces == "mantenimientos" || $enlaces == "reportes" || $enlaces == "salir" || $enlaces == "ingresoCliente" || $enlaces == "editarCliente" || $enlaces == "vehiculos" || $enlaces == "ingresoVehiculo" || $enlaces == "editarVehiculo" || $enlaces == "mantenimientos" || $enlaces == "ingresoMantenimiento" || $enlaces == "perfilUsuario" || $enlaces == "citas") {
 				
 				$modulo = "views/modulos/" . $enlaces . ".php";
 
